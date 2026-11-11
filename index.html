@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Sketchbook Coach</title>
+    <meta name="description" content="A personal drawing-practice notebook: journal, value tools, drills. Works offline." />
+    <meta name="theme-color" content="#f5f0e6" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Sketchbook" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="./icons/icon.svg" />
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+    <style>
+      /* First paint before the stylesheet arrives: paper, not a white flash. */
+      html { background: #f5f0e6; }
+      @media (prefers-color-scheme: dark) { html { background: #171614; } }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <noscript>Sketchbook Coach needs JavaScript to run.</noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
