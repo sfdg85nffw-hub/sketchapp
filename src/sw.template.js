@@ -34,14 +34,15 @@ self.addEventListener('fetch', (event) => {
       const cache = await caches.open(CACHE);
       const shell = new URL('./index.html', self.registration.scope).href;
       if (request.mode === 'navigate') {
-        return (await cache.match(shell)) ?? fetch(request);
+        return (await cache.match(shell, { ignoreVary: true })) ?? fetch(request);
       }
-      const hit = await cache.match(request, { ignoreSearch: true });
+      // Static files: the same bytes whatever the request headers, so ignore Vary.
+      const hit = await cache.match(request, { ignoreSearch: true, ignoreVary: true });
       if (hit) return hit;
       try {
         return await fetch(request);
       } catch {
-        return (await cache.match(shell)) ?? Response.error();
+        return Response.error();
       }
     })(),
   );

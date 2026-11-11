@@ -38,9 +38,9 @@ await draw('e2e/fixtures/sketch.jpg', 1200, 900, [
   ['#8a4a2b', 500, 600, 300, 200],
 ]);
 
-// A "photo of the scene" for Compare mode: darker overall, different layout.
+// A "photo of the scene" for Compare mode: a mid-grey ground, a black half, a white window.
 await draw('e2e/fixtures/reference.jpg', 1200, 900, [
-  ['#b9b2a4', 0, 0, 1200, 900],
+  ['#8f897c', 0, 0, 1200, 900],
   ['#101010', 0, 450, 1200, 450],
   ['#f4f4f4', 800, 80, 250, 250],
 ]);

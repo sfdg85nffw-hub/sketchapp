@@ -794,6 +794,10 @@ input[type='range'] {
   line-height: 1.25;
 }
 
+.thumb-cap svg {
+  flex: none;
+}
+
 .thumb-cap span {
   min-width: 0;
   overflow-wrap: anywhere;
@@ -1260,7 +1264,7 @@ input[type='range'] {
   min-height: 2.6em;
 }
 
-.skill svg {
+.skill > svg {
   width: 100%;
   height: auto;
   color: var(--ink);
@@ -1268,6 +1272,7 @@ input[type='range'] {
 
 .skill .now {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: var(--s1);
   font-size: 0.8125em;

@@ -74,8 +74,10 @@ export function ThenNow({ initialA, initialB }: ThenNowProps) {
   if (!entries) return <Screen label="Then and now">{null}</Screen>;
 
   const seeded = entries.find((e) => e.id === (initialB ?? initialA));
-  const fallbackSubject =
-    seeded?.subject ?? entries.find((e) => e.baseline)?.subject ?? [...counts.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] ?? null;
+  // Prefer a subject that has both a baseline and something newer to hold against it.
+  const byCount = [...counts.entries()].sort((a, b) => b[1] - a[1]);
+  const withPair = byCount.find(([s, n]) => n > 1 && entries.some((e) => e.subject === s && e.baseline));
+  const fallbackSubject = seeded?.subject ?? withPair?.[0] ?? byCount[0]?.[0] ?? null;
   const activeSubject = subject ?? fallbackSubject;
 
   const now = entries.find((e) => e.id === nowId) ?? (activeSubject ? nowFor(entries, activeSubject, thenId ?? undefined) : undefined);

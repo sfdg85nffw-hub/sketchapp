@@ -18,7 +18,7 @@ function LightDial({ value, onChange }: { value: number | undefined; onChange: (
   return (
     <div class="dial" role="radiogroup" aria-label="Light direction" style={{ position: 'relative', aspectRatio: '1' }}>
       <svg viewBox="0 0 200 200" width="100%" height="100%" aria-hidden="true" style={{ color: 'var(--ink)' }}>
-        <circle cx="100" cy="100" r="62" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 5" />
+        <circle cx="100" cy="100" r="52" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 5" />
         {shadow && <ellipse cx={100 + shadow.x} cy={108 + shadow.y} rx="26" ry="14" fill="currentColor" opacity="0.75" />}
         <path d="M100 78 122 90v24l-22 12-22-12V90Z" fill="var(--paper-raised)" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
         <path d="M78 90l22 12 22-12M100 102v24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
@@ -36,8 +36,8 @@ function LightDial({ value, onChange }: { value: number | undefined; onChange: (
             class="icon-btn"
             style={{
               position: 'absolute',
-              left: `${50 + Math.sin(rad) * 41}%`,
-              top: `${50 - Math.cos(rad) * 41}%`,
+              left: `${50 + Math.sin(rad) * 39}%`,
+              top: `${50 - Math.cos(rad) * 39}%`,
               transform: 'translate(-50%, -50%)',
               borderRadius: '50%',
               border: on ? '2.5px solid var(--ink)' : '1.5px solid var(--line)',
