@@ -3,7 +3,6 @@ import {
   contrastRatio,
   greyForLstar,
   hexToRgb,
-  labToRgb,
   linearToSrgb,
   lstarFromLuminance,
   lstarOfRgb,
@@ -65,12 +64,6 @@ describe('sRGB -> CIELAB', () => {
       expect(got[2]).toBeCloseTo(lab[2], 1);
     });
   }
-
-  it('round-trips through Lab back to the same 8-bit colour', () => {
-    for (const rgb of [[200, 30, 90], [12, 140, 77], [250, 247, 240], [34, 32, 32]] as const) {
-      expect(labToRgb(rgbToLab(rgb))).toEqual([...rgb]);
-    }
-  });
 });
 
 describe('lightness', () => {

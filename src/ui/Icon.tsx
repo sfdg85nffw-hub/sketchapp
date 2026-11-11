@@ -46,7 +46,6 @@ const PATHS = {
   arrowUp: 'M6 15l6-6 6 6',
   arrowFlat: 'M5 12h14',
   arrowDown: 'M6 9l6 6 6-6',
-  info: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0-10v6m0-9.5v.01',
   layers: 'M12 4 3.5 8.5 12 13l8.5-4.5L12 4ZM3.5 12.5 12 17l8.5-4.5M3.5 16.5 12 21l8.5-4.5',
   nib: 'M12 3l5 9-3.5 6h-3L7 12l5-9Zm0 7.5V18m-2.5 3h5',
   image: 'M4 5h16v14H4V5Zm0 10 4.5-4.5 4 4 2.5-2.5L20 17M15 9.5h.01',
@@ -55,7 +54,6 @@ const PATHS = {
   filter: 'M4 6h16M7 12h10M10 18h4',
   book: 'M12 6.5C10 5 7 4.5 4 5v13.5c3-.5 6 0 8 1.5m0-13.5c2-1.5 5-2 8-1.5v13.5c-3-.5-6 0-8 1.5m0-13.5V20',
   slider: 'M4 12h16M9 8l-4 4 4 4m6-8 4 4-4 4',
-  freeze: 'M7 4h10v16H7V4Zm3 5h4m-4 4h4',
 } as const;
 
 export type IconName = keyof typeof PATHS | 'ratingPartly' | 'ratingYes';

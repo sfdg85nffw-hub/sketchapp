@@ -58,7 +58,8 @@ Judgment calls made while building this, with the reasoning. Grouped by area.
 
 ## Tests
 
-- **WebKit could not be run in the build environment** (only Chromium was installed, and installing browsers was not permitted there). The e2e suite is configured for both; CI installs and runs WebKit at 390 × 844. Locally the whole suite passed in Chromium at the same viewport.
+- **WebKit runs in CI, not locally.** The build environment only had Chromium, so the suite was developed against Chromium at 390 × 844 and then run in WebKit by the GitHub Actions workflow, which installs both engines.
+- **The offline test shuts its own server down** instead of using the browser's offline emulation. Playwright's WebKit refuses every navigation while emulating offline, service worker or not; a server that has really gone away is also the more honest test. It runs in both engines.
 - **The share sheet is stubbed out in e2e** so exports take the download path; no test browser has a share sheet to drive.
 - **Lighthouse.** Lighthouse removed its PWA category in version 12, so there is no "PWA audit" to pass any more. The installability criteria it used to check (manifest with name, icons at 192 and 512, standalone display, a service worker that serves the start URL offline, viewport and apple-touch-icon) are asserted directly in `e2e/offline.spec.ts`.
 

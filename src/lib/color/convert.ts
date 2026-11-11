@@ -44,15 +44,6 @@ export function linearToXyz(lin: RGB): RGB {
   ];
 }
 
-export function xyzToLinear(xyz: RGB): RGB {
-  const [x, y, z] = xyz;
-  return [
-    3.2404542 * x - 1.5371385 * y - 0.4985314 * z,
-    -0.969266 * x + 1.8760108 * y + 0.041556 * z,
-    0.0556434 * x - 0.2040259 * y + 1.0572252 * z,
-  ];
-}
-
 const EPSILON = 216 / 24389;
 const KAPPA = 24389 / 27;
 
@@ -77,13 +68,6 @@ export function xyzToLab(xyz: RGB): Lab {
   return [116 * fy - 16, 500 * (fx - fy), 200 * (fy - fz)];
 }
 
-export function labToXyz(lab: Lab): RGB {
-  const fy = (lab[0] + 16) / 116;
-  const fx = fy + lab[1] / 500;
-  const fz = fy - lab[2] / 200;
-  return [labFInverse(fx) * D65[0], labFInverse(fy) * D65[1], labFInverse(fz) * D65[2]];
-}
-
 export function linearToLab(lin: RGB): Lab {
   return xyzToLab(linearToXyz(lin));
 }
@@ -91,11 +75,6 @@ export function linearToLab(lin: RGB): Lab {
 /** 8-bit sRGB to CIELAB (D65). */
 export function rgbToLab(rgb: RGB): Lab {
   return linearToLab(rgbToLinear(rgb));
-}
-
-/** CIELAB to 8-bit sRGB, clamped into gamut. */
-export function labToRgb(lab: Lab): RGB {
-  return linearToRgb(xyzToLinear(labToXyz(lab)));
 }
 
 /** L* (0-100) of an 8-bit sRGB colour: true perceptual lightness, not a channel average. */

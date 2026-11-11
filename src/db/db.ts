@@ -94,10 +94,6 @@ export async function getEntries(): Promise<Entry[]> {
   return all.sort((a, b) => b.date.localeCompare(a.date) || b.createdAt.localeCompare(a.createdAt));
 }
 
-export async function getEntry(id: string): Promise<Entry | undefined> {
-  return (await db()).get('entries', id);
-}
-
 export async function putEntry(entry: Entry): Promise<void> {
   await (await db()).put('entries', entry);
   changed();
@@ -177,10 +173,6 @@ export async function deletePaint(id: string): Promise<void> {
 export async function getProjects(): Promise<Project[]> {
   const all = await (await db()).getAll('projects');
   return all.sort((a, b) => b.createdAt.localeCompare(a.createdAt));
-}
-
-export async function getProject(id: string): Promise<Project | undefined> {
-  return (await db()).get('projects', id);
 }
 
 export async function putProject(project: Project): Promise<void> {
