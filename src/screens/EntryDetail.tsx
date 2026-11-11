@@ -84,7 +84,9 @@ export function EntryDetail({ id }: { id: string }) {
       const image = await buildCritiqueImage(entry, photo);
       const file = new File([image], `sketch-${entry.date}-for-critique.jpg`, { type: 'image/jpeg' });
       const outcome = await shareOrDownload(file, 'Sketch for critique');
-      if (outcome === 'downloaded') toast('Image saved to your downloads.');
+      if (outcome === 'downloaded') toast('Image saved.');
+    } catch (error) {
+      toast(error instanceof Error ? error.message : 'Could not build the image.');
     } finally {
       setBusy(false);
     }

@@ -57,7 +57,7 @@ export function SettingsScreen() {
           onClick={() =>
             void run('export', async () => {
               const outcome = await exportBackup();
-              return outcome === 'cancelled' ? null : outcome === 'shared' ? 'Backup shared. Save it to Files or iCloud Drive.' : 'Backup saved to your downloads.';
+              return outcome === 'cancelled' ? null : outcome === 'shared' ? 'Backup shared. Save it to Files or iCloud Drive.' : 'Backup saved.';
             })
           }
         >

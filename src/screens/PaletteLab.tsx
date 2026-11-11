@@ -119,7 +119,9 @@ export function PaletteLab() {
       const browns = paints.filter((p) => nearestColorName(rgbToLab(p.rgb)).family === 'brown');
       const blob = await buildSwatchChart(paints, roles?.blue, browns.length ? browns : roles ? [roles.brown] : []);
       const outcome = await shareOrDownload(new File([blob], 'swatch-chart-template.png', { type: 'image/png' }), 'Swatch chart template');
-      if (outcome === 'downloaded') toast('Chart saved to your downloads. Print it, or copy the grid onto cotton paper.');
+      if (outcome === 'downloaded') toast('Chart saved. Print it, or copy the grid onto cotton paper.');
+    } catch (error) {
+      toast(error instanceof Error ? error.message : 'Could not draw the chart.');
     } finally {
       setBuilding(false);
     }

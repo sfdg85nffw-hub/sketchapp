@@ -42,7 +42,7 @@ export function See() {
   return (
     <Screen label="See">
       <Header title="See" />
-      <LiveCamera onFreeze={(blob) => setPhoto({ blob, mode: 'identify' })} fallback={photoButtons} />
+      <LiveCamera onFreeze={(blob) => setPhoto({ blob, mode: 'identify' })} />
       <Divider />
       <div class="stack">
         {photoButtons}

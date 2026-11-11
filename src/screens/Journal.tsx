@@ -64,7 +64,10 @@ function Notice({ entries, settings, reviewMonth }: { entries: Entry[]; settings
             variant="primary"
             icon="share"
             onClick={() =>
-              void exportBackup().then((outcome) => outcome !== 'cancelled' && toast('Backup saved. Keep the file somewhere off this phone.'))
+              void exportBackup().then(
+                (outcome) => outcome !== 'cancelled' && toast('Backup saved. Keep the file somewhere off this phone.'),
+                (error: unknown) => toast(error instanceof Error ? error.message : 'The backup could not be saved.'),
+              )
             }
           >
             Back up now

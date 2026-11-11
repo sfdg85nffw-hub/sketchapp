@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'preact/hooks';
+import { EMBEDDED } from '../env';
 
 export interface Route {
   /** First path segment, e.g. "entry" for #/entry/abc. */
@@ -14,31 +15,66 @@ export function parseHash(hash: string): Route {
   return { name: name || 'journal', params, query: new URLSearchParams(search) };
 }
 
-/** Screens visited in this session, so Back knows whether there is anywhere to go back to. */
-const visited: string[] = [location.hash];
+/*
+ * Two modes. Normally the route lives in location.hash (#/entry/abc), so the Back
+ * gesture and reloads work. In the Artifact preview only plain #name hashes pass
+ * through the frame, so the route is kept in memory and in-app links are intercepted.
+ */
+const ROUTE_EVENT = 'app-route';
+let memoryHash = '#/journal';
 
-window.addEventListener('hashchange', () => {
-  const hash = location.hash;
-  if (visited.length > 1 && visited[visited.length - 2] === hash) visited.pop();
-  else if (visited[visited.length - 1] !== hash) visited.push(hash);
-});
+function currentHash(): string {
+  return EMBEDDED ? memoryHash : location.hash;
+}
+
+export function currentRoute(): Route {
+  return parseHash(currentHash());
+}
+
+/** Screens visited in this session, so Back knows whether there is anywhere to go back to. */
+const visited: string[] = [currentHash()];
+
+function announce(): void {
+  window.dispatchEvent(new Event(ROUTE_EVENT));
+}
+
+if (EMBEDDED) {
+  document.addEventListener('click', (event) => {
+    const link = (event.target as Element | null)?.closest?.('a[href^="#/"]');
+    if (!link || event.defaultPrevented) return;
+    event.preventDefault();
+    navigate(link.getAttribute('href')!.slice(1));
+  });
+} else {
+  window.addEventListener('hashchange', () => {
+    const hash = location.hash;
+    if (visited.length > 1 && visited[visited.length - 2] === hash) visited.pop();
+    else if (visited[visited.length - 1] !== hash) visited.push(hash);
+    announce();
+  });
+}
 
 export function useRoute(): Route {
-  const [route, setRoute] = useState(() => parseHash(location.hash));
+  const [route, setRoute] = useState(currentRoute);
   useEffect(() => {
-    const onChange = () => setRoute(parseHash(location.hash));
-    window.addEventListener('hashchange', onChange);
-    return () => window.removeEventListener('hashchange', onChange);
+    const onChange = () => setRoute(currentRoute());
+    window.addEventListener(ROUTE_EVENT, onChange);
+    return () => window.removeEventListener(ROUTE_EVENT, onChange);
   }, []);
   return route;
 }
 
 export function navigate(path: string, options: { replace?: boolean } = {}): void {
   const target = `#${path}`;
-  if (options.replace) {
+  if (EMBEDDED) {
+    if (options.replace) visited[visited.length - 1] = target;
+    else visited.push(target);
+    memoryHash = target;
+    announce();
+  } else if (options.replace) {
     visited[visited.length - 1] = target;
     history.replaceState(null, '', target);
-    window.dispatchEvent(new HashChangeEvent('hashchange'));
+    announce();
   } else {
     location.hash = target;
   }
@@ -46,6 +82,13 @@ export function navigate(path: string, options: { replace?: boolean } = {}): voi
 
 /** Go back one screen, or to `fallback` when this screen was the first one opened. */
 export function goBack(fallback: string): void {
-  if (visited.length > 1) history.back();
-  else navigate(fallback, { replace: true });
+  if (visited.length <= 1) {
+    navigate(fallback, { replace: true });
+  } else if (EMBEDDED) {
+    visited.pop();
+    memoryHash = visited[visited.length - 1]!;
+    announce();
+  } else {
+    history.back();
+  }
 }

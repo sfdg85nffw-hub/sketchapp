@@ -75,6 +75,7 @@ npm run typecheck
 npm run lint
 npm test             # unit tests (Vitest)
 npm run build        # production build into dist/, including the service worker
+npm run build:artifact  # the claude.ai Artifact preview build, into dist-artifact/
 npm run e2e          # Playwright, WebKit and Chromium at 390x844; needs: npx playwright install webkit chromium
 npm run screenshots  # regenerate docs/screenshots (run npm run build first)
 npm run simulate     # regenerate docs/palette-simulation-*.png and check contrast

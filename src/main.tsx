@@ -1,5 +1,6 @@
 import { render } from 'preact';
 import { App } from './App';
+import { EMBEDDED } from './env';
 import { loadSettings, subscribe, currentSettings } from './db/db';
 import { applyAppearance } from './ui/appearance';
 import './styles/tokens.css';
@@ -13,7 +14,7 @@ async function start(): Promise<void> {
   // Ask the browser not to evict our data under storage pressure. Safari grants this to installed apps.
   void navigator.storage?.persist?.();
 
-  if ('serviceWorker' in navigator && import.meta.env.PROD) {
+  if ('serviceWorker' in navigator && import.meta.env.PROD && !EMBEDDED) {
     const hadController = Boolean(navigator.serviceWorker.controller);
     void navigator.serviceWorker.register('./sw.js');
     navigator.serviceWorker.addEventListener('controllerchange', () => {

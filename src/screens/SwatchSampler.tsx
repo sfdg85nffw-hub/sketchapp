@@ -7,7 +7,7 @@ import { applyGains, gainsFromWhiteReference, NO_GAINS } from '../lib/color/whit
 import { averagePatch } from '../lib/image/filters';
 import { useLive } from '../ui/hooks';
 import { Button, Chips, FileButton, Header, toast } from '../ui/kit';
-import { navigate, parseHash } from '../ui/router';
+import { currentRoute, navigate } from '../ui/router';
 import { Screen } from '../ui/Screen';
 import { blobToImageData, FilteredCanvas } from '../ui/ValueTools';
 
@@ -15,7 +15,7 @@ import { blobToImageData, FilteredCanvas } from '../ui/ValueTools';
 export function SwatchSampler() {
   const paints = useLive(getPaints);
   const [data, setData] = useState<ImageData | null>(null);
-  const [currentId, setCurrentId] = useState<string | null>(() => parseHash(location.hash).query.get('paint'));
+  const [currentId, setCurrentId] = useState<string | null>(() => currentRoute().query.get('paint'));
   const [white, setWhite] = useState<RGB | null>(null);
   const [calibrating, setCalibrating] = useState(false);
   const [error, setError] = useState<string | null>(null);

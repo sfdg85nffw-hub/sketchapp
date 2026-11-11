@@ -1,5 +1,5 @@
-import type { ComponentChildren } from 'preact';
 import { useEffect, useRef, useState } from 'preact/hooks';
+import { EMBEDDED } from '../env';
 import type { ValueSteps } from '../lib/color/value';
 import { applyValueFilter, fitWithin } from '../lib/image/filters';
 import type { IconName } from './Icon';
@@ -133,11 +133,9 @@ type CameraState = 'idle' | 'starting' | 'live' | 'denied' | 'unavailable';
 interface LiveCameraProps {
   /** Called with a still frame when he freezes the view to identify a colour. */
   onFreeze: (frame: Blob) => void;
-  /** Rendered when the live camera cannot be used, e.g. a photo picker. */
-  fallback: ComponentChildren;
 }
 
-export function LiveCamera({ onFreeze, fallback }: LiveCameraProps) {
+export function LiveCamera({ onFreeze }: LiveCameraProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [state, setState] = useState<CameraState>('idle');
@@ -148,7 +146,8 @@ export function LiveCamera({ onFreeze, fallback }: LiveCameraProps) {
   const settings = useRef({ mode, steps });
   settings.current = { mode, steps };
 
-  const supported = typeof navigator.mediaDevices?.getUserMedia === 'function';
+  // The Artifact preview frame refuses the camera outright, so offer photos there instead.
+  const supported = !EMBEDDED && typeof navigator.mediaDevices?.getUserMedia === 'function';
 
   useEffect(() => {
     if (state !== 'starting') return;
@@ -220,11 +219,12 @@ export function LiveCamera({ onFreeze, fallback }: LiveCameraProps) {
       <div class="card stack" data-testid="camera-fallback">
         <h2>{state === 'denied' ? 'Camera access is off' : 'No live camera here'}</h2>
         <p class="muted">
-          {state === 'denied'
-            ? 'Allow the camera for this app in Settings › Safari › Camera, then come back. Until then, the same tools work on a photo.'
-            : 'This browser will not give the app a live camera feed. The same tools work on a photo.'}
+          {EMBEDDED
+            ? 'This preview cannot use the live camera; the installed app can. The same tools work on a photo, just below.'
+            : state === 'denied'
+            ? 'Allow the camera for this app in Settings › Safari › Camera, then come back. Until then, the same tools work on a photo, just below.'
+            : 'This browser will not give the app a live camera feed. The same tools work on a photo, just below.'}
         </p>
-        {fallback}
       </div>
     );
   }

@@ -19,13 +19,17 @@ function walk(dir: string): string[] {
  */
 function offlineServiceWorker(): Plugin {
   let outDir = 'dist';
+  let enabled = true;
   return {
     name: 'sketchbook-offline-sw',
     apply: 'build',
     configResolved(config) {
       outDir = config.build.outDir;
+      // The Artifact preview frame does not allow service workers.
+      enabled = config.mode !== 'artifact';
     },
     closeBundle() {
+      if (!enabled) return;
       const files = walk(outDir)
         .map((f) => relative(outDir, f).split(sep).join('/'))
         .filter((f) => f !== 'sw.js')

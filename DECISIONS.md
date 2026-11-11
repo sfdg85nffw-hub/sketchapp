@@ -63,6 +63,10 @@ Judgment calls made while building this, with the reasoning. Grouped by area.
 - **The share sheet is stubbed out in e2e** so exports take the download path; no test browser has a share sheet to drive.
 - **Lighthouse.** Lighthouse removed its PWA category in version 12, so there is no "PWA audit" to pass any more. The installability criteria it used to check (manifest with name, icons at 192 and 512, standalone display, a service worker that serves the start URL offline, viewport and apple-touch-icon) are asserted directly in `e2e/offline.spec.ts`.
 
+## The claude.ai preview
+
+- `npm run build:artifact` builds the same app into `dist-artifact/` for a claude.ai Artifact preview (`--mode artifact`, see `src/env.ts`). That frame refuses service workers, the camera and plain downloads, and only passes `#name` hashes, so in that build: no service worker, the route is kept in memory and in-app links are intercepted, the live camera shows the photo tools instead, and exports go through the viewer's own save prompt. Everything else is the same code.
+
 ## Cut or reduced
 
 - **PDF output for the swatch chart**: PNG only (see above).
