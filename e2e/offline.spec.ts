@@ -47,6 +47,7 @@ test('works with the network off after the first load', async ({ page }) => {
   const site = await serveDist();
   await page.goto(site.url);
   await page.getByRole('button', { name: 'Skip' }).click();
+  await expect(page.getByRole('dialog', { name: 'Welcome' })).toBeHidden();
   await expect(page.getByRole('heading', { name: 'Journal', level: 1 })).toBeVisible();
 
   // First load installs the service worker and precaches the whole app.

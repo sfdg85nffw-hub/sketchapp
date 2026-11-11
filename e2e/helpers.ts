@@ -23,6 +23,8 @@ export { expect };
 export async function start(page: Page): Promise<void> {
   await page.goto('/');
   await page.getByRole('button', { name: 'Skip' }).click();
+  // The welcome screen closes once the choice has been written to storage.
+  await expect(page.getByRole('dialog', { name: 'Welcome' })).toBeHidden();
   await expect(page.getByRole('heading', { name: 'Journal', level: 1 })).toBeVisible();
 }
 
