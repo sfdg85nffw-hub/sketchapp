@@ -87,8 +87,8 @@
   --r-md: 12px;
   --r-lg: 20px;
 
-  /* Minimum touch target: 48pt. */
-  --tap: 3rem;
+  /* Minimum touch target: 48pt, and larger when the text is. */
+  --tap: max(48px, 3rem);
   --tabbar-h: 4.25rem;
   --safe-top: env(safe-area-inset-top, 0px);
   --safe-bottom: env(safe-area-inset-bottom, 0px);

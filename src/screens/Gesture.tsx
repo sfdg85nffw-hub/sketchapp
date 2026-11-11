@@ -216,8 +216,8 @@ export function Gesture() {
           <Button icon={phase === 'running' ? 'pause' : 'play'} onClick={pauseOrResume}>
             {phase === 'running' ? 'Pause' : 'Resume'}
           </Button>
-          <Button variant="primary" icon="skip" onClick={next}>
-            Next pose
+          <Button variant="primary" icon="skip" aria-label="Next pose" onClick={next}>
+            Next
           </Button>
         </>
       }

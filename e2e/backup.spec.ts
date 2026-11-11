@@ -1,5 +1,4 @@
-import { expect, test } from '@playwright/test';
-import { captureSketch, start, toast } from './helpers';
+import { captureSketch, expect, start, test, toast } from './helpers';
 
 test('backup export and import round-trip restores sketches, photos and reflections', async ({ page }, testInfo) => {
   await start(page);

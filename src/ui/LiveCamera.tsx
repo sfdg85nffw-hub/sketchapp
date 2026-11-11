@@ -254,7 +254,11 @@ export function LiveCamera({ onFreeze, fallback }: LiveCameraProps) {
           </Button>
         </div>
       )}
-      {state === 'starting' && <p class="muted" role="status">Starting the camera…</p>}
+      {state === 'starting' && (
+        <p class="muted" role="status">
+          Starting the camera… If iOS asks, allow it. If nothing happens, the same tools work on a photo, just below.
+        </p>
+      )}
 
       {live && (
         <>

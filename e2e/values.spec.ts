@@ -1,5 +1,4 @@
-import { expect, test } from '@playwright/test';
-import { canvasGreys, REFERENCE, saveSketch, SKETCH, start, tapAt } from './helpers';
+import { canvasGreys, expect, REFERENCE, saveSketch, SKETCH, start, tapAt, test } from './helpers';
 
 /*
  * The fixture "sketch" is paper (L* about 93) with a black block, a mid-grey block
@@ -157,10 +156,11 @@ test('live value camera posterizes the feed, or falls back gracefully', async ({
   await expect(startButton.or(fallback)).toBeVisible();
 
   if (browserName !== 'chromium') {
-    // No camera in this engine's test build: the photo tools must still be offered.
+    // No camera in this engine's test build. Whatever the camera does, the same
+    // tools must stay one tap away on a photo.
     if (await startButton.isVisible()) await startButton.click();
-    await expect(fallback).toBeVisible();
-    await expect(fallback.getByText('Check values in a photo')).toBeVisible();
+    await page.getByTestId('values-input').last().setInputFiles(SKETCH);
+    await expect(page.getByTestId('tool-canvas')).toHaveAttribute('data-rendered', 'steps-3');
     return;
   }
 

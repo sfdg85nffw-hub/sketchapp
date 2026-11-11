@@ -1,5 +1,4 @@
-import { expect, test } from '@playwright/test';
-import { captureSketch, saveSketch, start } from './helpers';
+import { captureSketch, expect, saveSketch, start, test } from './helpers';
 
 test.describe('capture to journal', () => {
   test('photographs a page, rotates it, tags it, and files it under this month', async ({ page }) => {

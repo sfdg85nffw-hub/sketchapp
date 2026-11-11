@@ -165,7 +165,7 @@ describe('critique prompt', () => {
       weaknessTitles: WEAKNESSES.map((w) => w.title),
       focusTitles: [],
     });
-    expect(text).toContain('red-green colourblind');
+    expect(text).toContain('red-green colorblind');
     expect(text).toContain('Feeling word I was aiming for: tired');
     expect(text).toContain('135th St B/C Station');
     expect(text).toContain('Where is the cast shadow? Partly. Note: forgot the bench again');

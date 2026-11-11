@@ -14,7 +14,8 @@
     "e2e": "playwright test",
     "icons": "node scripts/generate-assets.mjs",
     "simulate": "tsx scripts/simulate-palette.ts",
-    "screenshots": "node scripts/screenshots.mjs"
+    "screenshots": "tsx scripts/screenshots.ts",
+    "fixtures": "node scripts/make-fixtures.mjs"
   },
   "dependencies": {
     "fflate": "^0.8.3",

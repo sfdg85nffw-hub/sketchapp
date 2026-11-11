@@ -1,10 +1,23 @@
-import { expect, type Locator, type Page } from '@playwright/test';
+import { test as base, expect, type Locator, type Page } from '@playwright/test';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 export const SKETCH = path.join(here, 'fixtures', 'sketch.jpg');
 export const REFERENCE = path.join(here, 'fixtures', 'reference.jpg');
+
+/**
+ * The test browsers have no share sheet to drive, so exports take the app's
+ * download path. On the phone the same code hands the file to the iOS share sheet.
+ */
+export const test = base.extend({
+  page: async ({ page }, use) => {
+    await page.addInitScript(() => Object.defineProperty(navigator, 'share', { value: undefined, configurable: true }));
+    await use(page);
+  },
+});
+
+export { expect };
 
 /** Open the app fresh and skip the welcome screens. */
 export async function start(page: Page): Promise<void> {

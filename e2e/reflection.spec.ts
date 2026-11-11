@@ -1,5 +1,4 @@
-import { expect, test } from '@playwright/test';
-import { captureSketch, start, toast } from './helpers';
+import { captureSketch, expect, start, test, toast } from './helpers';
 
 test.describe('post-sketch reflection', () => {
   test('offers prompts, records labelled ratings, and feeds the skills view', async ({ page }) => {
@@ -60,7 +59,7 @@ test.describe('post-sketch reflection', () => {
     await expect(toast(page, /copied|Could not copy/)).toBeVisible();
     if (browserName === 'chromium') {
       const text = await page.evaluate(() => navigator.clipboard.readText());
-      expect(text).toContain('red-green colourblind');
+      expect(text).toContain('red-green colorblind');
       expect(text).toContain('Partly.');
       expect(text).toContain('10. No emotional intent');
     }

@@ -1,5 +1,4 @@
-import { expect, test } from '@playwright/test';
-import { captureSketch, start } from './helpers';
+import { captureSketch, expect, start, test } from './helpers';
 
 test('works with the network off after the first load', async ({ page, context }) => {
   await start(page);

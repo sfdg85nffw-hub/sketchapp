@@ -36,9 +36,9 @@ export function buildCritiquePrompt(ctx: CritiqueContext): string {
     'Please critique the attached sketch. Be honest, specific and unsparing, but kind. No flattery.',
     '',
     'About me: adult, self-taught, drawing since June 2026. I sketch on location in New York in pen and ink',
-    '(Sailor Fude de Mannen bent-nib fountain pen, pocket Moleskine), sometimes with a 12-pan student watercolour',
-    'set and a water brush. I am red-green colourblind: I confuse reds, greens, browns and oranges, so I work by',
-    'value (light vs. dark) and warm vs. cool rather than by naming colours. I am studying Betty Edwards and',
+    '(Sailor Fude de Mannen bent-nib fountain pen, pocket Moleskine), sometimes with a 12-pan student watercolor',
+    'set and a water brush. I am red-green colorblind: I confuse reds, greens, browns and oranges, so I work by',
+    'value (light vs. dark) and warm vs. cool rather than by naming colors. I am studying Betty Edwards and',
     'Arthur Guptill. My perspective and solid forms are fairly sound. What I want most is for my drawings to have',
     'a point of view and a feeling, not just accuracy.',
     '',
@@ -54,6 +54,6 @@ export function buildCritiquePrompt(ctx: CritiqueContext): string {
     'Then tell me: (a) the one thing that works best, (b) the single change that would improve it most,',
     '(c) whether the drawing actually evokes the feeling word, and what specific choices of crop, value or line',
     'weight would serve it better, and (d) one short exercise to do before my next sketch.',
-    'If you discuss colour, describe it as warm/cool and light/dark, not by hue name alone.',
+    'If you discuss color, describe it as warm/cool and light/dark, not by hue name alone.',
   ].join('\n');
 }

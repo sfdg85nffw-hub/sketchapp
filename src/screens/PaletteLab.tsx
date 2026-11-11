@@ -185,7 +185,7 @@ export function PaletteLab() {
         hint={
           unnamed > 0
             ? `${unnamed} still have guessed names. Tap a pan and type the name printed on it.`
-            : 'Every pan is labeled. Top strip: full strength to water. Bottom strip: the same in gray.'
+            : 'Every pan is labeled. Top strip: full strength to water. Bottom strip: the same in grey.'
         }
       >
         <ul class="stack">

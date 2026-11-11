@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test } from './helpers';
 
 test.describe('onboarding', () => {
   test('is three screens, confirms colorblind mode, and ends on the journal', async ({ page }) => {

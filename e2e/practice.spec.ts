@@ -1,5 +1,4 @@
-import { expect, test } from '@playwright/test';
-import { expectNoHorizontalOverflow, SKETCH, start, toast } from './helpers';
+import { expect, expectNoHorizontalOverflow, SKETCH, start, test, toast } from './helpers';
 
 test.describe('practice', () => {
   test("today's practice proposes one to three drills and logs a rated drill with a photo", async ({ page }) => {
