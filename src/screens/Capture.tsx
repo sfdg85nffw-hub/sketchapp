@@ -4,7 +4,7 @@ import { decodeImage, FULL_CROP, storePhoto, type CropRect, type Rotation } from
 import { toDateKey } from '../lib/dates';
 import { newId } from '../lib/id';
 import type { Entry, SubjectId } from '../lib/types';
-import { setPendingCapture, takePendingCapture, type CaptureIntent } from '../ui/captureStore';
+import { takePendingCapture, type CaptureIntent } from '../ui/captureStore';
 import { CropEditor } from '../ui/CropEditor';
 import { EntryFields, type EntryDraft } from '../ui/EntryFields';
 import { useLive, useSettings } from '../ui/hooks';
@@ -212,7 +212,6 @@ export function Capture() {
             block
             icon="image"
             onFile={(file) => {
-              setPendingCapture(file, intent);
               setMoreOpen(false);
               setRotation(0);
               setCrop(null);
