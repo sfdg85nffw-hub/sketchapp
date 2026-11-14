@@ -12,27 +12,33 @@ import sharp from 'sharp';
 
 const UA = 'SketchbookCoachPackBuilder/1.0 (dev-time asset script; GitHub Actions)';
 const OUT = 'candidates';
-const CELL = 200;
-const COLS = 8;
-const ROWS = 6;
-const PER_QUERY = 20;
+const CELL = 160;
+const COLS = 10;
+const ROWS = 7;
+const PER_QUERY = 22;
 const only = process.argv.slice(2);
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-async function get(url, as = 'json', tries = 4) {
+const failures = new Map();
+
+async function get(url, as = 'json', tries = 6) {
   for (let attempt = 1; ; attempt++) {
     try {
       const response = await fetch(url, { headers: { 'User-Agent': UA, Accept: as === 'json' ? 'application/json' : 'image/*' } });
-      if (response.status === 429 || response.status >= 500) throw new Error(`HTTP ${response.status}`);
-      if (!response.ok) return null;
+      // The Met answers 403 when it wants a client to slow down, so that is retried too.
+      if ([403, 429].includes(response.status) || response.status >= 500) throw new Error(`HTTP ${response.status}`);
+      if (!response.ok) {
+        failures.set(response.status, (failures.get(response.status) ?? 0) + 1);
+        return null;
+      }
       return as === 'json' ? await response.json() : Buffer.from(await response.arrayBuffer());
     } catch (error) {
       if (attempt >= tries) {
-        console.warn(`gave up on ${url}: ${error.message}`);
+        failures.set(error.message, (failures.get(error.message) ?? 0) + 1);
         return null;
       }
-      await sleep(800 * attempt * attempt);
+      await sleep(1500 * attempt * attempt);
     }
   }
 }
@@ -64,6 +70,7 @@ export function acceptableLicense(name) {
 }
 
 async function metCandidate(id) {
+  await sleep(150);
   const o = await get(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${id}`);
   if (!o || !o.isPublicDomain || !o.primaryImage) return null;
   return {
@@ -148,7 +155,7 @@ mkdirSync(OUT, { recursive: true });
 
 for (const category of Object.keys(met)) {
   if (only.length && !only.includes(category)) continue;
-  const fromMet = (await pool(met[category] ?? [], 4, metCandidate)).filter(Boolean);
+  const fromMet = (await pool(met[category] ?? [], 2, metCandidate)).filter(Boolean);
   const fromCommons = [];
   for (const query of commons[category] ?? []) {
     fromCommons.push(...(await commonsCandidates(query)));
@@ -157,7 +164,7 @@ for (const category of Object.keys(met)) {
   const seen = new Set();
   const all = [...fromCommons, ...fromMet].filter((c) => !seen.has(c.id) && seen.add(c.id));
   all.forEach((c, i) => (c.n = i + 1));
-  console.log(`${category}: ${fromMet.length} from the Met, ${fromCommons.length} from Commons`);
+  console.log(`${category}: ${fromMet.length} of ${(met[category] ?? []).length} from the Met, ${fromCommons.length} from Commons; failures ${JSON.stringify([...failures])}`);
   for (let i = 0; i < all.length; i += COLS * ROWS) {
     await sheet(category, i / (COLS * ROWS) + 1, all.slice(i, i + COLS * ROWS));
   }
