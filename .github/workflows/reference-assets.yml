@@ -1,0 +1,69 @@
+name: Reference assets
+
+# Dev-time only. Builds the bundled photo packs from reference-packs/manifest.json and
+# commits them, or gathers candidate previews for curation. The app itself never
+# downloads anything from a third party.
+on:
+  workflow_dispatch:
+    inputs:
+      task:
+        description: What to do
+        type: choice
+        default: build-packs
+        options:
+          - build-packs
+          - harvest-candidates
+      only:
+        description: Limit to these categories (space separated), or leave empty for all
+        type: string
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: reference-assets-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install the image tools
+        run: npm install --no-save --no-package-lock sharp@0.34
+
+      - name: Gather candidates for curation
+        if: inputs.task == 'harvest-candidates'
+        run: |
+          node scripts/harvest-reference-candidates.mjs ${{ inputs.only }}
+          cd candidates
+          git init -q -b reference-candidates
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Candidate previews for curation (scratch, safe to delete)"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" reference-candidates
+
+      - name: Build the photo packs
+        if: inputs.task == 'build-packs'
+        run: node scripts/build-reference-packs.mjs ${{ inputs.only }}
+
+      - name: Commit the packs
+        if: inputs.task == 'build-packs'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/packs CREDITS.md reference-packs/build-report.json
+          if git diff --cached --quiet; then
+            echo "Nothing changed."
+          else
+            git commit -q -m "Rebuild bundled reference photo packs"
+            git push
+          fi

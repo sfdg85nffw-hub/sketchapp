@@ -2,7 +2,7 @@ import js from '@eslint/js';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
-  { ignores: ['dist', 'dist-artifact', 'node_modules', 'playwright-report', 'test-results', 'docs'] },
+  { ignores: ['dist', 'dist-artifact', 'candidates', 'node_modules', 'playwright-report', 'test-results', 'docs'] },
   js.configs.recommended,
   ...tseslint.configs.recommended,
   {
@@ -19,7 +19,9 @@ export default tseslint.config(
   },
   {
     files: ['scripts/**', 'e2e/**', '*.config.*'],
-    languageOptions: { globals: { process: 'readonly', console: 'readonly', URL: 'readonly', document: 'readonly', window: 'readonly' } },
+    languageOptions: {
+      globals: { process: 'readonly', console: 'readonly', URL: 'readonly', document: 'readonly', window: 'readonly', fetch: 'readonly', setTimeout: 'readonly', Buffer: 'readonly' },
+    },
     rules: { 'no-console': 'off' },
   },
 );
