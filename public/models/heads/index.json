@@ -1,0 +1,78 @@
+{
+ "license": "CC0-1.0",
+ "source": "MakeHuman base mesh and targets (makehumancommunity/mpfb2)",
+ "heads": [
+  {
+   "id": "head-01",
+   "label": "Woman, mid twenties",
+   "file": "head-01.glb",
+   "bytes": 33732
+  },
+  {
+   "id": "head-02",
+   "label": "Man, about thirty",
+   "file": "head-02.glb",
+   "bytes": 33188
+  },
+  {
+   "id": "head-03",
+   "label": "Man, about fifty",
+   "file": "head-03.glb",
+   "bytes": 33640
+  },
+  {
+   "id": "head-04",
+   "label": "Woman, about eighty",
+   "file": "head-04.glb",
+   "bytes": 33996
+  },
+  {
+   "id": "head-05",
+   "label": "Man, about seventy-five",
+   "file": "head-05.glb",
+   "bytes": 33472
+  },
+  {
+   "id": "head-06",
+   "label": "Woman, about thirty",
+   "file": "head-06.glb",
+   "bytes": 33908
+  },
+  {
+   "id": "head-07",
+   "label": "Man, mid thirties, slight smile",
+   "file": "head-07.glb",
+   "bytes": 33556
+  },
+  {
+   "id": "head-08",
+   "label": "Woman, mid forties, brows raised",
+   "file": "head-08.glb",
+   "bytes": 33996
+  },
+  {
+   "id": "head-09",
+   "label": "Boy, about ten",
+   "file": "head-09.glb",
+   "bytes": 34596
+  },
+  {
+   "id": "head-10",
+   "label": "Young woman, late teens",
+   "file": "head-10.glb",
+   "bytes": 34236
+  },
+  {
+   "id": "head-11",
+   "label": "Heavy-set man, about fifty-five",
+   "file": "head-11.glb",
+   "bytes": 33760
+  },
+  {
+   "id": "head-12",
+   "label": "Woman, about seventy, eyes narrowed",
+   "file": "head-12.glb",
+   "bytes": 33468
+  }
+ ]
+}
