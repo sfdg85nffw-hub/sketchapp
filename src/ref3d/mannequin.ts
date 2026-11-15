@@ -168,7 +168,7 @@ export async function renderMannequin(random: Random): Promise<RefImage> {
   scene.add(ground(80, Math.min(0.9, lighting.background + 0.4)));
   const target = v3([bounds.center[0], Math.max(0.35, bounds.center[1]), bounds.center[2]]);
   const radius = Math.max(0.7, bounds.radius + 0.1);
-  const camera = makeCamera({ ...spec, distance: framingDistance(radius, spec.focal, 1.02) * spec.distance }, target);
+  const camera = makeCamera({ ...spec, distance: framingDistance(radius, spec.focal, 0.92) * spec.distance * 0.82 }, target);
   const { keyDirection } = applyLighting(scene, lighting, { turn: spec.azimuth, center: target, radius: radius * 1.3 });
 
   const blob = await renderStill(scene, camera);

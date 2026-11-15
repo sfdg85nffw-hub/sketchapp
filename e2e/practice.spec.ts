@@ -34,23 +34,25 @@ test.describe('practice', () => {
     await expect(page.locator('a.thumb')).toHaveCount(1);
   });
 
-  test('gesture timer counts down through poses and finishes', async ({ page }) => {
+  test('the gesture timer is the From life mode of the session player', async ({ page }) => {
     await page.clock.install();
     await start(page);
     await page.goto('/#/gesture');
-    await page.getByRole('radiogroup', { name: 'Pose length' }).getByRole('radio', { name: '30 sec' }).click();
-    await page.getByRole('group', { name: 'Number of poses' }).getByRole('button', { name: '3', exact: true }).click();
-    await page.getByRole('button', { name: 'Start 3 poses' }).click();
+    await expect(page.getByRole('heading', { name: 'From life' })).toBeVisible();
+    await page.getByRole('group', { name: 'Time per image' }).getByRole('button', { name: '30s' }).click();
+    for (let i = 0; i < 3; i++) await page.getByRole('button', { name: 'Fewer images' }).click();
+    await expect(page.getByTestId('ref-count')).toHaveText('3');
+    await page.getByRole('button', { name: 'Start', exact: true }).click();
 
-    await expect(page.getByText('Pose 1 of 3')).toBeVisible();
-    await expect(page.getByRole('timer')).toHaveText('30');
+    await expect(page.getByText('From life · 1 of 3')).toBeVisible();
+    await expect(page.getByTestId('ref-countdown')).toHaveText('30');
     await page.clock.runFor(31_000);
-    await expect(page.getByText('Pose 2 of 3')).toBeVisible();
-    await page.getByRole('button', { name: 'Next pose' }).click();
-    await expect(page.getByText('Pose 3 of 3')).toBeVisible();
+    await expect(page.getByText('From life · 2 of 3')).toBeVisible();
+    await page.getByTestId('ref-skip').click();
+    await expect(page.getByText('From life · 3 of 3')).toBeVisible();
     await page.clock.runFor(31_000);
-    await expect(page.getByRole('heading', { name: '3 poses done' })).toBeVisible();
-    await expect(page.getByText('Photograph the page')).toBeVisible();
+    await expect(page.getByRole('heading', { name: '3 images done' })).toBeVisible();
+    await expect(page.getByText('Photograph your page')).toBeVisible();
   });
 
   test('a plan made before drawing pre-fills the next capture', async ({ page }) => {

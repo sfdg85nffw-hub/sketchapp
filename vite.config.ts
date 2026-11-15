@@ -58,6 +58,8 @@ export default defineConfig({
   build: {
     target: 'es2022',
     sourcemap: false,
+    // three.js is a lazy chunk, loaded only by the 3D reference modes.
+    chunkSizeWarningLimit: 800,
   },
   worker: { format: 'es' },
   test: {

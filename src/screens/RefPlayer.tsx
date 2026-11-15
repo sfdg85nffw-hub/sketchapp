@@ -425,7 +425,7 @@ function Player({ config }: { config: SessionConfig }) {
         {prefs.guidance && current && player.phase === 'look' && player.total - player.remaining < 3 && <p class="ref-guidance">{gestureReminder(player.index)}</p>}
         {current?.seed !== undefined && showsPicture && <span class="ref-seed">Seed {current.seed}</span>}
         {current?.credit && showsPicture && chrome && <p class="ref-credit">{current.credit.line}</p>}
-        {!current?.blob && current && mode === 'life' && <p class="ref-life">Line of action first. Weight, then limbs.</p>}
+        {!current?.blob && current && mode === 'life' && !prefs.guidance && <p class="ref-life">Line of action first. Weight, then limbs.</p>}
       </main>
 
       <div class="ref-progress" aria-hidden="true">
