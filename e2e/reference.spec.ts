@@ -147,6 +147,13 @@ test.describe('timed reference', () => {
     await startMode(page, 'mine', { seconds: 30 });
     await waitForPicture(page);
     await expect(title(page)).toHaveText('Your photo');
+    // Two photos for a ten-image session: it runs as two, and the second gets its full time.
+    await expect(page.getByText('My References · 1 of 2')).toBeVisible();
+    await page.getByTestId('ref-skip').click();
+    await expect(page.getByText('My References · 2 of 2')).toBeVisible();
+    await page.waitForTimeout(1500);
+    await expect(page.getByTestId('ref-player')).toBeVisible();
+    await expect(page.getByTestId('ref-countdown')).toHaveText(/^(29|30)$/);
   });
 
   test('Make available offline saves a photo pack into the offline cache', async ({ page }) => {

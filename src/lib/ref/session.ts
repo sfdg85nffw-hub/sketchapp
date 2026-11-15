@@ -82,6 +82,26 @@ export function planLength(plan: SessionPlan): number | null {
   return plan.endless ? null : plan.blocks.reduce((sum, b) => sum + b.count, 0);
 }
 
+/**
+ * The plan cut down to its first `count` images, for when the picture pool runs out
+ * before the plan does: the last picture still gets its full time, then the session ends.
+ */
+export function capPlan(plan: SessionPlan, count: number): SessionPlan {
+  const limit = Math.max(1, Math.floor(count));
+  const blocks: Block[] = [];
+  let left = limit;
+  for (const block of plan.blocks) {
+    if (left <= 0) break;
+    const take = Math.min(block.count, left);
+    blocks.push({ ...block, count: take });
+    left -= take;
+  }
+  // An endless plan repeats its last timing; carry that on to the cut.
+  const last = plan.blocks[plan.blocks.length - 1];
+  if (left > 0 && plan.endless && last) blocks.push({ ...last, count: left });
+  return { ...plan, blocks, endless: false };
+}
+
 /** Drawing time for image number `index` (from 0), or null once the plan is over. */
 export function secondsAt(plan: SessionPlan, index: number): number | null {
   if (index < 0) return null;

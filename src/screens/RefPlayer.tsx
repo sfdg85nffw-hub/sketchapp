@@ -5,6 +5,7 @@ import { toDateKey } from '../lib/dates';
 import { angleError, gradeGuess, nearestDialDirection } from '../lib/ref/lighting';
 import {
   addTime,
+  capPlan,
   endSession,
   formatClock,
   inFinalCountdown,
@@ -206,7 +207,9 @@ export function RefPlayer() {
 }
 
 function Player({ config }: { config: SessionConfig }) {
-  const { plan, prefs, mode } = config;
+  const { prefs, mode } = config;
+  // Cut short when the picture pool runs out before the plan does.
+  const [plan, setPlan] = useState(config.plan);
   const info = modeInfo(mode);
   const total = planLength(plan);
   const guessing = prefs.guessLight && (info.only3d || (info.threeD && prefs.source === '3d'));
@@ -232,6 +235,13 @@ function Player({ config }: { config: SessionConfig }) {
     void getShown().then((lastShown) => {
       source.current = createSource({ mode, source: prefs.source, material: prefs.material, lastShown, directionalLight: guessing });
       ensure(0);
+      // Fewer pictures than the plan asks for: say so in the count from the start.
+      void source.current
+        .size?.()
+        .then((size) => {
+          if (size > 0) setPlan((p) => (size < (planLength(p) ?? Infinity) ? capPlan(p, size) : p));
+        })
+        .catch(() => undefined);
     });
   }, []);
 
@@ -242,8 +252,13 @@ function Player({ config }: { config: SessionConfig }) {
       .next(seen.current)
       .then((image) => {
         if (!image) {
-          setError(index === 0 ? 'There is nothing to show yet. Add some photos first.' : null);
-          if (index > 0) setPlayer((p) => endSession(p));
+          if (index === 0) {
+            setError('There is nothing to show yet. Add some photos first.');
+            return;
+          }
+          // No picture number `index`: the one before it is the last, and keeps its full time.
+          setPlan((p) => capPlan(p, index));
+          setPlayer((p) => (p.index >= index ? endSession(p) : p));
           return;
         }
         seen.current.add(image.key);
@@ -298,7 +313,7 @@ function Player({ config }: { config: SessionConfig }) {
       });
     }, 200);
     return () => clearInterval(timer);
-  }, [held, player.paused, player.done, images, guessed]);
+  }, [held, player.paused, player.done, images, guessed, plan]);
 
   useEffect(() => {
     if (player.done && !ended) finish();

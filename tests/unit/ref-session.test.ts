@@ -3,6 +3,7 @@ import { pickNext, pruneShown } from '../../src/lib/ref/picker';
 import {
   addTime,
   BUILTIN_SEQUENCES,
+  capPlan,
   clampSeconds,
   describeBlocks,
   endSession,
@@ -78,6 +79,26 @@ describe('session timing', () => {
     expect(planSeconds(plan)).toBeNull();
     expect(secondsAt(plan, 0)).toBe(45);
     expect(secondsAt(plan, 400)).toBe(45);
+  });
+
+  it('cuts a plan to the pictures there are, keeping the last one\'s full time', () => {
+    const standard = capPlan(sequencePlan(BUILTIN_SEQUENCES[1]!), 12);
+    expect(planLength(standard)).toBe(12);
+    expect(secondsAt(standard, 11)).toBe(60);
+    expect(secondsAt(standard, 12)).toBeNull();
+
+    const endless = capPlan(simplePlan(45, null), 3);
+    expect(planLength(endless)).toBe(3);
+    expect(secondsAt(endless, 2)).toBe(45);
+
+    // Two photos for a ten-image session: the second still runs its whole minute, then the session ends.
+    const short = capPlan(simplePlan(60, 10), 2);
+    const state = skip(short, startSession(short)).state;
+    expect(state.index).toBe(1);
+    expect(state.remaining).toBe(60);
+    const step = run(short, state, 61);
+    expect(step.state.done).toBe(true);
+    expect(step.events).toContain('finish');
   });
 });
 

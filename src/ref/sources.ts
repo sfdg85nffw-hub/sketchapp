@@ -23,6 +23,8 @@ export interface SourceOptions {
 export interface RefSource {
   /** The next image, or null when the pool has run out this session. Throws with a readable message on failure. */
   next(seen: ReadonlySet<string>): Promise<RefImage | null>;
+  /** How many different pictures there are, for a fixed pool; absent when endless. */
+  size?(): Promise<number>;
 }
 
 function photoImage(item: PackItem, blob: Blob): RefImage {
@@ -40,6 +42,10 @@ function photoImage(item: PackItem, blob: Blob): RefImage {
 function poolSource<T>(load: () => Promise<{ key: string; value: T }[]>, make: (value: T) => Promise<RefImage>, lastShown: Record<string, string>): RefSource {
   let pool: Promise<{ key: string; value: T }[]> | null = null;
   return {
+    async size() {
+      pool ??= load();
+      return (await pool).length;
+    },
     async next(seen) {
       pool ??= load();
       const items = await pool;
