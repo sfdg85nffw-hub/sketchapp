@@ -138,6 +138,7 @@ for (const scheme of ['light', 'dark'] as const) {
   await page.locator('.toast').waitFor({ state: 'detached', timeout: 10_000 });
   await page.goto(`${BASE}/#/ref`);
   await page.getByTestId('myref-input').setInputFiles(['e2e/fixtures/sketch.jpg']);
+  await page.locator('.toast', { hasText: 'added' }).waitFor({ timeout: 10_000 });
   await page.locator('.toast').waitFor({ state: 'detached', timeout: 10_000 });
 
   for (const shot of SHOTS) {
