@@ -5624,7 +5624,638 @@
    ]
   },
   "urban": {
-   "items": []
+   "items": [
+    {
+     "id": "urban-commons-11874710",
+     "file": "urban/urban-commons-11874710.webp",
+     "thumb": "urban/urban-commons-11874710.jpg",
+     "width": 1400,
+     "height": 1104,
+     "bytes": 236306,
+     "thumbBytes": 34890,
+     "title": "HARDWARE STORE 316-318 Bowery at Bleeker Street in New York City by Berenice Abbott in 1938",
+     "author": "Berenice Abbott",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:HARDWARE_STORE_316-318_Bowery_at_Bleeker_Street_in_New_York_City_by_Berenice_Abbott_in_1938.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-11607217",
+     "file": "urban/urban-commons-11607217.webp",
+     "thumb": "urban/urban-commons-11607217.jpg",
+     "width": 1400,
+     "height": 1140,
+     "bytes": 171762,
+     "thumbBytes": 32898,
+     "title": "Blossom Restaurant; 103 Bowery by Berenice Abbott in 1935",
+     "author": "Berenice Abbott",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Blossom_Restaurant;_103_Bowery_by_Berenice_Abbott_in_1935.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-11848673",
+     "file": "urban/urban-commons-11848673.webp",
+     "thumb": "urban/urban-commons-11848673.jpg",
+     "width": 1400,
+     "height": 1076,
+     "bytes": 114354,
+     "thumbBytes": 27029,
+     "title": "Pike and Henry Street by Berenice Abbott in 1936",
+     "author": "Berenice Abbott",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Pike_and_Henry_Street_by_Berenice_Abbott_in_1936.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-52629497",
+     "file": "urban/urban-commons-52629497.webp",
+     "thumb": "urban/urban-commons-52629497.jpg",
+     "width": 1108,
+     "height": 1400,
+     "bytes": 66664,
+     "thumbBytes": 13786,
+     "title": "Seventh Avenue looking south from 35th Street, Manhattan (NYPL b13668355-482802)",
+     "author": "Berenice Abbott",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Seventh_Avenue_looking_south_from_35th_Street,_Manhattan_(NYPL_b13668355-482802).jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-123224948",
+     "file": "urban/urban-commons-123224948.webp",
+     "thumb": "urban/urban-commons-123224948.jpg",
+     "width": 1108,
+     "height": 1400,
+     "bytes": 363870,
+     "thumbBytes": 34956,
+     "title": "Construction old and new from 37 Washington Street, New York City (cropped)",
+     "author": "Berenice Abbott",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Construction_old_and_new_from_37_Washington_Street,_New_York_City_(cropped).jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-139908981",
+     "file": "urban/urban-commons-139908981.webp",
+     "thumb": "urban/urban-commons-139908981.jpg",
+     "width": 1400,
+     "height": 975,
+     "bytes": 124268,
+     "thumbBytes": 25761,
+     "title": "21 Fifth Avenue NYC Berenice Abbott",
+     "author": "Berenice Abbott",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:21_Fifth_Avenue_NYC_Berenice_Abbott.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-52633376",
+     "file": "urban/urban-commons-52633376.webp",
+     "thumb": "urban/urban-commons-52633376.jpg",
+     "width": 1164,
+     "height": 1400,
+     "bytes": 130322,
+     "thumbBytes": 28436,
+     "title": "Doorway- Tredwell House, 29 East 4th Street, Manhattan (NYPL b13668355-1219143)",
+     "author": "Berenice Abbott",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Doorway-_Tredwell_House,_29_East_4th_Street,_Manhattan_(NYPL_b13668355-1219143).jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-52629920",
+     "file": "urban/urban-commons-52629920.webp",
+     "thumb": "urban/urban-commons-52629920.jpg",
+     "width": 1400,
+     "height": 1094,
+     "bytes": 144694,
+     "thumbBytes": 27445,
+     "title": "Automat, 977 Eighth Avenue, Manhattan (NYPL b13668355-482752)",
+     "author": "Berenice Abbott",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Automat,_977_Eighth_Avenue,_Manhattan_(NYPL_b13668355-482752).jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-52630543",
+     "file": "urban/urban-commons-52630543.webp",
+     "thumb": "urban/urban-commons-52630543.jpg",
+     "width": 1134,
+     "height": 1400,
+     "bytes": 221748,
+     "thumbBytes": 28254,
+     "title": "Court of first model tenement house in New York, 72nd Street and First Avenue, Manhattan (NYPL b13668355-482804)",
+     "author": "Berenice Abbott",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Court_of_first_model_tenement_house_in_New_York,_72nd_Street_and_First_Avenue,_Manhattan_(NYPL_b13668355-482804).jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-11864423",
+     "file": "urban/urban-commons-11864423.webp",
+     "thumb": "urban/urban-commons-11864423.jpg",
+     "width": 1400,
+     "height": 1115,
+     "bytes": 142084,
+     "thumbBytes": 23863,
+     "title": "Manhattan Skyline I South Street and Jones Lane Manhattan by Berenice Abbott March 26 1936",
+     "author": "Berenice Abbott",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Manhattan_Skyline_I_South_Street_and_Jones_Lane_Manhattan_by_Berenice_Abbott_March_26_1936.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-52629705",
+     "file": "urban/urban-commons-52629705.webp",
+     "thumb": "urban/urban-commons-52629705.jpg",
+     "width": 1400,
+     "height": 1134,
+     "bytes": 220740,
+     "thumbBytes": 31617,
+     "title": "Oldest apartment house in New York City, 142 East 18th Street, Manhattan (NYPL b13668355-482703)",
+     "author": "Berenice Abbott",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Oldest_apartment_house_in_New_York_City,_142_East_18th_Street,_Manhattan_(NYPL_b13668355-482703).jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-52631976",
+     "file": "urban/urban-commons-52631976.webp",
+     "thumb": "urban/urban-commons-52631976.jpg",
+     "width": 1114,
+     "height": 1400,
+     "bytes": 109066,
+     "thumbBytes": 24444,
+     "title": "Hot Dog Stand, West St. and North Moore, Manhattan (NYPL b13668355-1219152)",
+     "author": "Berenice Abbott",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Hot_Dog_Stand,_West_St._and_North_Moore,_Manhattan_(NYPL_b13668355-1219152).jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-52628855",
+     "file": "urban/urban-commons-52628855.webp",
+     "thumb": "urban/urban-commons-52628855.jpg",
+     "width": 1400,
+     "height": 1103,
+     "bytes": 268518,
+     "thumbBytes": 29413,
+     "title": "Huts and unemployed, West Houston and Mercer St., Manhattan (NYPL b13668355-482853)",
+     "author": "Berenice Abbott",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Huts_and_unemployed,_West_Houston_and_Mercer_St.,_Manhattan_(NYPL_b13668355-482853).jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-52631949",
+     "file": "urban/urban-commons-52631949.webp",
+     "thumb": "urban/urban-commons-52631949.jpg",
+     "width": 1400,
+     "height": 1129,
+     "bytes": 155586,
+     "thumbBytes": 30137,
+     "title": "Radio Row, Cortlandt Street, Manhattan (NYPL b13668355-482561)",
+     "author": "Berenice Abbott",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Radio_Row,_Cortlandt_Street,_Manhattan_(NYPL_b13668355-482561).jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-52634481",
+     "file": "urban/urban-commons-52634481.webp",
+     "thumb": "urban/urban-commons-52634481.jpg",
+     "width": 1400,
+     "height": 1153,
+     "bytes": 147382,
+     "thumbBytes": 24885,
+     "title": "Ferry, Central Railroad of New Jersey, Foot of Liberty Street, Manhattan (NYPL b13668355-482838)",
+     "author": "Berenice Abbott",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Ferry,_Central_Railroad_of_New_Jersey,_Foot_of_Liberty_Street,_Manhattan_(NYPL_b13668355-482838).jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-52641516",
+     "file": "urban/urban-commons-52641516.webp",
+     "thumb": "urban/urban-commons-52641516.jpg",
+     "width": 1065,
+     "height": 1400,
+     "bytes": 40430,
+     "thumbBytes": 13670,
+     "title": "Consolidated Edison powerhouse, 666 1st Avenue, Manhattan (NYPL b13668355-482598)",
+     "author": "Berenice Abbott",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Consolidated_Edison_powerhouse,_666_1st_Avenue,_Manhattan_(NYPL_b13668355-482598).jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-52639511",
+     "file": "urban/urban-commons-52639511.webp",
+     "thumb": "urban/urban-commons-52639511.jpg",
+     "width": 1144,
+     "height": 1400,
+     "bytes": 128218,
+     "thumbBytes": 29147,
+     "title": "Salmagundi Club, 47 Fifth Avenue, Manhattan (NYPL b13668355-482716)",
+     "author": "Berenice Abbott",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Salmagundi_Club,_47_Fifth_Avenue,_Manhattan_(NYPL_b13668355-482716).jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-27307589",
+     "file": "urban/urban-commons-27307589.webp",
+     "thumb": "urban/urban-commons-27307589.jpg",
+     "width": 1139,
+     "height": 1400,
+     "bytes": 135136,
+     "thumbBytes": 23573,
+     "title": "Dewey Arch, New York",
+     "author": "Detroit Publishing Co. no. 011507",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Dewey_Arch,_New_York.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-4377384",
+     "file": "urban/urban-commons-4377384.webp",
+     "thumb": "urban/urban-commons-4377384.jpg",
+     "width": 1400,
+     "height": 1135,
+     "bytes": 131204,
+     "thumbBytes": 20688,
+     "title": "Night in Luna Park, Coney Island (1905)",
+     "author": "Detroit Publishing Co.",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Night_in_Luna_Park,_Coney_Island_(1905).jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-5947712",
+     "file": "urban/urban-commons-5947712.webp",
+     "thumb": "urban/urban-commons-5947712.jpg",
+     "width": 1400,
+     "height": 1015,
+     "bytes": 162706,
+     "thumbBytes": 23397,
+     "title": "State Street - Ithaca, New York",
+     "author": "Detroit Publishing Co.",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:State_Street_-_Ithaca,_New_York.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-11164208",
+     "file": "urban/urban-commons-11164208.webp",
+     "thumb": "urban/urban-commons-11164208.jpg",
+     "width": 1400,
+     "height": 1021,
+     "bytes": 135820,
+     "thumbBytes": 26394,
+     "title": "Fifth Avenue at Fifty-First Street, New York City, 1900",
+     "author": "Detroit Publishing Co.",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Fifth_Avenue_at_Fifty-First_Street,_New_York_City,_1900.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-11163553",
+     "file": "urban/urban-commons-11163553.webp",
+     "thumb": "urban/urban-commons-11163553.jpg",
+     "width": 1030,
+     "height": 1400,
+     "bytes": 178494,
+     "thumbBytes": 35053,
+     "title": "Looking up Broadway from Dey Street, New York City, 1900",
+     "author": "Detroit Publishing Co.",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Looking_up_Broadway_from_Dey_Street,_New_York_City,_1900.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-97179729",
+     "file": "urban/urban-commons-97179729.webp",
+     "thumb": "urban/urban-commons-97179729.jpg",
+     "width": 1400,
+     "height": 1251,
+     "bytes": 145414,
+     "thumbBytes": 26543,
+     "title": "5th Avenue looking north from 33rd Street, New York City 1908",
+     "author": "Unknown 1908 American photographer",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:5th_Avenue_looking_north_from_33rd_Street,_New_York_City_1908.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-11307703",
+     "file": "urban/urban-commons-11307703.webp",
+     "thumb": "urban/urban-commons-11307703.jpg",
+     "width": 1400,
+     "height": 1094,
+     "bytes": 255408,
+     "thumbBytes": 32554,
+     "title": "Mulberry Street, New York City (LOC det.4a08193)",
+     "author": "Detroit Publishing Co. , copyright claimant",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Mulberry_Street,_New_York_City_(LOC_det.4a08193).jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-11161227",
+     "file": "urban/urban-commons-11161227.webp",
+     "thumb": "urban/urban-commons-11161227.jpg",
+     "width": 1400,
+     "height": 1016,
+     "bytes": 285108,
+     "thumbBytes": 36478,
+     "title": "Bowery, New York City, ca. 1898",
+     "author": "Detroit Publishing Co.",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Bowery,_New_York_City,_ca._1898.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-11159057",
+     "file": "urban/urban-commons-11159057.webp",
+     "thumb": "urban/urban-commons-11159057.jpg",
+     "width": 1400,
+     "height": 1038,
+     "bytes": 233160,
+     "thumbBytes": 32187,
+     "title": "High Bridge, New York City, 1900",
+     "author": "Detroit Publishing Co.",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:High_Bridge,_New_York_City,_1900.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-25635037",
+     "file": "urban/urban-commons-25635037.webp",
+     "thumb": "urban/urban-commons-25635037.jpg",
+     "width": 1117,
+     "height": 1400,
+     "bytes": 130992,
+     "thumbBytes": 20361,
+     "title": "New Amsterdam Theater - 42nd St. - New York City 1905",
+     "author": "Detroit Publishing Company",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:New_Amsterdam_Theater_-_42nd_St._-_New_York_City_1905.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-129644839",
+     "file": "urban/urban-commons-129644839.webp",
+     "thumb": "urban/urban-commons-129644839.jpg",
+     "width": 1400,
+     "height": 682,
+     "bytes": 142858,
+     "thumbBytes": 21593,
+     "title": "Chinese, Thai, and Vietnamese restaurants side by side in the Flushing neighborhood of New York City's Queens borough,…",
+     "author": "Carol M. Highsmith",
+     "license": "CC0",
+     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "source": "https://commons.wikimedia.org/wiki/File:Chinese,_Thai,_and_Vietnamese_restaurants_side_by_side_in_the_Flushing_neighborhood_of_New_York_City%27s_Queens_borough,_by_Carol_M._Highsmith,_2018_-_master-pnp-highsm-53000-53088a.tif",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-97464359",
+     "file": "urban/urban-commons-97464359.webp",
+     "thumb": "urban/urban-commons-97464359.jpg",
+     "width": 962,
+     "height": 1400,
+     "bytes": 108790,
+     "thumbBytes": 19216,
+     "title": "No Known Restrictions Flatiron Building, New York City (Highsmith LOC) (6718401639)",
+     "author": "Carol M. Highsmith",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:No_Known_Restrictions_Flatiron_Building,_New_York_City_(Highsmith_LOC)_(6718401639).jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-29494271",
+     "file": "urban/urban-commons-29494271.webp",
+     "thumb": "urban/urban-commons-29494271.jpg",
+     "width": 1335,
+     "height": 1400,
+     "bytes": 125630,
+     "thumbBytes": 26584,
+     "title": "F4F Wildcat on exhibit in New York for War bond selling 1942",
+     "author": "Marjory Collins (1912-1985), photographer",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:F4F_Wildcat_on_exhibit_in_New_York_for_War_bond_selling_1942.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-31474661",
+     "file": "urban/urban-commons-31474661.webp",
+     "thumb": "urban/urban-commons-31474661.jpg",
+     "width": 1374,
+     "height": 1400,
+     "bytes": 141942,
+     "thumbBytes": 26976,
+     "title": "New York, New York. Statue of General Sherman at 59th Street 8d22254v",
+     "author": "Marjory Collins",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:New_York,_New_York._Statue_of_General_Sherman_at_59th_Street_8d22254v.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-67863061",
+     "file": "urban/urban-commons-67863061.webp",
+     "thumb": "urban/urban-commons-67863061.jpg",
+     "width": 1400,
+     "height": 1119,
+     "bytes": 55514,
+     "thumbBytes": 19671,
+     "title": "New York City street peddler; Rivington Street scene LCCN2016648987",
+     "author": "George Grantham Bain Collection",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:New_York_City_street_peddler;_Rivington_Street_scene_LCCN2016648987.tif",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-66860430",
+     "file": "urban/urban-commons-66860430.webp",
+     "thumb": "urban/urban-commons-66860430.jpg",
+     "width": 1400,
+     "height": 1026,
+     "bytes": 155910,
+     "thumbBytes": 24670,
+     "title": "German sailors parade on street, New York LCCN2014684284",
+     "author": "Bain News Service, publisher",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:German_sailors_parade_on_street,_New_York_LCCN2014684284.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-133182190",
+     "file": "urban/urban-commons-133182190.webp",
+     "thumb": "urban/urban-commons-133182190.jpg",
+     "width": 1400,
+     "height": 937,
+     "bytes": 138006,
+     "thumbBytes": 24189,
+     "title": "175th. Street subway station, The Bronx, New York, 12 Feb. 2008 (2262046705)",
+     "author": "Phillip Capper from Wellington, New Zealand",
+     "license": "CC BY 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:175th._Street_subway_station,_The_Bronx,_New_York,_12_Feb._2008_(2262046705).jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-54660704",
+     "file": "urban/urban-commons-54660704.webp",
+     "thumb": "urban/urban-commons-54660704.jpg",
+     "width": 1400,
+     "height": 915,
+     "bytes": 180168,
+     "thumbBytes": 26862,
+     "title": "86th Street Second Av. Subway Station Unveiled (31863534822)",
+     "author": "Metropolitan Transportation Authority of the State of New York",
+     "license": "CC BY 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:86th_Street_Second_Av._Subway_Station_Unveiled_(31863534822).jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    }
+   ]
   }
  }
 }
