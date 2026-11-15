@@ -4324,7 +4324,1304 @@
    ]
   },
   "hands-feet": {
-   "items": []
+   "items": [
+    {
+     "id": "hands-feet-commons-145384274",
+     "file": "hands-feet/hands-feet-commons-145384274.webp",
+     "thumb": "hands-feet/hands-feet-commons-145384274.jpg",
+     "width": 1400,
+     "height": 1068,
+     "bytes": 64506,
+     "thumbBytes": 16798,
+     "title": "Hands of Mr. Henry Brooks, 8c05678a",
+     "author": "Jack Delano",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Hands_of_Mr._Henry_Brooks,_8c05678a.tif",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "hands-feet-commons-147826000",
+     "file": "hands-feet/hands-feet-commons-147826000.webp",
+     "thumb": "hands-feet/hands-feet-commons-147826000.jpg",
+     "width": 1400,
+     "height": 995,
+     "bytes": 47186,
+     "thumbBytes": 14338,
+     "title": "Hands of Mrs. Andrew Ostermeyer, wife of a homesteader, Woodbury County, Iowa, 8a21551",
+     "author": "Russell Lee",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Hands_of_Mrs._Andrew_Ostermeyer,_wife_of_a_homesteader,_Woodbury_County,_Iowa,_8a21551.tif",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "hands-feet-commons-32474954",
+     "file": "hands-feet/hands-feet-commons-32474954.webp",
+     "thumb": "hands-feet/hands-feet-commons-32474954.jpg",
+     "width": 1400,
+     "height": 1039,
+     "bytes": 89770,
+     "thumbBytes": 21154,
+     "title": "Hands of Mrs. Julian Bachman, a gauge inspector 31909v",
+     "author": "Marjory Collins",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Hands_of_Mrs._Julian_Bachman,_a_gauge_inspector_31909v.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "hands-feet-commons-8357372",
+     "file": "hands-feet/hands-feet-commons-8357372.webp",
+     "thumb": "hands-feet/hands-feet-commons-8357372.jpg",
+     "width": 1400,
+     "height": 958,
+     "bytes": 227702,
+     "thumbBytes": 28496,
+     "title": "US Navy 090418-N-1057H-084 A Seabee assigned to Naval Mobile Construction Battalion (NMCB) 11 Detachment Horn of Africa…",
+     "author": "U.S. Navy photo by Mass Communication Specialist 2nd Class Erick S. Holmes",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:US_Navy_090418-N-1057H-084_A_Seabee_assigned_to_Naval_Mobile_Construction_Battalion_(NMCB)_11_Detachment_Horn_of_Africa_picks_up_rocks_used_for_the_construction_of_a_the_Walela_low-water_crossing_bridge.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "hands-feet-commons-200922650",
+     "file": "hands-feet/hands-feet-commons-200922650.webp",
+     "thumb": "hands-feet/hands-feet-commons-200922650.jpg",
+     "width": 1050,
+     "height": 1400,
+     "bytes": 45744,
+     "thumbBytes": 16832,
+     "title": "Elderly man shows hands with dirt stains after working outdoors on a sunny day",
+     "author": "Shixart1985",
+     "license": "CC BY 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Elderly_man_shows_hands_with_dirt_stains_after_working_outdoors_on_a_sunny_day.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "hands-feet-commons-110680825",
+     "file": "hands-feet/hands-feet-commons-110680825.webp",
+     "thumb": "hands-feet/hands-feet-commons-110680825.jpg",
+     "width": 1400,
+     "height": 895,
+     "bytes": 451994,
+     "thumbBytes": 32869,
+     "title": "Standing male feet",
+     "author": "Pure male feet",
+     "license": "CC0",
+     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "source": "https://commons.wikimedia.org/wiki/File:Standing_male_feet.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "hands-feet-commons-110875911",
+     "file": "hands-feet/hands-feet-commons-110875911.webp",
+     "thumb": "hands-feet/hands-feet-commons-110875911.jpg",
+     "width": 1400,
+     "height": 1050,
+     "bytes": 33634,
+     "thumbBytes": 12557,
+     "title": "Soles of Bare Feet",
+     "author": "Pure male feet",
+     "license": "CC0",
+     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "source": "https://commons.wikimedia.org/wiki/File:Soles_of_Bare_Feet.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "hands-feet-commons-182020633",
+     "file": "hands-feet/hands-feet-commons-182020633.webp",
+     "thumb": "hands-feet/hands-feet-commons-182020633.jpg",
+     "width": 1400,
+     "height": 1042,
+     "bytes": 116800,
+     "thumbBytes": 18613,
+     "title": "Male bare feet resting on a log",
+     "author": "Barefootboy2005",
+     "license": "CC0",
+     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "source": "https://commons.wikimedia.org/wiki/File:Male_bare_feet_resting_on_a_log.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "hands-feet-commons-122081738",
+     "file": "hands-feet/hands-feet-commons-122081738.webp",
+     "thumb": "hands-feet/hands-feet-commons-122081738.jpg",
+     "width": 1400,
+     "height": 1050,
+     "bytes": 103804,
+     "thumbBytes": 22951,
+     "title": "Barefoot,Soles",
+     "author": "Pure male feet",
+     "license": "CC0",
+     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "source": "https://commons.wikimedia.org/wiki/File:Barefoot,Soles.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "hands-feet-commons-138180226",
+     "file": "hands-feet/hands-feet-commons-138180226.webp",
+     "thumb": "hands-feet/hands-feet-commons-138180226.jpg",
+     "width": 1400,
+     "height": 1050,
+     "bytes": 305092,
+     "thumbBytes": 39260,
+     "title": "Barefoot in nature",
+     "author": "Earthpwz",
+     "license": "CC0",
+     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "source": "https://commons.wikimedia.org/wiki/File:Barefoot_in_nature.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "hands-feet-commons-148787731",
+     "file": "hands-feet/hands-feet-commons-148787731.webp",
+     "thumb": "hands-feet/hands-feet-commons-148787731.jpg",
+     "width": 1050,
+     "height": 1400,
+     "bytes": 142488,
+     "thumbBytes": 29862,
+     "title": "Barefoot on a tree trunk",
+     "author": "Galus24",
+     "license": "CC0",
+     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "source": "https://commons.wikimedia.org/wiki/File:Barefoot_on_a_tree_trunk.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "hands-feet-commons-149136377",
+     "file": "hands-feet/hands-feet-commons-149136377.webp",
+     "thumb": "hands-feet/hands-feet-commons-149136377.jpg",
+     "width": 1400,
+     "height": 1050,
+     "bytes": 341452,
+     "thumbBytes": 32720,
+     "title": "Barefoot walking on tree trunk",
+     "author": "Galus24",
+     "license": "CC BY 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Barefoot_walking_on_tree_trunk.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "hands-feet-commons-169650697",
+     "file": "hands-feet/hands-feet-commons-169650697.webp",
+     "thumb": "hands-feet/hands-feet-commons-169650697.jpg",
+     "width": 848,
+     "height": 1400,
+     "bytes": 125632,
+     "thumbBytes": 23006,
+     "title": "Barefoot on gravel on a barefoot path",
+     "author": "Affi-kun",
+     "license": "CC0",
+     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "source": "https://commons.wikimedia.org/wiki/File:Barefoot_on_gravel_on_a_barefoot_path.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "hands-feet-commons-122081614",
+     "file": "hands-feet/hands-feet-commons-122081614.webp",
+     "thumb": "hands-feet/hands-feet-commons-122081614.jpg",
+     "width": 1349,
+     "height": 1400,
+     "bytes": 119318,
+     "thumbBytes": 11229,
+     "title": "Toes ,Foot ,Barefoot",
+     "author": "Pure male feet",
+     "license": "CC0",
+     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "source": "https://commons.wikimedia.org/wiki/File:Toes_,Foot_,Barefoot.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "hands-feet-commons-202943133",
+     "file": "hands-feet/hands-feet-commons-202943133.webp",
+     "thumb": "hands-feet/hands-feet-commons-202943133.jpg",
+     "width": 1400,
+     "height": 935,
+     "bytes": 71472,
+     "thumbBytes": 21695,
+     "title": "Hands playing piano keys",
+     "author": "Candeadly",
+     "license": "CC BY 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Hands_playing_piano_keys.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "hands-feet-commons-117473046",
+     "file": "hands-feet/hands-feet-commons-117473046.webp",
+     "thumb": "hands-feet/hands-feet-commons-117473046.jpg",
+     "width": 1400,
+     "height": 933,
+     "bytes": 78606,
+     "thumbBytes": 21745,
+     "title": "Hupfeld piano played (2018-10-04 @pxhere 1546039)",
+     "author": "Unknown author Unknown author",
+     "license": "CC0",
+     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "source": "https://commons.wikimedia.org/wiki/File:Hupfeld_piano_played_(2018-10-04_@pxhere_1546039).jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "hands-feet-commons-118631558",
+     "file": "hands-feet/hands-feet-commons-118631558.webp",
+     "thumb": "hands-feet/hands-feet-commons-118631558.jpg",
+     "width": 933,
+     "height": 1400,
+     "bytes": 92366,
+     "thumbBytes": 14681,
+     "title": "PikiWiki Israel 87609 hands on keyboards",
+     "author": "דוידי ורדי",
+     "license": "CC BY 2.5",
+     "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+     "source": "https://commons.wikimedia.org/wiki/File:PikiWiki_Israel_87609_hands_on_keyboards.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "hands-feet-commons-191635654",
+     "file": "hands-feet/hands-feet-commons-191635654.webp",
+     "thumb": "hands-feet/hands-feet-commons-191635654.jpg",
+     "width": 1400,
+     "height": 935,
+     "bytes": 45638,
+     "thumbBytes": 12669,
+     "title": "A woman sits quietly indoors with her hands clasped together",
+     "author": "Shixart1985",
+     "license": "CC BY 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:A_woman_sits_quietly_indoors_with_her_hands_clasped_together.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "hands-feet-commons-187608985",
+     "file": "hands-feet/hands-feet-commons-187608985.webp",
+     "thumb": "hands-feet/hands-feet-commons-187608985.jpg",
+     "width": 1400,
+     "height": 934,
+     "bytes": 29702,
+     "thumbBytes": 11175,
+     "title": "Old man hand holding tool keys in garage",
+     "author": "Shixart1985",
+     "license": "CC BY 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Old_man_hand_holding_tool_keys_in_garage.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "hands-feet-commons-35986013",
+     "file": "hands-feet/hands-feet-commons-35986013.webp",
+     "thumb": "hands-feet/hands-feet-commons-35986013.jpg",
+     "width": 1400,
+     "height": 1031,
+     "bytes": 112210,
+     "thumbBytes": 13145,
+     "title": "M. Klein's hands, writing. Wellcome L0018664",
+     "author": "Unknown",
+     "license": "CC BY 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:M._Klein%27s_hands,_writing._Wellcome_L0018664.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "hands-feet-commons-75859701",
+     "file": "hands-feet/hands-feet-commons-75859701.webp",
+     "thumb": "hands-feet/hands-feet-commons-75859701.jpg",
+     "width": 1400,
+     "height": 574,
+     "bytes": 135698,
+     "thumbBytes": 11769,
+     "title": "Railroadfistorca00casw 0022",
+     "author": "Guy Rich Caswell",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Railroadfistorca00casw_0022.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "hands-feet-commons-51499352",
+     "file": "hands-feet/hands-feet-commons-51499352.webp",
+     "thumb": "hands-feet/hands-feet-commons-51499352.jpg",
+     "width": 1400,
+     "height": 971,
+     "bytes": 57414,
+     "thumbBytes": 13007,
+     "title": "DIG13785-031 (21705789729)",
+     "author": "LBJ Library",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:DIG13785-031_(21705789729).jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "hands-feet-commons-53630447",
+     "file": "hands-feet/hands-feet-commons-53630447.webp",
+     "thumb": "hands-feet/hands-feet-commons-53630447.jpg",
+     "width": 961,
+     "height": 1400,
+     "bytes": 99634,
+     "thumbBytes": 21875,
+     "title": "Description- A woman potter from Senegal hand shapes a pot in the Roots of Virginia Culture program at the 2007 Smithso…",
+     "author": "Smithsonian Institution",
+     "license": "Public domain",
+     "licenseUrl": "https://www.flickr.com/commons/usage/",
+     "source": "https://commons.wikimedia.org/wiki/File:Description-_A_woman_potter_from_Senegal_hand_shapes_a_pot_in_the_Roots_of_Virginia_Culture_program_at_the_2007_Smithsonian_Folklife_Festival_on_the_National_Mall,_Washington,_D.C._(2553825128).jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "hands-feet-commons-74048864",
+     "file": "hands-feet/hands-feet-commons-74048864.webp",
+     "thumb": "hands-feet/hands-feet-commons-74048864.jpg",
+     "width": 1400,
+     "height": 1120,
+     "bytes": 38768,
+     "thumbBytes": 12016,
+     "title": "The Wheel (135616779)",
+     "author": "Stephanie Pakrul",
+     "license": "CC BY 3.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:The_Wheel_(135616779).jpeg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "hands-feet-commons-197449559",
+     "file": "hands-feet/hands-feet-commons-197449559.webp",
+     "thumb": "hands-feet/hands-feet-commons-197449559.jpg",
+     "width": 1400,
+     "height": 920,
+     "bytes": 28620,
+     "thumbBytes": 11165,
+     "title": "Kulol charxida idish shakllantirish",
+     "author": "AIDEPCUL",
+     "license": "CC BY 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Kulol_charxida_idish_shakllantirish.png",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "hands-feet-commons-61903502",
+     "file": "hands-feet/hands-feet-commons-61903502.webp",
+     "thumb": "hands-feet/hands-feet-commons-61903502.jpg",
+     "width": 933,
+     "height": 1400,
+     "bytes": 207202,
+     "thumbBytes": 21746,
+     "title": "Feet covered in beach sand (Unsplash)",
+     "author": "Matthew Wheeler matthewwheeler",
+     "license": "CC0",
+     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "source": "https://commons.wikimedia.org/wiki/File:Feet_covered_in_beach_sand_(Unsplash).jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "hands-feet-met-283177",
+     "file": "hands-feet/hands-feet-met-283177.webp",
+     "thumb": "hands-feet/hands-feet-met-283177.jpg",
+     "width": 1400,
+     "height": 1380,
+     "bytes": 134006,
+     "thumbBytes": 26975,
+     "title": "[Button]",
+     "author": "Unknown",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/283177",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "hands-feet-commons-80612552",
+     "file": "hands-feet/hands-feet-commons-80612552.webp",
+     "thumb": "hands-feet/hands-feet-commons-80612552.jpg",
+     "width": 1400,
+     "height": 981,
+     "bytes": 101466,
+     "thumbBytes": 11351,
+     "title": "Harriet Goodhue Hosmer, Clasped Hands of Robert Browning and Elizabeth Barrett Browning, model 1853, NGA 132405",
+     "author": "Harriet Goodhue Hosmer",
+     "license": "CC0",
+     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "source": "https://commons.wikimedia.org/wiki/File:Harriet_Goodhue_Hosmer,_Clasped_Hands_of_Robert_Browning_and_Elizabeth_Barrett_Browning,_model_1853,_NGA_132405.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-commons-126154361",
+     "file": "hands-feet/hands-feet-commons-126154361.webp",
+     "thumb": "hands-feet/hands-feet-commons-126154361.jpg",
+     "width": 1400,
+     "height": 1058,
+     "bytes": 62828,
+     "thumbBytes": 15415,
+     "title": "The complete works of Mrs. E. B. Browning - p75",
+     "author": "Author Elizabeth Barrett Browning Publisher G. Sproul Sculptured from the life…",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:The_complete_works_of_Mrs._E._B._Browning_-_p75.png",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-met-242270",
+     "file": "hands-feet/hands-feet-met-242270.webp",
+     "thumb": "hands-feet/hands-feet-met-242270.jpg",
+     "width": 1400,
+     "height": 1400,
+     "bytes": 46022,
+     "thumbBytes": 9947,
+     "title": "Limestone hand holding a dove",
+     "author": "Cypriot",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/242270",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-met-204711",
+     "file": "hands-feet/hands-feet-met-204711.webp",
+     "thumb": "hands-feet/hands-feet-met-204711.jpg",
+     "width": 989,
+     "height": 1400,
+     "bytes": 27770,
+     "thumbBytes": 9706,
+     "title": "Hand with base",
+     "author": "Auguste Rodin",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/204711",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-met-242265",
+     "file": "hands-feet/hands-feet-met-242265.webp",
+     "thumb": "hands-feet/hands-feet-met-242265.jpg",
+     "width": 1400,
+     "height": 1400,
+     "bytes": 75824,
+     "thumbBytes": 13473,
+     "title": "Limestone hand holding a pomegranate",
+     "author": "Cypriot",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/242265",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-met-571619",
+     "file": "hands-feet/hands-feet-met-571619.webp",
+     "thumb": "hands-feet/hands-feet-met-571619.jpg",
+     "width": 1187,
+     "height": 438,
+     "bytes": 76554,
+     "thumbBytes": 13142,
+     "title": "A hand from a coffin?",
+     "author": "Unknown",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/571619",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-met-251366",
+     "file": "hands-feet/hands-feet-met-251366.webp",
+     "thumb": "hands-feet/hands-feet-met-251366.jpg",
+     "width": 1370,
+     "height": 1400,
+     "bytes": 55406,
+     "thumbBytes": 11505,
+     "title": "Bronze right foot and lower leg from a colossal statue",
+     "author": "Roman",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/251366",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-met-62375",
+     "file": "hands-feet/hands-feet-met-62375.webp",
+     "thumb": "hands-feet/hands-feet-met-62375.jpg",
+     "width": 1400,
+     "height": 1112,
+     "bytes": 48272,
+     "thumbBytes": 10852,
+     "title": "Hand of a Buddha",
+     "author": "Japan",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/62375",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-met-191046",
+     "file": "hands-feet/hands-feet-met-191046.webp",
+     "thumb": "hands-feet/hands-feet-met-191046.jpg",
+     "width": 1208,
+     "height": 1400,
+     "bytes": 43634,
+     "thumbBytes": 13087,
+     "title": "The Hand of God",
+     "author": "Auguste Rodin",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/191046",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-met-39991",
+     "file": "hands-feet/hands-feet-met-39991.webp",
+     "thumb": "hands-feet/hands-feet-met-39991.jpg",
+     "width": 656,
+     "height": 798,
+     "bytes": 24554,
+     "thumbBytes": 16994,
+     "title": "Fragment of a Statue",
+     "author": "Central Asia",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/39991",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-met-241016",
+     "file": "hands-feet/hands-feet-met-241016.webp",
+     "thumb": "hands-feet/hands-feet-met-241016.jpg",
+     "width": 1400,
+     "height": 1120,
+     "bytes": 39058,
+     "thumbBytes": 9516,
+     "title": "Terracotta fragment of a hand",
+     "author": "Cypriot",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/241016",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-met-242269",
+     "file": "hands-feet/hands-feet-met-242269.webp",
+     "thumb": "hands-feet/hands-feet-met-242269.jpg",
+     "width": 1400,
+     "height": 1400,
+     "bytes": 24758,
+     "thumbBytes": 6752,
+     "title": "Limestone arm with pieces of fruit (?) held in the hand",
+     "author": "Cypriot",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/242269",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-met-242272",
+     "file": "hands-feet/hands-feet-met-242272.webp",
+     "thumb": "hands-feet/hands-feet-met-242272.jpg",
+     "width": 1400,
+     "height": 1400,
+     "bytes": 73658,
+     "thumbBytes": 14037,
+     "title": "Limestone hand holding a bird",
+     "author": "Cypriot",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/242272",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-met-242267",
+     "file": "hands-feet/hands-feet-met-242267.webp",
+     "thumb": "hands-feet/hands-feet-met-242267.jpg",
+     "width": 1400,
+     "height": 1136,
+     "bytes": 34504,
+     "thumbBytes": 8693,
+     "title": "Limestone hand holding a disk and pieces of fruit",
+     "author": "Cypriot",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/242267",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-met-39948",
+     "file": "hands-feet/hands-feet-met-39948.webp",
+     "thumb": "hands-feet/hands-feet-met-39948.jpg",
+     "width": 706,
+     "height": 1008,
+     "bytes": 50592,
+     "thumbBytes": 17251,
+     "title": "Left Hand",
+     "author": "Central Asia",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/39948",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-met-242250",
+     "file": "hands-feet/hands-feet-met-242250.webp",
+     "thumb": "hands-feet/hands-feet-met-242250.jpg",
+     "width": 1400,
+     "height": 1050,
+     "bytes": 27852,
+     "thumbBytes": 7399,
+     "title": "Limestone statue fragment of a right hand holding a phiale (libation bowl)",
+     "author": "Cypriot",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/242250",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-met-472022",
+     "file": "hands-feet/hands-feet-met-472022.webp",
+     "thumb": "hands-feet/hands-feet-met-472022.jpg",
+     "width": 848,
+     "height": 1400,
+     "bytes": 32670,
+     "thumbBytes": 6405,
+     "title": "Pilgrim's Badge",
+     "author": "French",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/472022",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-met-244804",
+     "file": "hands-feet/hands-feet-met-244804.webp",
+     "thumb": "hands-feet/hands-feet-met-244804.jpg",
+     "width": 1400,
+     "height": 1400,
+     "bytes": 74556,
+     "thumbBytes": 12840,
+     "title": "Limestone right foot",
+     "author": "Cypriot",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/244804",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-met-466659",
+     "file": "hands-feet/hands-feet-met-466659.webp",
+     "thumb": "hands-feet/hands-feet-met-466659.jpg",
+     "width": 855,
+     "height": 1400,
+     "bytes": 33342,
+     "thumbBytes": 7967,
+     "title": "Reliquary, Hand from",
+     "author": "French",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/466659",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-met-11793",
+     "file": "hands-feet/hands-feet-met-11793.webp",
+     "thumb": "hands-feet/hands-feet-met-11793.jpg",
+     "width": 1400,
+     "height": 930,
+     "bytes": 22552,
+     "thumbBytes": 9520,
+     "title": "Lady's Hand and Flowers",
+     "author": "American",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/11793",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-met-204710",
+     "file": "hands-feet/hands-feet-met-204710.webp",
+     "thumb": "hands-feet/hands-feet-met-204710.jpg",
+     "width": 1252,
+     "height": 1400,
+     "bytes": 18090,
+     "thumbBytes": 5122,
+     "title": "Hand with base",
+     "author": "Auguste Rodin",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/204710",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-met-247428",
+     "file": "hands-feet/hands-feet-met-247428.webp",
+     "thumb": "hands-feet/hands-feet-met-247428.jpg",
+     "width": 1400,
+     "height": 1400,
+     "bytes": 32472,
+     "thumbBytes": 12254,
+     "title": "Terracotta guttus (flask with handle and spout)",
+     "author": "Greek, South Italian, Campanian",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/247428",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-met-242256",
+     "file": "hands-feet/hands-feet-met-242256.webp",
+     "thumb": "hands-feet/hands-feet-met-242256.jpg",
+     "width": 1400,
+     "height": 1400,
+     "bytes": 57112,
+     "thumbBytes": 11413,
+     "title": "Limestone hand holding a sword (?)",
+     "author": "Cypriot",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/242256",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-met-207496",
+     "file": "hands-feet/hands-feet-met-207496.webp",
+     "thumb": "hands-feet/hands-feet-met-207496.jpg",
+     "width": 999,
+     "height": 1400,
+     "bytes": 34078,
+     "thumbBytes": 9444,
+     "title": "The Clenched Left Hand (Study for Hand of Pierre de Wiessant)",
+     "author": "Auguste Rodin",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/207496",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-met-39307",
+     "file": "hands-feet/hands-feet-met-39307.webp",
+     "thumb": "hands-feet/hands-feet-met-39307.jpg",
+     "width": 925,
+     "height": 425,
+     "bytes": 18752,
+     "thumbBytes": 8820,
+     "title": "Right Hand",
+     "author": "Thailand",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/39307",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-met-241890",
+     "file": "hands-feet/hands-feet-met-241890.webp",
+     "thumb": "hands-feet/hands-feet-met-241890.jpg",
+     "width": 1400,
+     "height": 1400,
+     "bytes": 89836,
+     "thumbBytes": 13928,
+     "title": "Limestone plinth with the feet of a male statuette",
+     "author": "Cypriot",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/241890",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-met-252959",
+     "file": "hands-feet/hands-feet-met-252959.webp",
+     "thumb": "hands-feet/hands-feet-met-252959.jpg",
+     "width": 1050,
+     "height": 1400,
+     "bytes": 28516,
+     "thumbBytes": 8906,
+     "title": "Marble right foot wearing a sandal",
+     "author": "Roman",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/252959",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-met-251036",
+     "file": "hands-feet/hands-feet-met-251036.webp",
+     "thumb": "hands-feet/hands-feet-met-251036.jpg",
+     "width": 1400,
+     "height": 1050,
+     "bytes": 16792,
+     "thumbBytes": 7493,
+     "title": "Marble left hand holding a scroll",
+     "author": "Roman",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/251036",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-met-19446",
+     "file": "hands-feet/hands-feet-met-19446.webp",
+     "thumb": "hands-feet/hands-feet-met-19446.jpg",
+     "width": 1400,
+     "height": 1050,
+     "bytes": 20614,
+     "thumbBytes": 6521,
+     "title": "Right Hand of Abraham Lincoln",
+     "author": "Leonard Wells Volk",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/19446",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-met-244058",
+     "file": "hands-feet/hands-feet-met-244058.webp",
+     "thumb": "hands-feet/hands-feet-met-244058.jpg",
+     "width": 1400,
+     "height": 1400,
+     "bytes": 25446,
+     "thumbBytes": 7972,
+     "title": "Limestone votive (?) foot with a sandal",
+     "author": "Greek or Roman, Cypriot",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/244058",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-met-329847",
+     "file": "hands-feet/hands-feet-met-329847.webp",
+     "thumb": "hands-feet/hands-feet-met-329847.jpg",
+     "width": 1400,
+     "height": 1050,
+     "bytes": 59756,
+     "thumbBytes": 10814,
+     "title": "Hand of a Seated Deity",
+     "author": "Unknown",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/329847",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-met-251536",
+     "file": "hands-feet/hands-feet-met-251536.webp",
+     "thumb": "hands-feet/hands-feet-met-251536.jpg",
+     "width": 1400,
+     "height": 1394,
+     "bytes": 30828,
+     "thumbBytes": 8948,
+     "title": "Foot fragment",
+     "author": "Unknown",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/251536",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-met-549701",
+     "file": "hands-feet/hands-feet-met-549701.webp",
+     "thumb": "hands-feet/hands-feet-met-549701.jpg",
+     "width": 1400,
+     "height": 1050,
+     "bytes": 30654,
+     "thumbBytes": 7711,
+     "title": "Sculptor's model/votive of a fist",
+     "author": "Unknown",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/549701",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-met-248729",
+     "file": "hands-feet/hands-feet-met-248729.webp",
+     "thumb": "hands-feet/hands-feet-met-248729.jpg",
+     "width": 1400,
+     "height": 1383,
+     "bytes": 88782,
+     "thumbBytes": 16032,
+     "title": "Bronze toes and instep of an over-lifesized right foot",
+     "author": "Roman",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/248729",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-met-254989",
+     "file": "hands-feet/hands-feet-met-254989.webp",
+     "thumb": "hands-feet/hands-feet-met-254989.jpg",
+     "width": 1400,
+     "height": 933,
+     "bytes": 13592,
+     "thumbBytes": 6090,
+     "title": "Marble right hand and forearm",
+     "author": "Greek",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/254989",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-met-251466",
+     "file": "hands-feet/hands-feet-met-251466.webp",
+     "thumb": "hands-feet/hands-feet-met-251466.jpg",
+     "width": 1400,
+     "height": 1400,
+     "bytes": 43420,
+     "thumbBytes": 9506,
+     "title": "Terracotta aryballos (perfume vase) in the form of a sandaled right foot",
+     "author": "Rhodian",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/251466",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-met-244803",
+     "file": "hands-feet/hands-feet-met-244803.webp",
+     "thumb": "hands-feet/hands-feet-met-244803.jpg",
+     "width": 1400,
+     "height": 1050,
+     "bytes": 32268,
+     "thumbBytes": 7210,
+     "title": "Limestone statue fragment of a hand holding a pyxis or bobbin",
+     "author": "Cypriot",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/244803",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-met-257574",
+     "file": "hands-feet/hands-feet-met-257574.webp",
+     "thumb": "hands-feet/hands-feet-met-257574.jpg",
+     "width": 1400,
+     "height": 1400,
+     "bytes": 53748,
+     "thumbBytes": 11719,
+     "title": "Bronze hand of a boxer",
+     "author": "Roman",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/257574",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "sculpture"
+     }
+    },
+    {
+     "id": "hands-feet-commons-81442821",
+     "file": "hands-feet/hands-feet-commons-81442821.webp",
+     "thumb": "hands-feet/hands-feet-commons-81442821.jpg",
+     "width": 1400,
+     "height": 992,
+     "bytes": 258014,
+     "thumbBytes": 12347,
+     "title": "Giacomo Cavedone, Clasped Hands (verso), c. 1612, NGA 79418",
+     "author": "Giacomo Cavedone",
+     "license": "CC0",
+     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "source": "https://commons.wikimedia.org/wiki/File:Giacomo_Cavedone,_Clasped_Hands_(verso),_c._1612,_NGA_79418.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "drawing"
+     }
+    },
+    {
+     "id": "hands-feet-commons-6227771",
+     "file": "hands-feet/hands-feet-commons-6227771.webp",
+     "thumb": "hands-feet/hands-feet-commons-6227771.jpg",
+     "width": 1046,
+     "height": 1400,
+     "bytes": 337314,
+     "thumbBytes": 16017,
+     "title": "Studies of the Hands of Erasmus, by Hans Holbein the Younger",
+     "author": "Hans Holbein the Younger",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Studies_of_the_Hands_of_Erasmus,_by_Hans_Holbein_the_Younger.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "drawing"
+     }
+    },
+    {
+     "id": "hands-feet-commons-152953",
+     "file": "hands-feet/hands-feet-commons-152953.webp",
+     "thumb": "hands-feet/hands-feet-commons-152953.jpg",
+     "width": 1151,
+     "height": 1400,
+     "bytes": 77264,
+     "thumbBytes": 20498,
+     "title": "Portait of the astronomer Nicholas Kratzer (detail, hands and astronomic tools) - Hans Holbein d. J. (Louvre Museum)",
+     "author": "Hans Holbein the Younger",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Portait_of_the_astronomer_Nicholas_Kratzer_(detail,_hands_and_astronomic_tools)_-_Hans_Holbein_d._J._(Louvre_Museum).jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "drawing"
+     }
+    },
+    {
+     "id": "hands-feet-met-338103",
+     "file": "hands-feet/hands-feet-met-338103.webp",
+     "thumb": "hands-feet/hands-feet-met-338103.jpg",
+     "width": 1400,
+     "height": 1055,
+     "bytes": 92848,
+     "thumbBytes": 13398,
+     "title": "Studies of Hands",
+     "author": "Andrea del Sarto (Andrea d'Agnolo)",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/338103",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "drawing"
+     }
+    },
+    {
+     "id": "hands-feet-met-854147",
+     "file": "hands-feet/hands-feet-met-854147.webp",
+     "thumb": "hands-feet/hands-feet-met-854147.jpg",
+     "width": 1400,
+     "height": 1398,
+     "bytes": 54250,
+     "thumbBytes": 13150,
+     "title": "Study of Hands for \"Christ Among the Doctors\"",
+     "author": "Jean Auguste Dominique Ingres",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/854147",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "drawing"
+     }
+    },
+    {
+     "id": "hands-feet-met-338419",
+     "file": "hands-feet/hands-feet-met-338419.webp",
+     "thumb": "hands-feet/hands-feet-met-338419.jpg",
+     "width": 1207,
+     "height": 1400,
+     "bytes": 125538,
+     "thumbBytes": 17962,
+     "title": "Studies for a Figure of Saint Francis Kneeling in a Three-Quarter View and for His Hands (recto); Studies for a Figure…",
+     "author": "Annibale Carracci",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/338419",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "drawing"
+     }
+    },
+    {
+     "id": "hands-feet-met-355535",
+     "file": "hands-feet/hands-feet-met-355535.webp",
+     "thumb": "hands-feet/hands-feet-met-355535.jpg",
+     "width": 921,
+     "height": 1400,
+     "bytes": 63434,
+     "thumbBytes": 9276,
+     "title": "Study of Legs",
+     "author": "Romain Cazes",
+     "license": "CC0",
+     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "source": "https://www.metmuseum.org/art/collection/search/355535",
+     "credit": "The Metropolitan Museum of Art, Open Access",
+     "tags": {
+      "kind": "drawing"
+     }
+    }
+   ]
   },
   "urban": {
    "items": []

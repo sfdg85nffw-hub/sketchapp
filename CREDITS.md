@@ -349,8 +349,80 @@ The wooden mannequin the motion drives is built from code (spheres, ellipsoids, 
 - [Terracotta statuette of a draped, standing woman](https://www.metmuseum.org/art/collection/search/247532), Greek, Boeotian. CC0, The Metropolitan Museum of Art, Open Access. `pose-met-247532`
 - [Terracotta statuette of a standing girl](https://www.metmuseum.org/art/collection/search/250741), Greek, probably Boeotian. CC0, The Metropolitan Museum of Art, Open Access. `pose-met-250741`
 
-### Hands and feet (0)
+### Hands and feet (72)
 
+- [Hands of Mr. Henry Brooks, 8c05678a](https://commons.wikimedia.org/wiki/File:Hands_of_Mr._Henry_Brooks,_8c05678a.tif), Jack Delano. Public domain, Wikimedia Commons. `hands-feet-commons-145384274`
+- [Hands of Mrs. Andrew Ostermeyer, wife of a homesteader, Woodbury County, Iowa, 8a21551](https://commons.wikimedia.org/wiki/File:Hands_of_Mrs._Andrew_Ostermeyer,_wife_of_a_homesteader,_Woodbury_County,_Iowa,_8a21551.tif), Russell Lee. Public domain, Wikimedia Commons. `hands-feet-commons-147826000`
+- [Hands of Mrs. Julian Bachman, a gauge inspector 31909v](https://commons.wikimedia.org/wiki/File:Hands_of_Mrs._Julian_Bachman,_a_gauge_inspector_31909v.jpg), Marjory Collins. Public domain, Wikimedia Commons. `hands-feet-commons-32474954`
+- [US Navy 090418-N-1057H-084 A Seabee assigned to Naval Mobile Construction Battalion (NMCB) 11 Detachment Horn of Africa…](https://commons.wikimedia.org/wiki/File:US_Navy_090418-N-1057H-084_A_Seabee_assigned_to_Naval_Mobile_Construction_Battalion_(NMCB)_11_Detachment_Horn_of_Africa_picks_up_rocks_used_for_the_construction_of_a_the_Walela_low-water_crossing_bridge.jpg), U.S. Navy photo by Mass Communication Specialist 2nd Class Erick S. Holmes. Public domain, Wikimedia Commons. `hands-feet-commons-8357372`
+- [Elderly man shows hands with dirt stains after working outdoors on a sunny day](https://commons.wikimedia.org/wiki/File:Elderly_man_shows_hands_with_dirt_stains_after_working_outdoors_on_a_sunny_day.jpg), Shixart1985. CC BY 2.0, Wikimedia Commons. `hands-feet-commons-200922650`
+- [Standing male feet](https://commons.wikimedia.org/wiki/File:Standing_male_feet.jpg), Pure male feet. CC0, Wikimedia Commons. `hands-feet-commons-110680825`
+- [Soles of Bare Feet](https://commons.wikimedia.org/wiki/File:Soles_of_Bare_Feet.jpg), Pure male feet. CC0, Wikimedia Commons. `hands-feet-commons-110875911`
+- [Male bare feet resting on a log](https://commons.wikimedia.org/wiki/File:Male_bare_feet_resting_on_a_log.jpg), Barefootboy2005. CC0, Wikimedia Commons. `hands-feet-commons-182020633`
+- [Barefoot,Soles](https://commons.wikimedia.org/wiki/File:Barefoot,Soles.jpg), Pure male feet. CC0, Wikimedia Commons. `hands-feet-commons-122081738`
+- [Barefoot in nature](https://commons.wikimedia.org/wiki/File:Barefoot_in_nature.jpg), Earthpwz. CC0, Wikimedia Commons. `hands-feet-commons-138180226`
+- [Barefoot on a tree trunk](https://commons.wikimedia.org/wiki/File:Barefoot_on_a_tree_trunk.jpg), Galus24. CC0, Wikimedia Commons. `hands-feet-commons-148787731`
+- [Barefoot walking on tree trunk](https://commons.wikimedia.org/wiki/File:Barefoot_walking_on_tree_trunk.jpg), Galus24. CC BY 4.0, Wikimedia Commons. `hands-feet-commons-149136377`
+- [Barefoot on gravel on a barefoot path](https://commons.wikimedia.org/wiki/File:Barefoot_on_gravel_on_a_barefoot_path.jpg), Affi-kun. CC0, Wikimedia Commons. `hands-feet-commons-169650697`
+- [Toes ,Foot ,Barefoot](https://commons.wikimedia.org/wiki/File:Toes_,Foot_,Barefoot.jpg), Pure male feet. CC0, Wikimedia Commons. `hands-feet-commons-122081614`
+- [Hands playing piano keys](https://commons.wikimedia.org/wiki/File:Hands_playing_piano_keys.jpg), Candeadly. CC BY 4.0, Wikimedia Commons. `hands-feet-commons-202943133`
+- [Hupfeld piano played (2018-10-04 @pxhere 1546039)](https://commons.wikimedia.org/wiki/File:Hupfeld_piano_played_(2018-10-04_@pxhere_1546039).jpg), Unknown author Unknown author. CC0, Wikimedia Commons. `hands-feet-commons-117473046`
+- [PikiWiki Israel 87609 hands on keyboards](https://commons.wikimedia.org/wiki/File:PikiWiki_Israel_87609_hands_on_keyboards.jpg), דוידי ורדי. CC BY 2.5, Wikimedia Commons. `hands-feet-commons-118631558`
+- [A woman sits quietly indoors with her hands clasped together](https://commons.wikimedia.org/wiki/File:A_woman_sits_quietly_indoors_with_her_hands_clasped_together.jpg), Shixart1985. CC BY 2.0, Wikimedia Commons. `hands-feet-commons-191635654`
+- [Old man hand holding tool keys in garage](https://commons.wikimedia.org/wiki/File:Old_man_hand_holding_tool_keys_in_garage.jpg), Shixart1985. CC BY 2.0, Wikimedia Commons. `hands-feet-commons-187608985`
+- [M. Klein's hands, writing. Wellcome L0018664](https://commons.wikimedia.org/wiki/File:M._Klein%27s_hands,_writing._Wellcome_L0018664.jpg), Unknown. CC BY 4.0, Wikimedia Commons. `hands-feet-commons-35986013`
+- [Railroadfistorca00casw 0022](https://commons.wikimedia.org/wiki/File:Railroadfistorca00casw_0022.jpg), Guy Rich Caswell. Public domain, Wikimedia Commons. `hands-feet-commons-75859701`
+- [DIG13785-031 (21705789729)](https://commons.wikimedia.org/wiki/File:DIG13785-031_(21705789729).jpg), LBJ Library. Public domain, Wikimedia Commons. `hands-feet-commons-51499352`
+- [Description- A woman potter from Senegal hand shapes a pot in the Roots of Virginia Culture program at the 2007 Smithso…](https://commons.wikimedia.org/wiki/File:Description-_A_woman_potter_from_Senegal_hand_shapes_a_pot_in_the_Roots_of_Virginia_Culture_program_at_the_2007_Smithsonian_Folklife_Festival_on_the_National_Mall,_Washington,_D.C._(2553825128).jpg), Smithsonian Institution. Public domain, Wikimedia Commons. `hands-feet-commons-53630447`
+- [The Wheel (135616779)](https://commons.wikimedia.org/wiki/File:The_Wheel_(135616779).jpeg), Stephanie Pakrul. CC BY 3.0, Wikimedia Commons. `hands-feet-commons-74048864`
+- [Kulol charxida idish shakllantirish](https://commons.wikimedia.org/wiki/File:Kulol_charxida_idish_shakllantirish.png), AIDEPCUL. CC BY 4.0, Wikimedia Commons. `hands-feet-commons-197449559`
+- [Feet covered in beach sand (Unsplash)](https://commons.wikimedia.org/wiki/File:Feet_covered_in_beach_sand_(Unsplash).jpg), Matthew Wheeler matthewwheeler. CC0, Wikimedia Commons. `hands-feet-commons-61903502`
+- [\[Button\]](https://www.metmuseum.org/art/collection/search/283177), Unknown. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-283177`
+- [Harriet Goodhue Hosmer, Clasped Hands of Robert Browning and Elizabeth Barrett Browning, model 1853, NGA 132405](https://commons.wikimedia.org/wiki/File:Harriet_Goodhue_Hosmer,_Clasped_Hands_of_Robert_Browning_and_Elizabeth_Barrett_Browning,_model_1853,_NGA_132405.jpg), Harriet Goodhue Hosmer. CC0, Wikimedia Commons. `hands-feet-commons-80612552`
+- [The complete works of Mrs. E. B. Browning - p75](https://commons.wikimedia.org/wiki/File:The_complete_works_of_Mrs._E._B._Browning_-_p75.png), Author Elizabeth Barrett Browning Publisher G. Sproul Sculptured from the life…. Public domain, Wikimedia Commons. `hands-feet-commons-126154361`
+- [Limestone hand holding a dove](https://www.metmuseum.org/art/collection/search/242270), Cypriot. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-242270`
+- [Hand with base](https://www.metmuseum.org/art/collection/search/204711), Auguste Rodin. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-204711`
+- [Limestone hand holding a pomegranate](https://www.metmuseum.org/art/collection/search/242265), Cypriot. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-242265`
+- [A hand from a coffin?](https://www.metmuseum.org/art/collection/search/571619), Unknown. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-571619`
+- [Bronze right foot and lower leg from a colossal statue](https://www.metmuseum.org/art/collection/search/251366), Roman. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-251366`
+- [Hand of a Buddha](https://www.metmuseum.org/art/collection/search/62375), Japan. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-62375`
+- [The Hand of God](https://www.metmuseum.org/art/collection/search/191046), Auguste Rodin. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-191046`
+- [Fragment of a Statue](https://www.metmuseum.org/art/collection/search/39991), Central Asia. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-39991`
+- [Terracotta fragment of a hand](https://www.metmuseum.org/art/collection/search/241016), Cypriot. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-241016`
+- [Limestone arm with pieces of fruit (?) held in the hand](https://www.metmuseum.org/art/collection/search/242269), Cypriot. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-242269`
+- [Limestone hand holding a bird](https://www.metmuseum.org/art/collection/search/242272), Cypriot. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-242272`
+- [Limestone hand holding a disk and pieces of fruit](https://www.metmuseum.org/art/collection/search/242267), Cypriot. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-242267`
+- [Left Hand](https://www.metmuseum.org/art/collection/search/39948), Central Asia. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-39948`
+- [Limestone statue fragment of a right hand holding a phiale (libation bowl)](https://www.metmuseum.org/art/collection/search/242250), Cypriot. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-242250`
+- [Pilgrim's Badge](https://www.metmuseum.org/art/collection/search/472022), French. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-472022`
+- [Limestone right foot](https://www.metmuseum.org/art/collection/search/244804), Cypriot. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-244804`
+- [Reliquary, Hand from](https://www.metmuseum.org/art/collection/search/466659), French. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-466659`
+- [Lady's Hand and Flowers](https://www.metmuseum.org/art/collection/search/11793), American. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-11793`
+- [Hand with base](https://www.metmuseum.org/art/collection/search/204710), Auguste Rodin. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-204710`
+- [Terracotta guttus (flask with handle and spout)](https://www.metmuseum.org/art/collection/search/247428), Greek, South Italian, Campanian. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-247428`
+- [Limestone hand holding a sword (?)](https://www.metmuseum.org/art/collection/search/242256), Cypriot. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-242256`
+- [The Clenched Left Hand (Study for Hand of Pierre de Wiessant)](https://www.metmuseum.org/art/collection/search/207496), Auguste Rodin. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-207496`
+- [Right Hand](https://www.metmuseum.org/art/collection/search/39307), Thailand. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-39307`
+- [Limestone plinth with the feet of a male statuette](https://www.metmuseum.org/art/collection/search/241890), Cypriot. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-241890`
+- [Marble right foot wearing a sandal](https://www.metmuseum.org/art/collection/search/252959), Roman. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-252959`
+- [Marble left hand holding a scroll](https://www.metmuseum.org/art/collection/search/251036), Roman. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-251036`
+- [Right Hand of Abraham Lincoln](https://www.metmuseum.org/art/collection/search/19446), Leonard Wells Volk. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-19446`
+- [Limestone votive (?) foot with a sandal](https://www.metmuseum.org/art/collection/search/244058), Greek or Roman, Cypriot. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-244058`
+- [Hand of a Seated Deity](https://www.metmuseum.org/art/collection/search/329847), Unknown. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-329847`
+- [Foot fragment](https://www.metmuseum.org/art/collection/search/251536), Unknown. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-251536`
+- [Sculptor's model/votive of a fist](https://www.metmuseum.org/art/collection/search/549701), Unknown. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-549701`
+- [Bronze toes and instep of an over-lifesized right foot](https://www.metmuseum.org/art/collection/search/248729), Roman. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-248729`
+- [Marble right hand and forearm](https://www.metmuseum.org/art/collection/search/254989), Greek. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-254989`
+- [Terracotta aryballos (perfume vase) in the form of a sandaled right foot](https://www.metmuseum.org/art/collection/search/251466), Rhodian. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-251466`
+- [Limestone statue fragment of a hand holding a pyxis or bobbin](https://www.metmuseum.org/art/collection/search/244803), Cypriot. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-244803`
+- [Bronze hand of a boxer](https://www.metmuseum.org/art/collection/search/257574), Roman. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-257574`
+- [Giacomo Cavedone, Clasped Hands (verso), c. 1612, NGA 79418](https://commons.wikimedia.org/wiki/File:Giacomo_Cavedone,_Clasped_Hands_(verso),_c._1612,_NGA_79418.jpg), Giacomo Cavedone. CC0, Wikimedia Commons. `hands-feet-commons-81442821`
+- [Studies of the Hands of Erasmus, by Hans Holbein the Younger](https://commons.wikimedia.org/wiki/File:Studies_of_the_Hands_of_Erasmus,_by_Hans_Holbein_the_Younger.jpg), Hans Holbein the Younger. Public domain, Wikimedia Commons. `hands-feet-commons-6227771`
+- [Portait of the astronomer Nicholas Kratzer (detail, hands and astronomic tools) - Hans Holbein d. J. (Louvre Museum)](https://commons.wikimedia.org/wiki/File:Portait_of_the_astronomer_Nicholas_Kratzer_(detail,_hands_and_astronomic_tools)_-_Hans_Holbein_d._J._(Louvre_Museum).jpg), Hans Holbein the Younger. Public domain, Wikimedia Commons. `hands-feet-commons-152953`
+- [Studies of Hands](https://www.metmuseum.org/art/collection/search/338103), Andrea del Sarto (Andrea d'Agnolo). CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-338103`
+- [Study of Hands for "Christ Among the Doctors"](https://www.metmuseum.org/art/collection/search/854147), Jean Auguste Dominique Ingres. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-854147`
+- [Studies for a Figure of Saint Francis Kneeling in a Three-Quarter View and for His Hands (recto); Studies for a Figure…](https://www.metmuseum.org/art/collection/search/338419), Annibale Carracci. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-338419`
+- [Study of Legs](https://www.metmuseum.org/art/collection/search/355535), Romain Cazes. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-355535`
 
 ### Urban scenes (0)
 
