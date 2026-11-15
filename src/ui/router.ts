@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'preact/hooks';
+import { useEffect, useMemo, useState } from 'preact/hooks';
 import { EMBEDDED } from '../env';
 
 export interface Route {
@@ -55,13 +55,16 @@ if (EMBEDDED) {
 }
 
 export function useRoute(): Route {
-  const [route, setRoute] = useState(currentRoute);
+  const [hash, setHash] = useState(currentHash);
   useEffect(() => {
-    const onChange = () => setRoute(currentRoute());
+    const onChange = () => setHash(currentHash());
     window.addEventListener(ROUTE_EVENT, onChange);
+    // The hash may have changed between the first render and this listener (a link
+    // tapped while the app was still starting); catch up rather than miss it.
+    onChange();
     return () => window.removeEventListener(ROUTE_EVENT, onChange);
   }, []);
-  return route;
+  return useMemo(() => parseHash(hash), [hash]);
 }
 
 export function navigate(path: string, options: { replace?: boolean } = {}): void {
