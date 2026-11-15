@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'preact/hooks';
 import { EMBEDDED } from '../env';
 import type { ValueSteps } from '../lib/color/value';
 import { applyValueFilter, fitWithin } from '../lib/image/filters';
+import { keepingUp, LIVE_HEIGHTS, nextRung } from '../lib/image/liveRate';
 import type { IconName } from './Icon';
 import { Button, Chips, Segmented } from './kit';
 import { STEP_OPTIONS } from './ValueTools';
@@ -168,13 +169,53 @@ export function LiveCamera({ onFreeze }: LiveCameraProps) {
     };
     const cancel = () => (perFrame ? video.cancelVideoFrameCallback(handle) : cancelAnimationFrame(handle));
 
-    const loop = () => {
+    // If it falls behind the camera, ask for fewer pixels (see lib/image/liveRate).
+    let rung = 0;
+    let slow = 0;
+    let quietUntil = performance.now() + 1500;
+    let windowStart = 0;
+    let presentedAtStart = -1;
+    let processed = 0;
+    const adapt = (presented: number) => {
+      const now = performance.now();
+      if (presentedAtStart < 0 || now < quietUntil) {
+        windowStart = now;
+        presentedAtStart = presented;
+        processed = 0;
+        return;
+      }
+      processed++;
+      const seconds = (now - windowStart) / 1000;
+      if (seconds < 1) return;
+      const ok = keepingUp({ processed, presented: presented - presentedAtStart, seconds });
+      slow = ok ? 0 : slow + 1;
+      canvas.dataset.keepingUp = String(ok);
+      const next = nextRung(rung, slow);
+      if (next !== rung) {
+        rung = next;
+        slow = 0;
+        quietUntil = now + 1500;
+        const height = LIVE_HEIGHTS[rung]!;
+        canvas.dataset.keepingUp = '';
+        canvas.dataset.height = String(height);
+        void stream
+          ?.getVideoTracks()[0]
+          ?.applyConstraints({ width: { ideal: Math.round((height * 16) / 9) }, height: { ideal: height }, frameRate: { ideal: 30 } })
+          .catch(() => undefined);
+      }
+      windowStart = now;
+      presentedAtStart = presented;
+      processed = 0;
+    };
+
+    const loop = (_now?: number, frame?: VideoFrameCallbackMetadata) => {
       if (!alive) return;
       if (renderer && video.readyState >= 2 && video.videoWidth > 0) {
         const { mode: m, steps: s } = settings.current;
         renderer.draw(video, m === 'grey' ? 0 : m === 'values' ? s : -1);
         // Frame counter for the e2e test and for checking the frame rate on a real phone.
         canvas.dataset.frames = String(Number(canvas.dataset.frames ?? 0) + 1);
+        if (frame) adapt(frame.presentedFrames);
       }
       schedule();
     };
