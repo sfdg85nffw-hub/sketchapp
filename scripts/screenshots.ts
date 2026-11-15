@@ -61,6 +61,44 @@ const SHOTS: readonly Shot[] = [
       await page.getByRole('heading', { name: 'Skill trends' }).scrollIntoViewIfNeeded();
     },
   },
+  { name: 'ref-home', go: (page) => page.goto(`${BASE}/#/ref`).then(() => undefined) },
+  { name: 'ref-setup', go: (page) => page.goto(`${BASE}/#/ref/faces`).then(() => undefined) },
+  ...(
+    [
+      ['faces-photos', 'faces', 'Photos'],
+      ['faces-3d', 'faces', '3D heads'],
+      ['poses-photos', 'poses', 'Photos'],
+      ['poses-mannequin', 'poses', 'Mannequin'],
+      ['shapes', 'shapes', undefined],
+      ['skull', 'skull', undefined],
+      ['hands', 'hands', undefined],
+      ['urban', 'urban', undefined],
+      ['mine', 'mine', undefined],
+      ['life', 'life', undefined],
+    ] as const
+  ).map(([name, mode, source]) => ({
+    name: `ref-${name}`,
+    go: async (page: Page) => {
+      await page.goto(`${BASE}/#/ref/${mode}`);
+      if (source) await page.getByRole('radiogroup', { name: 'Reference source' }).getByRole('radio', { name: source }).click();
+      await page.getByRole('button', { name: 'Start', exact: true }).click();
+      if (mode !== 'life') await page.locator('[data-testid="ref-canvas"][data-rendered]').waitFor({ timeout: 60_000 });
+      await page.waitForTimeout(mode === 'life' ? 2500 : 4200);
+    },
+  })),
+  {
+    name: 'ref-contact-sheet',
+    go: async (page) => {
+      await page.goto(`${BASE}/#/ref/faces`);
+      await page.getByRole('radiogroup', { name: 'Reference source' }).getByRole('radio', { name: 'Photos' }).click();
+      await page.getByRole('button', { name: 'Start', exact: true }).click();
+      for (let i = 0; i < 3; i++) {
+        await page.locator('[data-testid="ref-canvas"][data-rendered]').waitFor({ timeout: 60_000 });
+        await page.getByTestId(i < 2 ? 'ref-skip' : 'ref-end').click();
+      }
+      await page.getByRole('heading', { name: /images done/ }).waitFor();
+    },
+  },
   {
     name: 'then-now',
     go: async (page) => {
@@ -98,6 +136,9 @@ for (const scheme of ['light', 'dark'] as const) {
   await page.getByRole('button', { name: 'Load demo data' }).click();
   await page.getByRole('button', { name: 'Clear demo data' }).waitFor({ timeout: 60_000 });
   await page.locator('.toast').waitFor({ state: 'detached', timeout: 10_000 });
+  await page.goto(`${BASE}/#/ref`);
+  await page.getByTestId('myref-input').setInputFiles(['e2e/fixtures/sketch.jpg']);
+  await page.locator('.toast').waitFor({ state: 'detached', timeout: 10_000 });
 
   for (const shot of SHOTS) {
     await shot.go(page);
@@ -105,7 +146,7 @@ for (const scheme of ['light', 'dark'] as const) {
     await page.locator('.toast').waitFor({ state: 'detached', timeout: 10_000 });
     await page.screenshot({ path: `${OUT}/${shot.name}-${scheme}.jpg`, type: 'jpeg', quality: 82 });
     console.log(`wrote ${OUT}/${shot.name}-${scheme}.jpg`);
-    if (scheme === 'light' && (shot.name === 'reflection' || shot.name === 'progress' || shot.name === 'palette-lab')) {
+    if (scheme === 'light' && (shot.name === 'reflection' || shot.name === 'progress' || shot.name === 'palette-lab' || shot.name === 'ref-home' || shot.name === 'ref-shapes')) {
       for (const type of ['deuteranopia', 'protanopia'] as const) {
         await simulate(page, type);
         await page.screenshot({ path: `${OUT}/${shot.name}-${type}.jpg`, type: 'jpeg', quality: 82 });
