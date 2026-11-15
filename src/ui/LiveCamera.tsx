@@ -153,11 +153,20 @@ export function LiveCamera({ onFreeze }: LiveCameraProps) {
     if (state !== 'starting') return;
     let stream: MediaStream | null = null;
     let renderer: Renderer | null = null;
-    let raf = 0;
+    let handle = 0;
     let alive = true;
     const video = videoRef.current;
     const canvas = canvasRef.current;
     if (!video || !canvas) return;
+
+    // Draw once per new camera frame where the browser can say when one arrives, rather
+    // than on every display refresh: a 120 Hz screen would otherwise process each 30 fps
+    // camera frame four times over.
+    const perFrame = typeof video.requestVideoFrameCallback === 'function';
+    const schedule = () => {
+      handle = perFrame ? video.requestVideoFrameCallback(loop) : requestAnimationFrame(loop);
+    };
+    const cancel = () => (perFrame ? video.cancelVideoFrameCallback(handle) : cancelAnimationFrame(handle));
 
     const loop = () => {
       if (!alive) return;
@@ -167,11 +176,11 @@ export function LiveCamera({ onFreeze }: LiveCameraProps) {
         // Frame counter for the e2e test and for checking the frame rate on a real phone.
         canvas.dataset.frames = String(Number(canvas.dataset.frames ?? 0) + 1);
       }
-      raf = requestAnimationFrame(loop);
+      schedule();
     };
 
     navigator.mediaDevices
-      .getUserMedia({ audio: false, video: { facingMode: { ideal: 'environment' }, width: { ideal: 1280 }, height: { ideal: 720 } } })
+      .getUserMedia({ audio: false, video: { facingMode: { ideal: 'environment' }, width: { ideal: 1280 }, height: { ideal: 720 }, frameRate: { ideal: 30 } } })
       .then(async (media) => {
         if (!alive) {
           media.getTracks().forEach((t) => t.stop());
@@ -196,7 +205,7 @@ export function LiveCamera({ onFreeze }: LiveCameraProps) {
 
     return () => {
       alive = false;
-      cancelAnimationFrame(raf);
+      cancel();
       renderer?.dispose();
       stream?.getTracks().forEach((t) => t.stop());
       video.srcObject = null;

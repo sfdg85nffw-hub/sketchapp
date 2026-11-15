@@ -8,7 +8,8 @@ const CHROMIUM = {
   ...devices['Pixel 7'],
   viewport: IPHONE_14,
   permissions: ['camera', 'clipboard-read', 'clipboard-write'],
-  launchOptions: { args: ['--use-fake-device-for-media-stream', '--use-fake-ui-for-media-stream'] },
+  // The fake camera defaults to 20 fps; a phone camera gives 30.
+  launchOptions: { args: ['--use-fake-device-for-media-stream=fps=30', '--use-fake-ui-for-media-stream'] },
 };
 
 export default defineConfig({
