@@ -1,0 +1,196 @@
+{
+ "failures": [
+  {
+   "category": "face",
+   "id": "face-commons-92108982",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/71/Staring_child_detail%2C_from-_Dorothea_Lange%2C_Children_of_Oklahoma_drought_refugee_in_migratory_camp_in_California%2C_1936_%28cropped%29.jpg",
+   "reason": "HTTP 429"
+  },
+  {
+   "category": "face",
+   "id": "face-commons-6293109",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Strike_leader_in_Kern_County%2C_California%2C_8b32699.jpg",
+   "reason": "HTTP 429"
+  },
+  {
+   "category": "face",
+   "id": "face-commons-33761718",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Jack_Delano_by_John_Collier_1942_.jpg",
+   "reason": "HTTP 429"
+  },
+  {
+   "category": "face",
+   "id": "face-commons-11158898",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Jack_Delano%2C_FSA_borrower%2C_vicinity_of_Frederiksted%2C_St._Croix%2C_Virgin_Islands%2C_1941.jpg",
+   "reason": "HTTP 429"
+  },
+  {
+   "category": "face",
+   "id": "face-commons-45049921",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Langston_Hughes_cph.3a43849.jpg",
+   "reason": "HTTP 429"
+  },
+  {
+   "category": "face",
+   "id": "face-commons-268174",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/PullmanPorter.jpg",
+   "reason": "HTTP 429"
+  },
+  {
+   "category": "face",
+   "id": "face-commons-17033762",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Portrait_of_Special_Agent_George_G._Liddy_%28now_known_as_G._Gordon_Liddy%29._-_NARA_-_518189.jpg",
+   "reason": "HTTP 429"
+  },
+  {
+   "category": "face",
+   "id": "face-commons-33151",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Edward_S._Curtis_Collection_People_062.jpg",
+   "reason": "HTTP 429"
+  },
+  {
+   "category": "face",
+   "id": "face-commons-11160157",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Edward_S._Curtis%2C_Navajo_child%2C_1904.jpg",
+   "reason": "HTTP 429"
+  },
+  {
+   "category": "face",
+   "id": "face-commons-33152",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Edward_S._Curtis_Collection_People_063.jpg",
+   "reason": "HTTP 429"
+  },
+  {
+   "category": "face",
+   "id": "face-commons-53649204",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/85/Floyd_Burroughs%2C_cotton_sharecropper._Hale_County%2C_Alabama_LOC_3549662506.jpg",
+   "reason": "HTTP 429"
+  },
+  {
+   "category": "face",
+   "id": "face-commons-8308169",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/53/Laura_Minnie_Lee_Tengle.jpg",
+   "reason": "HTTP 429"
+  },
+  {
+   "category": "face",
+   "id": "face-commons-157474025",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Prince_John%2C_Bain_News_Service_%28cropped%29.jpg",
+   "reason": "HTTP 429"
+  },
+  {
+   "category": "face",
+   "id": "face-commons-2722054",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Allie_Mae_Burroughs.jpg",
+   "reason": "HTTP 429"
+  },
+  {
+   "category": "face",
+   "id": "face-commons-6207173",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Reed_Smoot%2C_bw_photo_portrait%2C_Bain_News_Service.jpg",
+   "reason": "HTTP 429"
+  },
+  {
+   "category": "face",
+   "id": "face-commons-38052586",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Tom%C3%A1%C5%A1_Garrigue_Masaryk%2C_Bain_News_Service_%28Library_of_Congress%2C_Bain_Collection%29_crop.jpg",
+   "reason": "HTTP 429"
+  },
+  {
+   "category": "face",
+   "id": "face-commons-37875330",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Harris_%26_Ewing_-_Helena_Hill_Weed.jpg",
+   "reason": "HTTP 429"
+  },
+  {
+   "category": "face",
+   "id": "face-commons-178691356",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Ishbel_MacDonald_1927_by_Harris_%26_Ewing.jpg",
+   "reason": "HTTP 429"
+  },
+  {
+   "category": "face",
+   "id": "face-commons-160211349",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Senator_Jim_Justice_Official_Portrait_%28cropped%29.jpg",
+   "reason": "HTTP 429"
+  },
+  {
+   "category": "face",
+   "id": "face-commons-162039124",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Senator_Blunt_Rochester_Official_Portrait_%28cropped%29.jpg",
+   "reason": "HTTP 429"
+  },
+  {
+   "category": "face",
+   "id": "face-commons-881913",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Kalpana_Chawla%2C_NASA_photo_portrait_in_orange_suit.jpg",
+   "reason": "HTTP 429"
+  },
+  {
+   "category": "face",
+   "id": "face-commons-135864523",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Chris_Cassidy_-_Official_NASA_Astronaut_Portrait_in_EMU_%28cropped%29.jpg",
+   "reason": "HTTP 429"
+  },
+  {
+   "category": "face",
+   "id": "face-commons-163786748",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/56/NASA_Astronaut_Christopher_Williams_%28jsc2024e013691_alt%29.jpg",
+   "reason": "HTTP 429"
+  },
+  {
+   "category": "face",
+   "id": "face-commons-120428990",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Portrait_of_NASA_astronaut_Raja_Chari_in_EMU.jpg",
+   "reason": "HTTP 429"
+  },
+  {
+   "category": "face",
+   "id": "face-commons-176972326",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Air_Force_portrait_of_Major_General_Norris_B._Harbold.jpeg",
+   "reason": "HTTP 429"
+  },
+  {
+   "category": "face",
+   "id": "face-commons-139759068",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Senior_Airman_Ronisha_Carter_%282000497423%29.jpg",
+   "reason": "HTTP 429"
+  },
+  {
+   "category": "face",
+   "id": "face-commons-107021338",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Photographer_Arthur_Rothstein_on_L_Street_in_Washington%2C_D.C.jpg",
+   "reason": "HTTP 429"
+  },
+  {
+   "category": "face",
+   "id": "face-commons-5641446",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/George_Washington_Carver2.jpg",
+   "reason": "HTTP 429"
+  },
+  {
+   "category": "face",
+   "id": "face-commons-2741196",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/John_Vachon_8c51722r.jpg",
+   "reason": "HTTP 429"
+  },
+  {
+   "category": "face",
+   "id": "face-commons-95584395",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Coal_miner_%28Polish%29._Capels%2C_West_Virginia_%28detail_of_miner%27s_cap%29.jpg",
+   "reason": "HTTP 429"
+  },
+  {
+   "category": "face",
+   "id": "face-commons-11159480",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Esther_Bubley%2C_A_student_at_Woodrow_Wilson_High_School%2C_Washington_DC%2C_1943.jpg",
+   "reason": "HTTP 429"
+  },
+  {
+   "category": "face",
+   "id": "face-commons-3325376",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Fiddlin_Bill_Henseley%2C_Mountain_Fiddler%2C_Asheville%2C_North_Carolina_by_Ben_Shahn%2C_1937_LOC_290626613.jpg",
+   "reason": "HTTP 429"
+  }
+ ]
+}
