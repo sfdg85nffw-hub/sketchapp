@@ -197,61 +197,79 @@ function buildBust(vertices, groups) {
   let top = -Infinity;
   for (const face of groups.get('body')) for (const i of face) top = Math.max(top, vertices[i * 3 + 1]);
   const u = top - eyeY; // eye line to crown: roughly half a head
-  const chestY = eyeY - 2.2 * u;
-  const shoulderY = eyeY - 1.25 * u;
-  const shoulderX = 1.45 * u;
-  const cutAt = (x) => chestY + (shoulderY - chestY) * Math.min(1, Math.abs(x) / shoulderX) ** 2;
-  const keep = (i) => Math.abs(vertices[i * 3]) < 1.6 * u && vertices[i * 3 + 1] > cutAt(vertices[i * 3]);
-  const quads = [];
-  const bodyQuads = groups.get('body').filter((face) => face.every(keep));
-  quads.push(...bodyQuads, ...eyes);
 
-  // Close the cut so the bust is not hollow when seen from below.
-  const edgeCount = new Map();
-  const key = (a, b) => (a < b ? `${a}_${b}` : `${b}_${a}`);
-  for (const f of bodyQuads) for (let k = 0; k < f.length; k++) edgeCount.set(key(f[k], f[(k + 1) % f.length]), (edgeCount.get(key(f[k], f[(k + 1) % f.length])) ?? 0) + 1);
-  const next = new Map();
-  for (const f of bodyQuads) {
-    for (let k = 0; k < f.length; k++) {
-      const a = f[k];
-      const b = f[(k + 1) % f.length];
-      if (edgeCount.get(key(a, b)) === 1) next.set(b, a); // reversed, so the cap faces outwards
+  // The bust ends on a curve: low across the chest, rising over the shoulders so the arms fall away.
+  const chestY = eyeY - 2.15 * u;
+  const rise = 1.05 * u;
+  const shoulderX = 1.25 * u;
+  const inside = (x, y) => y - (chestY + rise * (Math.abs(x) / shoulderX) ** 2);
+
+  const pivot = [0, eyeY - 0.1 * u, eyeZ - 0.85 * u];
+  const scale = 1 / (2.05 * u);
+  const positions = [];
+  const remap = new Map();
+  const push = (x, y, z) => positions.push((x - pivot[0]) * scale, (y - pivot[1]) * scale, (z - pivot[2]) * scale) / 3 - 1;
+  const use = (i) => {
+    if (!remap.has(i)) remap.set(i, push(vertices[i * 3], vertices[i * 3 + 1], vertices[i * 3 + 2]));
+    return remap.get(i);
+  };
+  // A new vertex where an edge crosses the cut, shared by the faces on both sides of the edge.
+  const crossings = new Map();
+  const crossing = (a, b) => {
+    const key = a < b ? `${a}_${b}` : `${b}_${a}`;
+    if (!crossings.has(key)) {
+      const fa = inside(vertices[a * 3], vertices[a * 3 + 1]);
+      const fb = inside(vertices[b * 3], vertices[b * 3 + 1]);
+      const t = fa / (fa - fb);
+      const mix = (k) => vertices[a * 3 + k] + (vertices[b * 3 + k] - vertices[a * 3 + k]) * t;
+      crossings.set(key, push(mix(0), mix(1), mix(2)));
+    }
+    return crossings.get(key);
+  };
+
+  const indices = [];
+  const boundary = new Map(); // from -> to, along the cut, wound so the cap faces down
+  for (const quad of groups.get('body')) {
+    const polygon = [];
+    for (let k = 0; k < quad.length; k++) {
+      const a = quad[k];
+      const b = quad[(k + 1) % quad.length];
+      const ina = inside(vertices[a * 3], vertices[a * 3 + 1]) >= 0;
+      const inb = inside(vertices[b * 3], vertices[b * 3 + 1]) >= 0;
+      if (ina) polygon.push(use(a));
+      if (ina !== inb) {
+        const c = crossing(a, b);
+        polygon.push(c);
+        polygon.cut ??= [];
+        polygon.cut.push({ index: c, leaving: ina });
+      }
+    }
+    for (let k = 1; k < polygon.length - 1; k++) indices.push(polygon[0], polygon[k], polygon[k + 1]);
+    if (polygon.cut?.length === 2) {
+      const leave = polygon.cut.find((c) => c.leaving);
+      const enter = polygon.cut.find((c) => !c.leaving);
+      if (leave && enter) boundary.set(enter.index, leave.index);
     }
   }
+  for (const [a, b, c, d] of eyes) indices.push(use(a), use(b), use(c), use(a), use(c), use(d));
+
+  // Close the cut so the bust is not hollow when seen from below.
   const loops = [];
   const seen = new Set();
-  for (const start of next.keys()) {
+  for (const start of boundary.keys()) {
     if (seen.has(start)) continue;
     const loop = [];
     let at = start;
-    while (at !== undefined && !seen.has(at)) { seen.add(at); loop.push(at); at = next.get(at); }
+    while (at !== undefined && !seen.has(at)) { seen.add(at); loop.push(at); at = boundary.get(at); }
     loops.push(loop);
   }
   loops.sort((a, b) => b.length - a.length);
-  // Pull the ragged edge down onto the cut line so the bust ends in a clean curve.
-  for (const i of loops[0] ?? []) vertices[i * 3 + 1] = cutAt(vertices[i * 3]);
-
-  // Re-index to just the vertices in use, recentred on the middle of the head and scaled so the head is one unit tall.
-  const pivot = [0, eyeY - 0.1 * u, eyeZ - 0.85 * u];
-  const scale = 1 / (2.05 * u);
-  const remap = new Map();
-  const positions = [];
-  const use = (i) => {
-    if (!remap.has(i)) {
-      remap.set(i, positions.length / 3);
-      positions.push((vertices[i * 3] - pivot[0]) * scale, (vertices[i * 3 + 1] - pivot[1]) * scale, (vertices[i * 3 + 2] - pivot[2]) * scale);
-    }
-    return remap.get(i);
-  };
-  const indices = [];
-  for (const [a, b, c, d] of quads) indices.push(use(a), use(b), use(c), use(a), use(c), use(d));
   const cap = loops[0] ?? [];
   if (cap.length > 2) {
     const centre = [0, 0, 0];
-    for (const i of cap) for (let k = 0; k < 3; k++) centre[k] += (vertices[i * 3 + k] - pivot[k]) * scale;
-    const c = positions.length / 3;
-    positions.push(centre[0] / cap.length, centre[1] / cap.length, centre[2] / cap.length);
-    for (let k = 0; k < cap.length; k++) indices.push(c, use(cap[k]), use(cap[(k + 1) % cap.length]));
+    for (const i of cap) for (let k = 0; k < 3; k++) centre[k] += positions[i * 3 + k];
+    const c = positions.push(centre[0] / cap.length, centre[1] / cap.length + 0.03, centre[2] / cap.length) / 3 - 1;
+    for (let k = 0; k < cap.length; k++) indices.push(c, cap[k], cap[(k + 1) % cap.length]);
   }
   return { positions: Float32Array.from(positions), indices: Uint32Array.from(indices), loops: loops.map((l) => l.length) };
 }

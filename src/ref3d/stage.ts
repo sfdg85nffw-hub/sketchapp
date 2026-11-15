@@ -153,7 +153,7 @@ export const MATERIALS = {
 /** A soft studio surround so polished metal has something to reflect. Built from code, no image file. */
 export function studioEnvironment(): THREE.Texture {
   const room = new THREE.Scene();
-  room.background = grey(0.08);
+  room.background = grey(0.3);
   const panel = (w: number, h: number, value: number, position: [number, number, number]) => {
     const mesh = new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshBasicMaterial({ color: grey(value), side: THREE.DoubleSide }));
     mesh.position.set(...position);
@@ -183,7 +183,15 @@ export function loadGeometries(url: string): Promise<Map<string, THREE.BufferGeo
       gltf.scene.traverse((object) => {
         const mesh = object as THREE.Mesh;
         if (!mesh.isMesh) return;
-        const geometry = mesh.geometry.clone().applyMatrix4(mesh.matrixWorld);
+        // Compressed models store positions as quantised integers plus a node transform.
+        // Bake both into plain floats so every engine can treat the geometry the same way.
+        const source = mesh.geometry.getAttribute('position');
+        const positions = new Float32Array(source.count * 3);
+        const point = new THREE.Vector3();
+        for (let i = 0; i < source.count; i++) point.fromBufferAttribute(source, i).applyMatrix4(mesh.matrixWorld).toArray(positions, i * 3);
+        const geometry = new THREE.BufferGeometry();
+        geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+        geometry.setIndex(mesh.geometry.getIndex());
         geometry.computeVertexNormals();
         found.set(mesh.name || mesh.parent?.name || `mesh-${found.size}`, geometry);
       });

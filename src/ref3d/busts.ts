@@ -119,7 +119,7 @@ async function renderBust(model: BustModel, random: Random): Promise<RefImage> {
 export async function renderHead(random: Random): Promise<RefImage> {
   const head = pickOne(random, await loadHeadIndex());
   return renderBust(
-    { key: head.id, url: `./models/heads/${head.file}`, label: head.label, material: 'skin', center: [0, -0.12, 0.02], radius: 0.86, landmarks: head.landmarks ?? {} },
+    { key: head.id, url: `./models/heads/${head.file}`, label: head.label, material: 'skin', center: [0, -0.16, 0.02], radius: 0.8, landmarks: head.landmarks ?? {} },
     random,
   );
 }

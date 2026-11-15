@@ -20,6 +20,8 @@ if (!SRC || !existsSync(`${SRC}/cmu-mocap-index-text.txt`)) {
 const OUT = 'public/mocap';
 const FPS = 10;
 const MAX_SECONDS = 24;
+/** Every clip opens on a calibration T-pose. Skip it. */
+const SKIP_SECONDS = 0.4;
 const HEIGHT = 1.75;
 
 /** The joints the mannequin needs, in parent-before-child order. Fingers are dropped. */
@@ -67,7 +69,7 @@ function convert(id) {
     tips[key] = child ? child.position.toArray() : [0, 0, 0];
   }
 
-  const total = Math.min(clip.duration, MAX_SECONDS);
+  const total = Math.min(clip.duration - SKIP_SECONDS, MAX_SECONDS);
   const frames = Math.max(2, Math.floor(total * FPS));
   const root = new Float32Array(frames * 3);
   const quats = new Int16Array(frames * BONES.length * 4);
@@ -75,7 +77,7 @@ function convert(id) {
   let ground = Infinity;
   const q = new Quaternion();
   for (let f = 0; f < frames; f++) {
-    const time = f / FPS;
+    const time = SKIP_SECONDS + f / FPS;
     const rootPosition = sampleTrack(tracks.get('Hips.position'), time, 3);
     root.set(rootPosition, f * 3);
     for (let b = 0; b < BONES.length; b++) {
