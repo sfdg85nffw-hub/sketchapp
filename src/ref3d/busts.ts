@@ -44,11 +44,12 @@ const SKULL: BustModel = {
   material: 'bone',
   center: [0, 0.125, 0.01],
   radius: 0.2,
+  // Measured on the mesh (see DECISIONS.md): the face looks along +z.
   landmarks: {
-    'brow ridge': [0.03, 0.172, 0.094],
-    'zygomatic arch': [0.066, 0.118, 0.045],
-    'temporal line': [0.058, 0.19, 0.03],
-    'jaw angle': [0.048, 0.052, -0.012],
+    'brow ridge': [0.03, 0.152, 0.112],
+    'zygomatic arch': [0.102, 0.088, 0.021],
+    'temporal line': [0.078, 0.195, 0.022],
+    'jaw angle': [0.095, 0.043, -0.035],
   },
 };
 
@@ -98,9 +99,11 @@ async function renderBust(model: BustModel, random: Random): Promise<RefImage> {
     planesBlob = await renderStill(scene, camera);
   }
   pivot.updateMatrixWorld(true);
+  // Landmarks are stored for one side; label whichever side is turned towards the camera.
   const landmarks: Landmark[] = Object.entries(model.landmarks).map(([label, p]) => {
-    const world = new THREE.Vector3(...p).sub(center).applyMatrix4(pivot.matrixWorld);
-    const [x, y] = project([world.x, world.y, world.z], camera);
+    const sides = [1, -1].map((s) => new THREE.Vector3(p[0] * s, p[1], p[2]).sub(center).applyMatrix4(pivot.matrixWorld));
+    const near = sides[0]!.distanceTo(camera.position) <= sides[1]!.distanceTo(camera.position) ? sides[0]! : sides[1]!;
+    const [x, y] = project([near.x, near.y, near.z], camera);
     return { label, x, y };
   });
   disposeScene(scene, shared);

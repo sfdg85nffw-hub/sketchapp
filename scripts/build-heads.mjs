@@ -9,7 +9,8 @@
 // Then: MAKEHUMAN_DATA=path/to/mpfb2/src/mpfb/data node scripts/build-heads.mjs
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { gunzipSync } from 'node:zlib';
-import { writeGlb } from './lib/glb.mjs';
+import { MeshoptSimplifier } from 'meshoptimizer';
+import { writeGlbParts } from './lib/glb.mjs';
 
 const DATA = process.env.MAKEHUMAN_DATA;
 if (!DATA || !existsSync(`${DATA}/3dobjs/base.obj`)) {
@@ -274,6 +275,59 @@ function buildBust(vertices, groups) {
   return { positions: Float32Array.from(positions), indices: Uint32Array.from(indices), loops: loops.map((l) => l.length) };
 }
 
+
+/* ---------- the big planes, and named landmarks ---------- */
+
+/**
+ * The head reduced to a few hundred flat facets: a rough, generated cousin of the
+ * Asaro planes head, shown flat-shaded so each plane reads as one value.
+ */
+async function bigPlanes(positions, indices) {
+  await MeshoptSimplifier.ready;
+  const [simplified] = MeshoptSimplifier.simplify(indices, positions, 3, 420 * 3, 0.2, ['LockBorder']);
+  return { positions, indices: simplified };
+}
+
+/**
+ * Landmark points found on the surface itself, for the labels overlay. The head faces +z;
+ * points are on the model's left side (+x) and mirrored by the app to whichever side faces the camera.
+ */
+function landmarks(positions) {
+  const n = positions.length / 3;
+  const P = (i) => [positions[i * 3], positions[i * 3 + 1], positions[i * 3 + 2]];
+  /** The front-most vertex near (x, y). */
+  const front = (x, y, r = 0.03) => {
+    let best = null;
+    for (let i = 0; i < n; i++) {
+      const p = P(i);
+      if (Math.abs(p[0] - x) < r && Math.abs(p[1] - y) < r && (!best || p[2] > best[2])) best = p;
+    }
+    return best;
+  };
+  /** The outer-most vertex near height y, in the front half of the head. */
+  const side = (y, zMin, r = 0.03) => {
+    let best = null;
+    for (let i = 0; i < n; i++) {
+      const p = P(i);
+      if (Math.abs(p[1] - y) < r && p[2] > zMin && p[0] > 0 && (!best || p[0] > best[0])) best = p;
+    }
+    return best;
+  };
+  // After centring, the eyes sit at y = 0.1 / 2.05 and z = 0.85 / 2.05 (see buildBust).
+  const eyeY = 0.1 / 2.05;
+  const eyeZ = 0.85 / 2.05;
+  let tip = [0, 0, -Infinity];
+  for (let i = 0; i < n; i++) if (Math.abs(positions[i * 3]) < 0.02 && positions[i * 3 + 2] > tip[2]) tip = P(i);
+  const round = (p) => p.map((v) => Math.round(v * 1000) / 1000);
+  const marks = {
+    'brow ridge': front(0.1, eyeY + 0.07),
+    cheekbone: side(eyeY - 0.09, eyeZ - 0.06),
+    'nose planes': front(0.035, tip[1] + 0.035, 0.02),
+    'jaw angle': side(eyeY - 0.42, 0.1, 0.04),
+  };
+  return Object.fromEntries(Object.entries(marks).filter(([, p]) => p).map(([k, p]) => [k, round(p)]));
+}
+
 /* ---------- main ---------- */
 
 const base = readObj(`${DATA}/3dobjs/base.obj`);
@@ -284,8 +338,12 @@ for (const [index, spec] of HEADS.entries()) {
   applyMacros(vertices, spec);
   applyDetails(vertices, spec, index);
   const bust = buildBust(vertices, base.groups);
-  const bytes = await writeGlb(`${OUT}/${spec.id}.glb`, bust.positions, bust.indices);
-  catalogue.push({ id: spec.id, label: spec.label, file: `${spec.id}.glb`, bytes });
+  const planes = await bigPlanes(bust.positions, bust.indices);
+  const bytes = await writeGlbParts(`${OUT}/${spec.id}.glb`, [
+    { name: 'head', positions: bust.positions, indices: bust.indices },
+    { name: 'planes', positions: planes.positions, indices: planes.indices },
+  ]);
+  catalogue.push({ id: spec.id, label: spec.label, file: `${spec.id}.glb`, bytes, landmarks: landmarks(bust.positions) });
   console.log(`${spec.id}: ${bust.positions.length / 3} vertices, ${bust.indices.length / 3} triangles, ${(bytes / 1024).toFixed(0)} KB, boundary loops ${bust.loops.join('/')}`);
 }
 writeFileSync(`${OUT}/index.json`, JSON.stringify({ license: 'CC0-1.0', source: 'MakeHuman base mesh and targets (makehumancommunity/mpfb2)', heads: catalogue }, null, 1));

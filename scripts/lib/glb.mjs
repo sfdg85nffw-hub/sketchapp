@@ -28,3 +28,20 @@ export async function writeGlb(file, positions, indices, name = 'mesh') {
   await (await ioWithMeshopt()).write(file, document);
   return statSync(file).size;
 }
+
+/** Several named meshes in one GLB. Parts may share a positions array. */
+export async function writeGlbParts(file, parts) {
+  const document = new Document();
+  const buffer = document.createBuffer();
+  const scene = document.createScene();
+  for (const part of parts) {
+    const primitive = document
+      .createPrimitive()
+      .setAttribute('POSITION', document.createAccessor().setType('VEC3').setArray(part.positions).setBuffer(buffer))
+      .setIndices(document.createAccessor().setType('SCALAR').setArray(part.indices).setBuffer(buffer));
+    scene.addChild(document.createNode(part.name).setMesh(document.createMesh(part.name).addPrimitive(primitive)));
+  }
+  await compress(document);
+  await (await ioWithMeshopt()).write(file, document);
+  return statSync(file).size;
+}
