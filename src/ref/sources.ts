@@ -16,6 +16,8 @@ export interface SourceOptions {
   source: 'photos' | '3d';
   material: MaterialChoice;
   lastShown: Record<string, string>;
+  /** Guess the light is on: skip lighting with no one direction to guess. */
+  directionalLight?: boolean;
 }
 
 export interface RefSource {
@@ -97,15 +99,16 @@ export function createSource(options: SourceOptions): RefSource {
       const e = await engines;
       if (!e.webglAvailable()) throw new Error('This browser cannot draw 3D here. The photo packs still work.');
       const random = Math.random;
+      const directional = options.directionalLight ?? false;
       switch (mode) {
         case 'faces':
-          return e.renderHead(random);
+          return e.renderHead(random, directional);
         case 'poses':
-          return e.renderMannequin(random);
+          return e.renderMannequin(random, directional);
         case 'skull':
-          return e.renderSkull(random);
+          return e.renderSkull(random, directional);
         default:
-          return e.renderShapes(newSeed(), { material: options.material });
+          return e.renderShapes(newSeed(), { material: options.material, directional });
       }
     });
   }

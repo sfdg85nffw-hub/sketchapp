@@ -58,6 +58,8 @@ export interface SceneOptions {
   /** Re-light the same arrangement by changing only this. */
   lightSeed?: number;
   lighting?: LightingId;
+  /** Only light with one clear direction, for guess the light. */
+  directional?: boolean;
 }
 
 /** Shapes with a flat top that something smaller can sit on. */
@@ -132,13 +134,13 @@ export function generateScene(seed: number, options: SceneOptions = {}): ShapeSc
 
   const camera = sampleSceneCamera(random);
   const lightSeed = options.lightSeed ?? seed;
-  const lighting = sampleLighting(seededRandom(lightSeed * 7919 + 13), 'shapes', options.lighting);
+  const lighting = sampleLighting(seededRandom(lightSeed * 7919 + 13), 'shapes', options.lighting, options.directional);
   return { seed, lightSeed, shapes, camera, lighting };
 }
 
 /** The same arrangement and camera under a different light. */
 export function relight(scene: ShapeScene, lightSeed: number, options: SceneOptions = {}): ShapeScene {
-  return { ...scene, lightSeed, lighting: sampleLighting(seededRandom(lightSeed * 7919 + 13), 'shapes', options.lighting) };
+  return { ...scene, lightSeed, lighting: sampleLighting(seededRandom(lightSeed * 7919 + 13), 'shapes', options.lighting, options.directional) };
 }
 
 /** "cube, hollow cup and sphere" */

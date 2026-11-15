@@ -68,9 +68,12 @@ export function lightingFor(use: LightingUse): readonly Recipe[] {
   return LIGHTING_RECIPES.filter((r) => r.use.includes(use));
 }
 
-/** One concrete lighting setup: a named recipe with its angles rolled, on a random side. */
-export function sampleLighting(random: Random, use: LightingUse, only?: LightingId): LightingSetup {
-  const pool = lightingFor(use);
+/**
+ * One concrete lighting setup: a named recipe with its angles rolled, on a random side.
+ * `directional` leaves out light that has no one direction to guess (overcast).
+ */
+export function sampleLighting(random: Random, use: LightingUse, only?: LightingId, directional = false): LightingSetup {
+  const pool = lightingFor(use).filter((r) => !directional || r.directional);
   const recipe = (only && pool.find((r) => r.id === only)) || pickOne(random, pool);
   const side = random() < 0.5 ? -1 : 1;
   const roll = (range: Range) => between(random, range[0], range[1]);

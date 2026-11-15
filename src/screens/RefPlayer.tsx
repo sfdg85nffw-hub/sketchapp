@@ -230,7 +230,7 @@ function Player({ config }: { config: SessionConfig }) {
 
   useEffect(() => {
     void getShown().then((lastShown) => {
-      source.current = createSource({ mode, source: prefs.source, material: prefs.material, lastShown });
+      source.current = createSource({ mode, source: prefs.source, material: prefs.material, lastShown, directionalLight: guessing });
       ensure(0);
     });
   }, []);

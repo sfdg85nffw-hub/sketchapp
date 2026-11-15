@@ -53,11 +53,11 @@ const SKULL: BustModel = {
   },
 };
 
-async function renderBust(model: BustModel, random: Random): Promise<RefImage> {
+async function renderBust(model: BustModel, random: Random, directional = false): Promise<RefImage> {
   const geometries = await loadGeometries(model.url);
   const view = sampleHeadView(random);
   const focal = samplePortraitFocal(random);
-  const lighting = sampleLighting(random, 'portrait');
+  const lighting = sampleLighting(random, 'portrait', undefined, directional);
   const cameraElevation = between(random, -4, 10);
 
   const scene = new THREE.Scene();
@@ -119,14 +119,15 @@ async function renderBust(model: BustModel, random: Random): Promise<RefImage> {
 }
 
 /** A random head, turned to a random artist-useful view, under random named light. */
-export async function renderHead(random: Random): Promise<RefImage> {
+export async function renderHead(random: Random, directional = false): Promise<RefImage> {
   const head = pickOne(random, await loadHeadIndex());
   return renderBust(
     { key: head.id, url: `./models/heads/${head.file}`, label: head.label, material: 'skin', center: [0, -0.16, 0.02], radius: 0.8, landmarks: head.landmarks ?? {} },
     random,
+    directional,
   );
 }
 
-export function renderSkull(random: Random): Promise<RefImage> {
-  return renderBust(SKULL, random);
+export function renderSkull(random: Random, directional = false): Promise<RefImage> {
+  return renderBust(SKULL, random, directional);
 }

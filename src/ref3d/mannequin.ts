@@ -146,7 +146,7 @@ export function buildMannequin(index: MocapIndex, clip: ClipMeta, pose: Pose): T
 }
 
 /** A random dynamic pose from real motion capture, on the mannequin, from a random viewpoint. */
-export async function renderMannequin(random: Random): Promise<RefImage> {
+export async function renderMannequin(random: Random, directional = false): Promise<RefImage> {
   const { index, data, scores } = await loadMocap();
   const clip = pickOne(random, index.clips);
   let clipScores = scores.get(clip.id);
@@ -164,7 +164,7 @@ export async function renderMannequin(random: Random): Promise<RefImage> {
   scene.add(buildMannequin(index, clip, pose));
   const bounds = poseBounds(pose);
   const spec = sampleFigureCamera(random);
-  const lighting = sampleLighting(random, 'figure');
+  const lighting = sampleLighting(random, 'figure', undefined, directional);
   scene.add(ground(80, Math.min(0.9, lighting.background + 0.4)));
   const target = v3([bounds.center[0], Math.max(0.35, bounds.center[1]), bounds.center[2]]);
   const radius = Math.max(0.7, bounds.radius + 0.1);

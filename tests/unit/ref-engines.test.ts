@@ -67,6 +67,15 @@ describe('named lighting', () => {
     expect(sampleLighting(seededRandom(4), 'portrait', 'overcast').directional).toBe(false);
     expect(sampleLighting(seededRandom(4), 'shapes', 'double-shadow').second).toBeDefined();
   });
+
+  it('only gives light with one clear direction when guess the light is on', () => {
+    for (const use of ['portrait', 'figure', 'shapes'] as const) {
+      const ids = new Set(Array.from({ length: 200 }, (_, i) => sampleLighting(seededRandom(i + 1), use, undefined, true).id));
+      expect(ids.has('overcast')).toBe(false);
+      expect(ids.size).toBeGreaterThan(3);
+    }
+    for (let seed = 1; seed < 60; seed++) expect(generateScene(seed, { directional: true }).lighting.directional).toBe(true);
+  });
 });
 
 describe('guess the light', () => {
