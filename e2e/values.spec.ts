@@ -169,11 +169,7 @@ test('live value camera posterizes the feed, or falls back gracefully', async ({
   await expect.poll(async () => Number(await canvas.getAttribute('data-frames')), { timeout: 15_000 }).toBeGreaterThan(5);
   expect((await canvasGreys(canvas)).levels.length).toBeLessThanOrEqual(3);
 
-  // Frame rate over one second of the fake camera feed.
-  const first = Number(await canvas.getAttribute('data-frames'));
-  await page.waitForTimeout(1000);
-  const fps = Number(await canvas.getAttribute('data-frames')) - first;
-  expect(fps).toBeGreaterThanOrEqual(24);
+  // The frame rate is measured on its own in framerate.spec.ts, once nothing else is running.
 
   await page.getByRole('radiogroup', { name: 'Number of values' }).getByRole('radio', { name: /2/ }).click();
   await expect.poll(async () => (await canvasGreys(canvas)).levels.length).toBeLessThanOrEqual(2);

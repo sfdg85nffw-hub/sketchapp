@@ -3,6 +3,14 @@ import { defineConfig, devices } from '@playwright/test';
 /** iPhone 14 in a home-screen web app: 390 x 844 points, no browser chrome. */
 const IPHONE_14 = { width: 390, height: 844 };
 
+/** Same viewport in Chromium, which can also fake a camera for the live value view. */
+const CHROMIUM = {
+  ...devices['Pixel 7'],
+  viewport: IPHONE_14,
+  permissions: ['camera', 'clipboard-read', 'clipboard-write'],
+  launchOptions: { args: ['--use-fake-device-for-media-stream', '--use-fake-ui-for-media-stream'] },
+};
+
 export default defineConfig({
   testDir: 'e2e',
   fullyParallel: true,
@@ -19,17 +27,20 @@ export default defineConfig({
     {
       // The target device: Safari's engine at the iPhone 14 viewport.
       name: 'webkit',
+      testIgnore: 'framerate.spec.ts',
       use: { ...devices['iPhone 14'], viewport: IPHONE_14 },
     },
     {
-      // Same viewport in Chromium, which can also fake a camera for the live value view.
       name: 'chromium',
-      use: {
-        ...devices['Pixel 7'],
-        viewport: IPHONE_14,
-        permissions: ['camera', 'clipboard-read', 'clipboard-write'],
-        launchOptions: { args: ['--use-fake-device-for-media-stream', '--use-fake-ui-for-media-stream'] },
-      },
+      testIgnore: 'framerate.spec.ts',
+      use: CHROMIUM,
+    },
+    {
+      // Timing-sensitive, so it waits until the other projects are done with the CPU.
+      name: 'framerate',
+      testMatch: 'framerate.spec.ts',
+      dependencies: ['webkit', 'chromium'],
+      use: CHROMIUM,
     },
   ],
   webServer: {
