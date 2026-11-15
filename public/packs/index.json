@@ -7612,6 +7612,24 @@
      }
     },
     {
+     "id": "urban-commons-2972458",
+     "file": "urban/urban-commons-2972458.webp",
+     "thumb": "urban/urban-commons-2972458.jpg",
+     "width": 1400,
+     "height": 1033,
+     "bytes": 304722,
+     "thumbBytes": 39407,
+     "title": "Mulberry Street NYC c1900 LOC 3g04637u edit",
+     "author": "Detroit Publishing Co. , publisher",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Mulberry_Street_NYC_c1900_LOC_3g04637u_edit.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
      "id": "urban-commons-27307589",
      "file": "urban/urban-commons-27307589.webp",
      "thumb": "urban/urban-commons-27307589.jpg",
@@ -7642,6 +7660,24 @@
      "license": "Public domain",
      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
      "source": "https://commons.wikimedia.org/wiki/File:Night_in_Luna_Park,_Coney_Island_(1905).jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-12692184",
+     "file": "urban/urban-commons-12692184.webp",
+     "thumb": "urban/urban-commons-12692184.jpg",
+     "width": 1400,
+     "height": 1040,
+     "bytes": 121450,
+     "thumbBytes": 22357,
+     "title": "Detroit Publishing - Empire State Express (New York Central Railroad) coming thru Washington Street, Syracuse, N.Y.",
+     "author": "Detroit Publishing Co. , publisher",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Detroit_Publishing_-_Empire_State_Express_(New_York_Central_Railroad)_coming_thru_Washington_Street,_Syracuse,_N.Y..jpg",
      "credit": "Wikimedia Commons",
      "tags": {
       "kind": "photo"
@@ -7828,6 +7864,24 @@
      }
     },
     {
+     "id": "urban-commons-52110327",
+     "file": "urban/urban-commons-52110327.webp",
+     "thumb": "urban/urban-commons-52110327.jpg",
+     "width": 1400,
+     "height": 1100,
+     "bytes": 291434,
+     "thumbBytes": 41763,
+     "title": "Bryant Park in New York City LCCN2011632474",
+     "author": "Carol M. Highsmith",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Bryant_Park_in_New_York_City_LCCN2011632474.tif",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
      "id": "urban-commons-29494271",
      "file": "urban/urban-commons-29494271.webp",
      "thumb": "urban/urban-commons-29494271.jpg",
@@ -7864,6 +7918,24 @@
      }
     },
     {
+     "id": "urban-commons-66808280",
+     "file": "urban/urban-commons-66808280.webp",
+     "thumb": "urban/urban-commons-66808280.jpg",
+     "width": 1400,
+     "height": 1034,
+     "bytes": 80678,
+     "thumbBytes": 20097,
+     "title": "Christmas shoppers on street, New York LCCN2014683053",
+     "author": "Bain News Service, publisher",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Christmas_shoppers_on_street,_New_York_LCCN2014683053.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
      "id": "urban-commons-67863061",
      "file": "urban/urban-commons-67863061.webp",
      "thumb": "urban/urban-commons-67863061.jpg",
@@ -7894,6 +7966,492 @@
      "license": "Public domain",
      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
      "source": "https://commons.wikimedia.org/wiki/File:German_sailors_parade_on_street,_New_York_LCCN2014684284.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-66810735",
+     "file": "urban/urban-commons-66810735.webp",
+     "thumb": "urban/urban-commons-66810735.jpg",
+     "width": 1400,
+     "height": 1028,
+     "bytes": 55282,
+     "thumbBytes": 15409,
+     "title": "Children bundled in warm clothes playing in street, New York LCCN2014683229",
+     "author": "Bain News Service, publisher",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Children_bundled_in_warm_clothes_playing_in_street,_New_York_LCCN2014683229.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-66808617",
+     "file": "urban/urban-commons-66808617.webp",
+     "thumb": "urban/urban-commons-66808617.jpg",
+     "width": 1009,
+     "height": 1400,
+     "bytes": 127746,
+     "thumbBytes": 20577,
+     "title": "Street scene, including Church of Our Lady of Carmel, New York LCCN2014683089",
+     "author": "Bain News Service, publisher",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Street_scene,_including_Church_of_Our_Lady_of_Carmel,_New_York_LCCN2014683089.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-66812321",
+     "file": "urban/urban-commons-66812321.webp",
+     "thumb": "urban/urban-commons-66812321.jpg",
+     "width": 1400,
+     "height": 1043,
+     "bytes": 132446,
+     "thumbBytes": 25926,
+     "title": "Labor Day (May Day) parade, crowd in rain in street, New York LCCN2014683319",
+     "author": "Bain News Service, publisher",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Labor_Day_(May_Day)_parade,_crowd_in_rain_in_street,_New_York_LCCN2014683319.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-66727175",
+     "file": "urban/urban-commons-66727175.webp",
+     "thumb": "urban/urban-commons-66727175.jpg",
+     "width": 1400,
+     "height": 1024,
+     "bytes": 78810,
+     "thumbBytes": 19107,
+     "title": "Snow storm, 14th St., New York LCCN2014680049",
+     "author": "Bain News Service, publisher",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Snow_storm,_14th_St.,_New_York_LCCN2014680049.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-66806286",
+     "file": "urban/urban-commons-66806286.webp",
+     "thumb": "urban/urban-commons-66806286.jpg",
+     "width": 1400,
+     "height": 1016,
+     "bytes": 85624,
+     "thumbBytes": 18661,
+     "title": "R.R. on 11th Ave. (New York City) LCCN2014682879",
+     "author": "Bain News Service, publisher",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:R.R._on_11th_Ave._(New_York_City)_LCCN2014682879.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-4942526",
+     "file": "urban/urban-commons-4942526.webp",
+     "thumb": "urban/urban-commons-4942526.jpg",
+     "width": 952,
+     "height": 1400,
+     "bytes": 98950,
+     "thumbBytes": 19702,
+     "title": "Chicago and Northwestern railroad locomotive shop fsac.1a34676u",
+     "author": "Jack Delano",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Chicago_and_Northwestern_railroad_locomotive_shop_fsac.1a34676u.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-97467624",
+     "file": "urban/urban-commons-97467624.webp",
+     "thumb": "urban/urban-commons-97467624.jpg",
+     "width": 1400,
+     "height": 1031,
+     "bytes": 113358,
+     "thumbBytes": 22281,
+     "title": "No Known Restrictions Train Yard in Chicago by Jack Delano, 1942 (LOC) (471343643)",
+     "author": "Jack Delano",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:No_Known_Restrictions_Train_Yard_in_Chicago_by_Jack_Delano,_1942_(LOC)_(471343643).jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-97467632",
+     "file": "urban/urban-commons-97467632.webp",
+     "thumb": "urban/urban-commons-97467632.jpg",
+     "width": 1400,
+     "height": 1051,
+     "bytes": 74694,
+     "thumbBytes": 17288,
+     "title": "No Known Restrictions Freight Cars in Chicago by Jack Delano, 1942 (LOC) (471344147)",
+     "author": "Jack Delano",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:No_Known_Restrictions_Freight_Cars_in_Chicago_by_Jack_Delano,_1942_(LOC)_(471344147).jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-186073093",
+     "file": "urban/urban-commons-186073093.webp",
+     "thumb": "urban/urban-commons-186073093.jpg",
+     "width": 1400,
+     "height": 1285,
+     "bytes": 99938,
+     "thumbBytes": 25359,
+     "title": "Scene along Bathgate Avenue in the Bronx, a section from which many of the New Jersey homesteaders have come, New York…",
+     "author": "The Library of Congress",
+     "license": "Public domain",
+     "licenseUrl": "https://www.flickr.com/commons/usage/",
+     "source": "https://commons.wikimedia.org/wiki/File:Scene_along_Bathgate_Avenue_in_the_Bronx,_a_section_from_which_many_of_the_New_Jersey_homesteaders_have_come,_New_York_(LOC)_(55146160660).jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-159602339",
+     "file": "urban/urban-commons-159602339.webp",
+     "thumb": "urban/urban-commons-159602339.jpg",
+     "width": 1400,
+     "height": 1400,
+     "bytes": 241290,
+     "thumbBytes": 41893,
+     "title": "Grocery Shop - Dec. 1936 - Flickr - JFGryphon",
+     "author": "Jim Griffin",
+     "license": "CC0",
+     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "source": "https://commons.wikimedia.org/wiki/File:Grocery_Shop_-_Dec._1936_-_Flickr_-_JFGryphon.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-52104806",
+     "file": "urban/urban-commons-52104806.webp",
+     "thumb": "urban/urban-commons-52104806.jpg",
+     "width": 1098,
+     "height": 1400,
+     "bytes": 121020,
+     "thumbBytes": 21063,
+     "title": "Brooklyn Bridge, New York, New York LCCN2011632099",
+     "author": "Carol M. Highsmith",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Brooklyn_Bridge,_New_York,_New_York_LCCN2011632099.tif",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-52083902",
+     "file": "urban/urban-commons-52083902.webp",
+     "thumb": "urban/urban-commons-52083902.jpg",
+     "width": 1400,
+     "height": 1107,
+     "bytes": 203980,
+     "thumbBytes": 33026,
+     "title": "Boro Park, Brooklyn, New York LCCN2011631029",
+     "author": "Carol M. Highsmith",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Boro_Park,_Brooklyn,_New_York_LCCN2011631029.tif",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-52217415",
+     "file": "urban/urban-commons-52217415.webp",
+     "thumb": "urban/urban-commons-52217415.jpg",
+     "width": 1106,
+     "height": 1400,
+     "bytes": 164362,
+     "thumbBytes": 24655,
+     "title": "Replica of the Brooklyn Bridge, Las Vegas, Nevada LCCN2011630290",
+     "author": "Carol M. Highsmith",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Replica_of_the_Brooklyn_Bridge,_Las_Vegas,_Nevada_LCCN2011630290.tif",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-52108542",
+     "file": "urban/urban-commons-52108542.webp",
+     "thumb": "urban/urban-commons-52108542.jpg",
+     "width": 1400,
+     "height": 1103,
+     "bytes": 98724,
+     "thumbBytes": 20965,
+     "title": "Subway train arrives at a station in Brooklyn, New York LCCN2011632357",
+     "author": "Carol M. Highsmith",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Subway_train_arrives_at_a_station_in_Brooklyn,_New_York_LCCN2011632357.tif",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-52189678",
+     "file": "urban/urban-commons-52189678.webp",
+     "thumb": "urban/urban-commons-52189678.jpg",
+     "width": 1096,
+     "height": 1400,
+     "bytes": 120984,
+     "thumbBytes": 24254,
+     "title": "Aerial view of New York City, with a focus on the Brooklyn Bridge, through which the Twin Towers of the World Trade Cen…",
+     "author": "Carol M. Highsmith",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_New_York_City,_with_a_focus_on_the_Brooklyn_Bridge,_through_which_the_Twin_Towers_of_the_World_Trade_Center_are_visible_LCCN2011634928.tif",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-52103676",
+     "file": "urban/urban-commons-52103676.webp",
+     "thumb": "urban/urban-commons-52103676.jpg",
+     "width": 1400,
+     "height": 1105,
+     "bytes": 142422,
+     "thumbBytes": 28404,
+     "title": "Food vendors, Coney Island, New York LCCN2011632051",
+     "author": "Carol M. Highsmith",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Food_vendors,_Coney_Island,_New_York_LCCN2011632051.tif",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-1614242",
+     "file": "urban/urban-commons-1614242.webp",
+     "thumb": "urban/urban-commons-1614242.jpg",
+     "width": 932,
+     "height": 1400,
+     "bytes": 159478,
+     "thumbBytes": 27784,
+     "title": "New York Lower East Side Tenement Museum’s landmark tenement building at 97 Orchard Street",
+     "author": "Wally Gobetz",
+     "license": "CC BY 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:New_York_Lower_East_Side_Tenement_Museum%E2%80%99s_landmark_tenement_building_at_97_Orchard_Street.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-111587783",
+     "file": "urban/urban-commons-111587783.webp",
+     "thumb": "urban/urban-commons-111587783.jpg",
+     "width": 1400,
+     "height": 1050,
+     "bytes": 286808,
+     "thumbBytes": 32999,
+     "title": "The Tenement Museum (51624759160)",
+     "author": "ajay_suresh",
+     "license": "CC BY 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:The_Tenement_Museum_(51624759160).jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-180726226",
+     "file": "urban/urban-commons-180726226.webp",
+     "thumb": "urban/urban-commons-180726226.jpg",
+     "width": 1400,
+     "height": 1050,
+     "bytes": 290738,
+     "thumbBytes": 35443,
+     "title": "NYCHA Lower East Side I Infill 2025 jeh",
+     "author": "NewestPiano",
+     "license": "CC BY 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:NYCHA_Lower_East_Side_I_Infill_2025_jeh.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-62148628",
+     "file": "urban/urban-commons-62148628.webp",
+     "thumb": "urban/urban-commons-62148628.jpg",
+     "width": 1400,
+     "height": 789,
+     "bytes": 41564,
+     "thumbBytes": 13241,
+     "title": "Train stopping at a New York subway station (Unsplash)",
+     "author": "Martin David martindavid",
+     "license": "CC0",
+     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "source": "https://commons.wikimedia.org/wiki/File:Train_stopping_at_a_New_York_subway_station_(Unsplash).jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-26559071",
+     "file": "urban/urban-commons-26559071.webp",
+     "thumb": "urban/urban-commons-26559071.jpg",
+     "width": 1400,
+     "height": 1045,
+     "bytes": 299402,
+     "thumbBytes": 25019,
+     "title": "Travelers at Wall Street subway Station, New York",
+     "author": "Phillip Capper from Wellington, New Zealand",
+     "license": "CC BY 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Travelers_at_Wall_Street_subway_Station,_New_York.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-1792309",
+     "file": "urban/urban-commons-1792309.webp",
+     "thumb": "urban/urban-commons-1792309.jpg",
+     "width": 1400,
+     "height": 1050,
+     "bytes": 165322,
+     "thumbBytes": 24426,
+     "title": "51st Street 6 Subway Station by David Shankbone",
+     "author": "David Shankbone",
+     "license": "CC BY 2.5",
+     "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+     "source": "https://commons.wikimedia.org/wiki/File:51st_Street_6_Subway_Station_by_David_Shankbone.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-166556371",
+     "file": "urban/urban-commons-166556371.webp",
+     "thumb": "urban/urban-commons-166556371.jpg",
+     "width": 1400,
+     "height": 1050,
+     "bytes": 198734,
+     "thumbBytes": 24786,
+     "title": "The Clark Street subway station elevators post modernization",
+     "author": "Baron Maddock",
+     "license": "CC BY 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:The_Clark_Street_subway_station_elevators_post_modernization.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-1315897",
+     "file": "urban/urban-commons-1315897.webp",
+     "thumb": "urban/urban-commons-1315897.jpg",
+     "width": 1400,
+     "height": 853,
+     "bytes": 274408,
+     "thumbBytes": 16677,
+     "title": "Columbia University-116th Street station, New York Subway",
+     "author": "Unknown",
+     "license": "Public domain",
+     "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Columbia_University-116th_Street_station,_New_York_Subway.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-149234410",
+     "file": "urban/urban-commons-149234410.webp",
+     "thumb": "urban/urban-commons-149234410.jpg",
+     "width": 1400,
+     "height": 1129,
+     "bytes": 108716,
+     "thumbBytes": 21413,
+     "title": "Bowling Green Subway Station, New York City, RP-F-2012-23",
+     "author": "Rijksmuseum",
+     "license": "CC0",
+     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "source": "https://commons.wikimedia.org/wiki/File:Bowling_Green_Subway_Station,_New_York_City,_RP-F-2012-23.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-149234419",
+     "file": "urban/urban-commons-149234419.webp",
+     "thumb": "urban/urban-commons-149234419.jpg",
+     "width": 1400,
+     "height": 1108,
+     "bytes": 159040,
+     "thumbBytes": 27345,
+     "title": "Bowling Green Subway Station, New York City, RP-F-2012-24",
+     "author": "Rijksmuseum",
+     "license": "CC0",
+     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "source": "https://commons.wikimedia.org/wiki/File:Bowling_Green_Subway_Station,_New_York_City,_RP-F-2012-24.jpg",
+     "credit": "Wikimedia Commons",
+     "tags": {
+      "kind": "photo"
+     }
+    },
+    {
+     "id": "urban-commons-33086927",
+     "file": "urban/urban-commons-33086927.webp",
+     "thumb": "urban/urban-commons-33086927.jpg",
+     "width": 1400,
+     "height": 743,
+     "bytes": 81952,
+     "thumbBytes": 17848,
+     "title": "Subway Station Digital Advertising Screens (13251001473)",
+     "author": "Metropolitan Transportation Authority of the State of New York",
+     "license": "CC BY 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Subway_Station_Digital_Advertising_Screens_(13251001473).jpg",
      "credit": "Wikimedia Commons",
      "tags": {
       "kind": "photo"
