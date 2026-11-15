@@ -434,12 +434,13 @@ The wooden mannequin the motion drives is built from code (spheres, ellipsoids, 
 - [Terracotta statuette of a draped, standing woman](https://www.metmuseum.org/art/collection/search/247532), Greek, Boeotian. CC0, The Metropolitan Museum of Art, Open Access. `pose-met-247532`
 - [Terracotta statuette of a standing girl](https://www.metmuseum.org/art/collection/search/250741), Greek, probably Boeotian. CC0, The Metropolitan Museum of Art, Open Access. `pose-met-250741`
 
-### Hands and feet (72)
+### Hands and feet (75)
 
 - [Hands of Mr. Henry Brooks, 8c05678a](https://commons.wikimedia.org/wiki/File:Hands_of_Mr._Henry_Brooks,_8c05678a.tif), Jack Delano. Public domain, Wikimedia Commons. `hands-feet-commons-145384274`
 - [Hands of Mrs. Andrew Ostermeyer, wife of a homesteader, Woodbury County, Iowa, 8a21551](https://commons.wikimedia.org/wiki/File:Hands_of_Mrs._Andrew_Ostermeyer,_wife_of_a_homesteader,_Woodbury_County,_Iowa,_8a21551.tif), Russell Lee. Public domain, Wikimedia Commons. `hands-feet-commons-147826000`
 - [Hands of Mrs. Julian Bachman, a gauge inspector 31909v](https://commons.wikimedia.org/wiki/File:Hands_of_Mrs._Julian_Bachman,_a_gauge_inspector_31909v.jpg), Marjory Collins. Public domain, Wikimedia Commons. `hands-feet-commons-32474954`
 - [US Navy 090418-N-1057H-084 A Seabee assigned to Naval Mobile Construction Battalion (NMCB) 11 Detachment Horn of Africa…](https://commons.wikimedia.org/wiki/File:US_Navy_090418-N-1057H-084_A_Seabee_assigned_to_Naval_Mobile_Construction_Battalion_(NMCB)_11_Detachment_Horn_of_Africa_picks_up_rocks_used_for_the_construction_of_a_the_Walela_low-water_crossing_bridge.jpg), U.S. Navy photo by Mass Communication Specialist 2nd Class Erick S. Holmes. Public domain, Wikimedia Commons. `hands-feet-commons-8357372`
+- [Elderly Man's Hands (7760356574)](https://commons.wikimedia.org/wiki/File:Elderly_Man%27s_Hands_(7760356574).jpg), Tony Alter from Newport News, USA. CC BY 2.0, Wikimedia Commons. `hands-feet-commons-89581765`
 - [Elderly man shows hands with dirt stains after working outdoors on a sunny day](https://commons.wikimedia.org/wiki/File:Elderly_man_shows_hands_with_dirt_stains_after_working_outdoors_on_a_sunny_day.jpg), Shixart1985. CC BY 2.0, Wikimedia Commons. `hands-feet-commons-200922650`
 - [Standing male feet](https://commons.wikimedia.org/wiki/File:Standing_male_feet.jpg), Pure male feet. CC0, Wikimedia Commons. `hands-feet-commons-110680825`
 - [Soles of Bare Feet](https://commons.wikimedia.org/wiki/File:Soles_of_Bare_Feet.jpg), Pure male feet. CC0, Wikimedia Commons. `hands-feet-commons-110875911`
@@ -460,9 +461,11 @@ The wooden mannequin the motion drives is built from code (spheres, ellipsoids, 
 - [DIG13785-031 (21705789729)](https://commons.wikimedia.org/wiki/File:DIG13785-031_(21705789729).jpg), LBJ Library. Public domain, Wikimedia Commons. `hands-feet-commons-51499352`
 - [Description- A woman potter from Senegal hand shapes a pot in the Roots of Virginia Culture program at the 2007 Smithso…](https://commons.wikimedia.org/wiki/File:Description-_A_woman_potter_from_Senegal_hand_shapes_a_pot_in_the_Roots_of_Virginia_Culture_program_at_the_2007_Smithsonian_Folklife_Festival_on_the_National_Mall,_Washington,_D.C._(2553825128).jpg), Smithsonian Institution. Public domain, Wikimedia Commons. `hands-feet-commons-53630447`
 - [The Wheel (135616779)](https://commons.wikimedia.org/wiki/File:The_Wheel_(135616779).jpeg), Stephanie Pakrul. CC BY 3.0, Wikimedia Commons. `hands-feet-commons-74048864`
+- [Pottery and craft (Unsplash)](https://commons.wikimedia.org/wiki/File:Pottery_and_craft_(Unsplash).jpg), Alex Jones alexjones. CC0, Wikimedia Commons. `hands-feet-commons-61807120`
 - [Kulol charxida idish shakllantirish](https://commons.wikimedia.org/wiki/File:Kulol_charxida_idish_shakllantirish.png), AIDEPCUL. CC BY 4.0, Wikimedia Commons. `hands-feet-commons-197449559`
 - [Feet covered in beach sand (Unsplash)](https://commons.wikimedia.org/wiki/File:Feet_covered_in_beach_sand_(Unsplash).jpg), Matthew Wheeler matthewwheeler. CC0, Wikimedia Commons. `hands-feet-commons-61903502`
 - [\[Button\]](https://www.metmuseum.org/art/collection/search/283177), Unknown. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-283177`
+- [Clasped Hands of Robert and Elizabeth Barrett Browning MET DT8282](https://commons.wikimedia.org/wiki/File:Clasped_Hands_of_Robert_and_Elizabeth_Barrett_Browning_MET_DT8282.jpg), Harriet Hosmer. CC0, Wikimedia Commons. `hands-feet-commons-57862011`
 - [Harriet Goodhue Hosmer, Clasped Hands of Robert Browning and Elizabeth Barrett Browning, model 1853, NGA 132405](https://commons.wikimedia.org/wiki/File:Harriet_Goodhue_Hosmer,_Clasped_Hands_of_Robert_Browning_and_Elizabeth_Barrett_Browning,_model_1853,_NGA_132405.jpg), Harriet Goodhue Hosmer. CC0, Wikimedia Commons. `hands-feet-commons-80612552`
 - [The complete works of Mrs. E. B. Browning - p75](https://commons.wikimedia.org/wiki/File:The_complete_works_of_Mrs._E._B._Browning_-_p75.png), Author Elizabeth Barrett Browning Publisher G. Sproul Sculptured from the life…. Public domain, Wikimedia Commons. `hands-feet-commons-126154361`
 - [Limestone hand holding a dove](https://www.metmuseum.org/art/collection/search/242270), Cypriot. CC0, The Metropolitan Museum of Art, Open Access. `hands-feet-met-242270`
