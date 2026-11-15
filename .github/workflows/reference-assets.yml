@@ -31,6 +31,8 @@ jobs:
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
@@ -65,5 +67,7 @@ jobs:
             echo "Nothing changed."
           else
             git commit -q -m "Rebuild bundled reference photo packs"
-            git push
+            # Other commits may have landed while the packs were building.
+            git pull --rebase -q origin "${{ github.ref_name }}"
+            git push origin "HEAD:${{ github.ref_name }}"
           fi
