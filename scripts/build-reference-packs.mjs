@@ -44,9 +44,9 @@ async function throttle(host) {
   if (at > now) await sleep(at - now);
 }
 
-async function download(url) {
+async function download(url, attempts = 5) {
   const host = new URL(url).host;
-  for (let attempt = 1; attempt <= 5; attempt++) {
+  for (let attempt = 1; attempt <= attempts; attempt++) {
     try {
       await throttle(host);
       const response = await fetch(url, { headers: { 'User-Agent': UA, Accept: 'image/*' }, signal: AbortSignal.timeout(REQUEST_TIMEOUT) });
@@ -62,7 +62,7 @@ async function download(url) {
       if (!type.startsWith('image/')) return { error: `not an image (${type || 'no content type'})` };
       return { bytes: Buffer.from(await response.arrayBuffer()) };
     } catch (error) {
-      if (attempt === 5) return { error: error.message, limited: error.message === 'HTTP 429' };
+      if (attempt === attempts) return { error: error.message, limited: error.message === 'HTTP 429' };
       await sleep(error.wait ?? 2000 * attempt);
     }
   }
@@ -79,7 +79,7 @@ function candidates(url) {
   return [`https://upload.wikimedia.org/wikipedia/commons/thumb/${a}/${ab}/${name}/${page}1920px-${name}${suffix}`, url];
 }
 
-async function build(entry) {
+async function build(entry, attempts) {
   const dir = `${OUT}/${entry.category}`;
   const full = `${dir}/${entry.id}.webp`;
   const thumb = `${dir}/${entry.id}.jpg`;
@@ -88,7 +88,7 @@ async function build(entry) {
   let source = null;
   let problem = 'no URL worked';
   for (const url of candidates(entry.url)) {
-    const result = await download(url);
+    const result = await download(url, attempts);
     if (result.bytes) {
       source = result.bytes;
       break;
@@ -97,7 +97,7 @@ async function build(entry) {
     // Rate limited: the original file is bigger and limited the same way, so leave it for the next run.
     if (result.limited) break;
   }
-  if (!source) return { failed: problem };
+  if (!source) return { failed: problem, limited: problem === 'HTTP 429' };
 
   try {
     // .rotate() applies the camera's orientation; everything else in the metadata is dropped on output.
@@ -191,27 +191,39 @@ for (const category of CATEGORIES) {
     continue;
   }
   const items = [];
-  let next = 0;
-  let done = 0;
-  await Promise.all(
-    Array.from({ length: WORKERS }, async () => {
-      while (next < entries.length) {
-        const entry = entries[next++];
-        if (!ALLOWED.test(entry.license) || !entry.source || !entry.url) {
-          failures.push({ category, id: entry.id, reason: 'licence, source or URL missing or not allowed' });
-          continue;
+  const limited = [];
+  const run = async (queue, workers, pass) => {
+    let next = 0;
+    let done = 0;
+    await Promise.all(
+      Array.from({ length: workers }, async () => {
+        while (next < queue.length) {
+          const entry = queue[next++];
+          if (!ALLOWED.test(entry.license) || !entry.source || !entry.url) {
+            failures.push({ category, id: entry.id, reason: 'licence, source or URL missing or not allowed' });
+            continue;
+          }
+          const t = Date.now();
+          // The first pass gives up on a rate-limited file sooner; the second pass waits longer.
+          const result = await build(entry, pass === 1 ? 3 : 5);
+          done++;
+          const took = `${((Date.now() - t) / 1000).toFixed(1)}s`;
+          if (result.item) items.push(result.item);
+          else if (result.limited && pass === 1) limited.push(entry);
+          else failures.push({ category, id: entry.id, url: entry.url, reason: result.failed });
+          console.log(`[${elapsed()}] ${category} pass ${pass} ${done}/${queue.length} ${entry.id} ${result.item ? 'ok' : `FAILED ${result.failed}`} (${took})`);
+          await sleep(100);
         }
-        const t = Date.now();
-        const result = await build(entry);
-        done++;
-        const took = `${((Date.now() - t) / 1000).toFixed(1)}s`;
-        if (result.item) items.push(result.item);
-        else failures.push({ category, id: entry.id, url: entry.url, reason: result.failed });
-        console.log(`[${elapsed()}] ${category} ${done}/${entries.length} ${entry.id} ${result.item ? 'ok' : `FAILED ${result.failed}`} (${took})`);
-        await sleep(100);
-      }
-    }),
-  );
+      }),
+    );
+  };
+  await run(entries, WORKERS, 1);
+  if (limited.length) {
+    // Rate limited: let the host cool down, then try those again one at a time.
+    console.log(`[${elapsed()}] ${category}: ${limited.length} rate limited; retrying after a pause`);
+    await sleep(Number(process.env.COOL_DOWN ?? 90_000));
+    await run(limited, 1, 2);
+  }
   const order = new Map(entries.map((e, i) => [e.id, i]));
   items.sort((a, b) => order.get(a.id) - order.get(b.id));
   packs[category] = { items };

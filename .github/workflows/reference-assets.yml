@@ -59,6 +59,8 @@ jobs:
         if: inputs.task == 'build-packs'
         env:
           CATEGORIES: ${{ inputs.only || 'face pose hands-feet urban' }}
+          # Milliseconds between Wikimedia requests; it rate limits bursts.
+          WIKIMEDIA_GAP: '4000'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
