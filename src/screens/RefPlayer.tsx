@@ -84,7 +84,8 @@ function Stage({ image, view, hidden }: { image: RefImage; view: View; hidden: b
   const label = `${image.title}${steps === null ? '' : steps === 0 ? ', in grayscale' : `, in ${steps} values`}${view.flip ? ', mirrored' : ''}`;
   return (
     <div class={`ref-picture${view.flip ? ' flip' : ''}`} style={{ visibility: hidden ? 'hidden' : 'visible' }}>
-      <FilteredCanvas data={data} steps={steps} autoRange={false} label={label} testId="ref-canvas" style={view.squint ? { filter: 'blur(8px)' } : {}} />
+      {/* A reference's exposure is arbitrary, so its value map splits its own range, not the absolute scale. */}
+      <FilteredCanvas data={data} steps={steps} autoRange={steps !== null && steps >= 2} label={label} testId="ref-canvas" style={view.squint ? { filter: 'blur(8px)' } : {}} />
       {terminatorUrl && <img class="ref-overlay" src={terminatorUrl} alt="" />}
       {view.landmarks &&
         image.overlays?.landmarks?.map((l) => (

@@ -91,10 +91,10 @@ test.describe('timed reference', () => {
     const canvas = page.getByTestId('ref-canvas');
     expect((await canvasGreys(canvas)).levels.length).toBeGreaterThan(20);
     await page.getByTestId('ref-values').click();
-    await expect(canvas).toHaveAttribute('data-rendered', 'steps-2');
+    await expect(canvas).toHaveAttribute('data-rendered', 'steps-2-auto');
     expect((await canvasGreys(canvas)).levels).toEqual([0, 255]);
     await page.getByTestId('ref-values').click();
-    await expect(canvas).toHaveAttribute('data-rendered', 'steps-3');
+    await expect(canvas).toHaveAttribute('data-rendered', 'steps-3-auto');
     expect((await canvasGreys(canvas)).levels.length).toBeLessThanOrEqual(3);
 
     await page.getByRole('button', { name: 'More options' }).click();
