@@ -28,7 +28,7 @@ concurrency:
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 240
     steps:
       - uses: actions/checkout@v4
         with:
@@ -53,21 +53,24 @@ jobs:
           git commit -q -m "Candidate previews for curation (scratch, safe to delete)"
           git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" reference-candidates
 
-      - name: Build the photo packs
+      # One category at a time, committed as it finishes, so a slow host or a timeout
+      # never throws away the categories that are already done.
+      - name: Build and commit the photo packs
         if: inputs.task == 'build-packs'
-        run: node scripts/build-reference-packs.mjs ${{ inputs.only }}
-
-      - name: Commit the packs
-        if: inputs.task == 'build-packs'
+        env:
+          CATEGORIES: ${{ inputs.only || 'face pose hands-feet urban' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/packs CREDITS.md reference-packs/build-report.json
-          if git diff --cached --quiet; then
-            echo "Nothing changed."
-          else
-            git commit -q -m "Rebuild bundled reference photo packs"
-            # Other commits may have landed while the packs were building.
+          for category in $CATEGORIES; do
+            node scripts/build-reference-packs.mjs "$category"
+            git add public/packs CREDITS.md reference-packs/build-report.json
+            if git diff --cached --quiet; then
+              echo "$category: nothing changed."
+              continue
+            fi
+            git commit -q -m "Build the $category reference photo pack"
+            # Other commits may have landed while the pack was building.
             git pull --rebase -q origin "${{ github.ref_name }}"
             git push origin "HEAD:${{ github.ref_name }}"
-          fi
+          done

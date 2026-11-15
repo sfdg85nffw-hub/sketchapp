@@ -23,21 +23,28 @@ const CATEGORIES = ['face', 'pose', 'hands-feet', 'urban'];
 const LABELS = { face: 'Faces', pose: 'Poses', 'hands-feet': 'Hands and feet', urban: 'Urban scenes' };
 const only = process.argv.slice(2);
 const force = process.env.FORCE === '1';
+const WORKERS = Number(process.env.CONCURRENCY ?? 4);
+const REQUEST_TIMEOUT = 60_000;
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function download(url) {
-  for (let attempt = 1; attempt <= 5; attempt++) {
+  for (let attempt = 1; attempt <= 4; attempt++) {
     try {
-      const response = await fetch(url, { headers: { 'User-Agent': UA, Accept: 'image/*' } });
-      if ([403, 429].includes(response.status) || response.status >= 500) throw new Error(`HTTP ${response.status}`);
+      const response = await fetch(url, { headers: { 'User-Agent': UA, Accept: 'image/*' }, signal: AbortSignal.timeout(REQUEST_TIMEOUT) });
+      if ([403, 429].includes(response.status) || response.status >= 500) {
+        const wait = Number(response.headers.get('retry-after'));
+        const error = new Error(`HTTP ${response.status}`);
+        error.wait = Number.isFinite(wait) && wait > 0 ? Math.min(wait, 30) * 1000 : 0;
+        throw error;
+      }
       if (!response.ok) return { error: `HTTP ${response.status}` };
       const type = response.headers.get('content-type') ?? '';
       if (!type.startsWith('image/')) return { error: `not an image (${type || 'no content type'})` };
       return { bytes: Buffer.from(await response.arrayBuffer()) };
     } catch (error) {
-      if (attempt === 5) return { error: error.message };
-      await sleep(1500 * attempt * attempt);
+      if (attempt === 4) return { error: error.message };
+      await sleep(error.wait || 2000 * attempt);
     }
   }
   return { error: 'unreachable' };
@@ -141,29 +148,46 @@ function writeCredits(packs) {
 
 const manifest = JSON.parse(readFileSync('reference-packs/manifest.json', 'utf8'));
 const previous = existsSync(`${OUT}/index.json`) ? JSON.parse(readFileSync(`${OUT}/index.json`, 'utf8')).packs : {};
+const report = 'reference-packs/build-report.json';
+const previousFailures = existsSync(report) ? JSON.parse(readFileSync(report, 'utf8')).failures : [];
 const packs = {};
 const failures = [];
+const started = Date.now();
+const elapsed = () => `${((Date.now() - started) / 1000).toFixed(0)}s`;
+
+function save() {
+  mkdirSync(OUT, { recursive: true });
+  writeFileSync(`${OUT}/index.json`, `${JSON.stringify({ version: 1, packs }, null, 1)}\n`);
+  writeCredits(packs);
+  writeFileSync(report, `${JSON.stringify({ failures }, null, 1)}\n`);
+}
 
 for (const category of CATEGORIES) {
   const entries = manifest.entries.filter((e) => e.category === category);
   if (only.length && !only.includes(category)) {
     packs[category] = previous[category] ?? { items: [] };
+    failures.push(...previousFailures.filter((f) => f.category === category));
     continue;
   }
   const items = [];
   let next = 0;
+  let done = 0;
   await Promise.all(
-    Array.from({ length: 3 }, async () => {
+    Array.from({ length: WORKERS }, async () => {
       while (next < entries.length) {
         const entry = entries[next++];
         if (!ALLOWED.test(entry.license) || !entry.source || !entry.url) {
-          failures.push({ id: entry.id, reason: 'licence, source or URL missing or not allowed' });
+          failures.push({ category, id: entry.id, reason: 'licence, source or URL missing or not allowed' });
           continue;
         }
+        const t = Date.now();
         const result = await build(entry);
+        done++;
+        const took = `${((Date.now() - t) / 1000).toFixed(1)}s`;
         if (result.item) items.push(result.item);
-        else failures.push({ id: entry.id, url: entry.url, reason: result.failed });
-        await sleep(120);
+        else failures.push({ category, id: entry.id, url: entry.url, reason: result.failed });
+        console.log(`[${elapsed()}] ${category} ${done}/${entries.length} ${entry.id} ${result.item ? 'ok' : `FAILED ${result.failed}`} (${took})`);
+        await sleep(100);
       }
     }),
   );
@@ -178,9 +202,6 @@ for (const category of CATEGORIES) {
   console.log(`${category}: ${items.length} of ${entries.length} built, ${(bytes / 1e6).toFixed(1)} MB`);
 }
 
-mkdirSync(OUT, { recursive: true });
-writeFileSync(`${OUT}/index.json`, `${JSON.stringify({ version: 1, packs }, null, 1)}\n`);
-writeCredits(packs);
-writeFileSync('reference-packs/build-report.json', `${JSON.stringify({ failures }, null, 1)}\n`);
+save();
 const total = Object.values(packs).reduce((sum, p) => sum + p.items.reduce((s, i) => s + i.bytes + i.thumbBytes, 0), 0);
-console.log(`total ${(total / 1e6).toFixed(1)} MB; ${failures.length} entries failed (see reference-packs/build-report.json)`);
+console.log(`total ${(total / 1e6).toFixed(1)} MB; ${failures.length} entries failed (see ${report})`);

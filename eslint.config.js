@@ -20,7 +20,7 @@ export default tseslint.config(
   {
     files: ['scripts/**', 'e2e/**', '*.config.*'],
     languageOptions: {
-      globals: { process: 'readonly', console: 'readonly', URL: 'readonly', document: 'readonly', window: 'readonly', fetch: 'readonly', setTimeout: 'readonly', Buffer: 'readonly' },
+      globals: { process: 'readonly', console: 'readonly', URL: 'readonly', document: 'readonly', window: 'readonly', fetch: 'readonly', setTimeout: 'readonly', Buffer: 'readonly', AbortSignal: 'readonly' },
     },
     rules: { 'no-console': 'off' },
   },
