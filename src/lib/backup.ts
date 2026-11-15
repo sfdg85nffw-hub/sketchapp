@@ -11,6 +11,8 @@ export interface BackupRecords {
   projects: Project[];
   reviews: MonthlyReview[];
   settings: Settings | null;
+  /** Small records kept by key: My References, light guesses, saved sequences. */
+  extra?: Record<string, unknown>;
 }
 
 interface ImageManifestItem {
@@ -99,6 +101,7 @@ export function unpackBackup(zip: Uint8Array): UnpackedBackup {
       projects: manifest.projects ?? [],
       reviews: manifest.reviews ?? [],
       settings: manifest.settings ?? null,
+      ...(manifest.extra && typeof manifest.extra === 'object' ? { extra: manifest.extra } : {}),
     },
     images,
     exportedAt: manifest.exportedAt,

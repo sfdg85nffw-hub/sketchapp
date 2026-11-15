@@ -33,6 +33,8 @@ function offlineServiceWorker(): Plugin {
       const files = walk(outDir)
         .map((f) => relative(outDir, f).split(sep).join('/'))
         .filter((f) => f !== 'sw.js')
+        // Photo packs are saved offline only when he asks for them; their index ships with the shell.
+        .filter((f) => !f.startsWith('packs/') || f === 'packs/index.json')
         .sort();
       const hash = createHash('sha256');
       for (const f of files) {

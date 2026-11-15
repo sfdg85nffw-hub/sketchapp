@@ -115,11 +115,21 @@ export function Practice() {
           </a>
         </li>
         <li>
+          <a class="list-link" href="#/ref">
+            <Icon name="portrait" />
+            <span class="grow">
+              Timed reference
+              <span class="sub">Faces, poses, lit shapes, a skull, your own photos. All offline.</span>
+            </span>
+            <Icon name="chevron" size={20} />
+          </a>
+        </li>
+        <li>
           <a class="list-link" href="#/gesture">
             <Icon name="timer" />
             <span class="grow">
               Gesture timer
-              <span class="sub">30 s, 1 min or 2 min poses. Good on the train.</span>
+              <span class="sub">Draw from life on the train: 30 s, 1 min or 2 min poses.</span>
             </span>
             <Icon name="chevron" size={20} />
           </a>

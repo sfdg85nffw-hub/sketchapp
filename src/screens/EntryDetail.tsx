@@ -158,6 +158,12 @@ export function EntryDetail({ id }: { id: string }) {
         <li class="tag">{mediumLabel(entry.medium)}</li>
         {entry.minutes && <li class="tag">{entry.minutes} min</li>}
         {entry.location && <li class="tag">{entry.location}</li>}
+        {entry.reference && (
+          <li class="tag">
+            <Icon name="timer" size={12} />
+            {entry.reference.mode} · {entry.reference.summary}
+          </li>
+        )}
       </ul>
 
       {entry.feeling ? (

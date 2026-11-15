@@ -47,6 +47,22 @@ function changed(): void {
   for (const listener of [...listeners]) listener();
 }
 
+/* ---------- small keyed records ---------- */
+
+/** Keyed records that travel with a backup. Everything else in kv is either settings or rebuilt. */
+export const BACKUP_KV_KEYS = ['myRefs', 'lightGuesses', 'refSequences', 'refShown'] as const;
+export type KvKey = (typeof BACKUP_KV_KEYS)[number] | 'packsCached';
+
+export async function getKv<T>(key: KvKey, fallback: T): Promise<T> {
+  const value = (await (await db()).get('kv', key)) as T | undefined;
+  return value ?? fallback;
+}
+
+export async function putKv(key: KvKey, value: unknown, notify = true): Promise<void> {
+  await (await db()).put('kv', value, key);
+  if (notify) changed();
+}
+
 /* ---------- settings ---------- */
 
 export function defaultSettings(): Settings {
@@ -208,7 +224,12 @@ export async function exportEverything(): Promise<{ records: BackupRecords; imag
     database.getAll('reviews'),
     database.getAll('images'),
   ]);
-  return { records: { entries, drillStates, paints, projects, reviews, settings: await loadSettings() }, images };
+  const extra: Record<string, unknown> = {};
+  for (const key of BACKUP_KV_KEYS) {
+    const value = await database.get('kv', key);
+    if (value !== undefined) extra[key] = value;
+  }
+  return { records: { entries, drillStates, paints, projects, reviews, settings: await loadSettings(), extra }, images };
 }
 
 /**
@@ -225,6 +246,9 @@ export async function importEverything(records: BackupRecords, images: readonly 
   if (records.paints.length) await tx.objectStore('kv').put(true, 'paintsSeeded');
   for (const project of records.projects) await tx.objectStore('projects').put(project);
   for (const review of records.reviews) await tx.objectStore('reviews').put(review);
+  for (const key of BACKUP_KV_KEYS) {
+    if (records.extra && key in records.extra) await tx.objectStore('kv').put(records.extra[key], key);
+  }
   if (records.settings) {
     const merged: Settings = {
       ...defaultSettings(),

@@ -5,6 +5,9 @@
 export interface CaptureIntent {
   projectId?: string;
   subject?: string;
+  minutes?: number;
+  reference?: { mode: string; summary: string };
+  drillId?: string;
 }
 
 let pendingFile: File | null = null;

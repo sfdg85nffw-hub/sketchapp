@@ -2,7 +2,6 @@ import { useEffect, useState } from 'preact/hooks';
 import { Capture } from './screens/Capture';
 import { DrillDetail, DrillLibrary } from './screens/Drills';
 import { EntryDetail } from './screens/EntryDetail';
-import { Gesture } from './screens/Gesture';
 import { Journal } from './screens/Journal';
 import { Materials } from './screens/Materials';
 import { Onboarding } from './screens/Onboarding';
@@ -12,6 +11,9 @@ import { Practice } from './screens/Practice';
 import { Progress } from './screens/Progress';
 import { ProjectDetail, Projects } from './screens/Projects';
 import { Reflect } from './screens/Reflect';
+import { RefHome } from './screens/RefHome';
+import { RefPlayer } from './screens/RefPlayer';
+import { RefSetup } from './screens/RefSetup';
 import { Review } from './screens/Review';
 import { See } from './screens/See';
 import { SettingsScreen } from './screens/Settings';
@@ -40,6 +42,8 @@ const TAB_OF_ROUTE: Record<string, TabId> = {
   drills: 'practice',
   drill: 'practice',
   gesture: 'practice',
+  ref: 'practice',
+  refplay: 'practice',
   projects: 'practice',
   project: 'practice',
   plan: 'practice',
@@ -53,7 +57,7 @@ const TAB_OF_ROUTE: Record<string, TabId> = {
 };
 
 /** Focused flows replace the tab bar with their own single primary action. */
-const FLOWS = new Set(['capture', 'reflect', 'plan', 'drill', 'gesture', 'review', 'sample']);
+const FLOWS = new Set(['capture', 'reflect', 'plan', 'drill', 'gesture', 'review', 'sample', 'ref', 'refplay']);
 
 function screenFor(route: Route) {
   const id = route.params[0] ?? '';
@@ -73,7 +77,11 @@ function screenFor(route: Route) {
     case 'drill':
       return <DrillDetail id={id} />;
     case 'gesture':
-      return <Gesture />;
+      return <RefSetup mode="life" />;
+    case 'ref':
+      return id ? <RefSetup mode={id} /> : <RefHome />;
+    case 'refplay':
+      return <RefPlayer />;
     case 'projects':
       return <Projects />;
     case 'project':

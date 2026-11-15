@@ -37,7 +37,8 @@ self.addEventListener('fetch', (event) => {
         return (await cache.match(shell, { ignoreVary: true })) ?? fetch(request);
       }
       // Static files: the same bytes whatever the request headers, so ignore Vary.
-      const hit = await cache.match(request, { ignoreSearch: true, ignoreVary: true });
+      // Searches every cache, so photo packs saved offline are found too.
+      const hit = await caches.match(request, { ignoreSearch: true, ignoreVary: true });
       if (hit) return hit;
       try {
         return await fetch(request);

@@ -161,9 +161,9 @@ export function DrillDetail({ id }: { id: string }) {
         {state.level < 3 && <p class="small muted">Next step up: {drill.levels[state.level as 1 | 2]}</p>}
       </div>
 
-      {drill.kind === 'gesture' ? (
-        <Button block icon="timer" onClick={() => navigate('/gesture')}>
-          Open the gesture timer
+      {drill.launch ? (
+        <Button block icon="timer" onClick={() => navigate(drill.launch!.route)}>
+          {drill.launch.label}
         </Button>
       ) : (
         <DrillTimer seconds={drill.timerSeconds ?? drill.minutes * 60} />

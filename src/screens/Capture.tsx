@@ -53,6 +53,7 @@ export function Capture() {
       baseline: false,
       date: toDateKey(new Date()),
       projectId: intent.projectId,
+      ...(intent.minutes ? { minutes: intent.minutes } : {}),
     });
   }, [history, draft, settings, intent]);
 
@@ -78,6 +79,8 @@ export function Capture() {
         weaknessIds: draft.weaknessIds,
         baseline: draft.baseline,
         ...(draft.minutes ? { minutes: draft.minutes } : {}),
+        ...(intent.reference ? { reference: intent.reference } : {}),
+        ...(intent.drillId ? { drillId: intent.drillId } : {}),
         ...(draft.location.trim() ? { location: draft.location.trim() } : {}),
         ...(draft.feeling.trim() ? { feeling: draft.feeling.trim() } : {}),
         ...(draft.projectId ? { projectId: draft.projectId } : {}),

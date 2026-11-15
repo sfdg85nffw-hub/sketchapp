@@ -1,8 +1,3 @@
-import type { MaterialChoice } from '../lib/ref/scene';
-
-export type RefMode = 'faces' | 'poses' | 'shapes' | 'skull' | 'hands' | 'urban' | 'mirror' | 'mine';
-export type RefSourceKind = 'photos' | '3d' | 'life';
-
 /** A label pinned to a point on the picture, in 0-1 coordinates from the top-left. */
 export interface Landmark {
   label: string;
@@ -47,13 +42,3 @@ export interface RefImage {
   relight?: () => Promise<RefImage>;
 }
 
-export interface RefSource {
-  /** The next image, or null when there is nothing left to show. */
-  next(index: number): Promise<RefImage | null>;
-  dispose?(): void;
-}
-
-export interface EngineOptions {
-  material: MaterialChoice;
-  random: () => number;
-}

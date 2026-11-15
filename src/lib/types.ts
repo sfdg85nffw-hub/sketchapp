@@ -62,6 +62,8 @@ export interface Entry {
   reflection?: Reflection;
   projectId?: string;
   drillId?: string;
+  /** Set when the page was drawn in a Timed Reference session. */
+  reference?: { mode: string; summary: string };
   /** White-paper sample used to white-balance colour sampling for this photo. */
   whiteRef?: RGB;
   demo?: boolean;
@@ -111,6 +113,8 @@ export interface Drill {
   /** What changes at difficulty 1, 2 and 3. */
   levels: [string, string, string];
   timerSeconds?: number;
+  /** Route of the tool that runs this drill, when it has one. */
+  launch?: { route: string; label: string };
 }
 
 export interface Paint {
@@ -177,4 +181,22 @@ export interface Settings {
   pendingPlan?: SketchPlan;
   firstUseAt: string;
   demoLoaded: boolean;
+  /** Last-used Timed Reference settings, for Quick start. */
+  reference?: RefPrefs;
+}
+
+export interface RefPrefs {
+  mode: string;
+  source: 'photos' | '3d';
+  seconds: number;
+  /** null: until I stop. */
+  count: number | null;
+  sequenceId?: string;
+  memory: boolean;
+  memoryLook: number;
+  guessLight: boolean;
+  guidance: boolean;
+  showLine: boolean;
+  material: 'plaster' | 'dark' | 'metal' | 'mixed';
+  muted: boolean;
 }
