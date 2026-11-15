@@ -155,6 +155,25 @@ export function SettingsScreen() {
 
       <Divider />
 
+      <Section title="About and credits" hint="Every reference in the app is public domain, CC0 or CC BY, and ships with it.">
+        <ul class="stack small">
+          <li>
+            <strong>3D heads:</strong> built from the MakeHuman base mesh and targets (CC0, MakeHuman project).
+          </li>
+          <li>
+            <strong>Skull:</strong> "Skull" by Vladimir Petkovic (CC0), from the Khronos Group glTF Sample Assets.
+          </li>
+          <li>
+            <strong>Motion:</strong> CMU Graphics Lab Motion Capture Database, mocap.cs.cmu.edu (created with funding from NSF EIA-0196217), BVH conversion by Bruce Hahne.
+          </li>
+          <li>
+            <strong>Photographs, paintings and sculpture:</strong> The Metropolitan Museum of Art Open Access (CC0) and Wikimedia Commons (public domain and CC BY). Each image is credited under it during a session and on the contact sheet; the full list is in CREDITS.md.
+          </li>
+        </ul>
+      </Section>
+
+      <Divider />
+
       <Section title="Start over">
         <Button block icon="trash" onClick={() => setConfirmErase(true)}>
           Erase everything on this phone

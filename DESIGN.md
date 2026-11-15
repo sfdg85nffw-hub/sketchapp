@@ -111,14 +111,26 @@ Baseline copy is matter-of-fact: *"Rough is the point. This is your 'before.'"* 
 - Contrast is at least WCAG AA for every pair in use, and AAA (7:1) for body text, in both themes and under both simulations.
 - Inputs are 16 px or larger so Safari does not zoom on focus.
 
+## Timed Reference
+
+| Principle | Decision |
+| --- | --- |
+| Fitts | All ten session controls (previous, pause, skip, add 30s, end, flip, gray, values, squint, chime) sit in two rows at the bottom, each about 75 × 52 pt. Start is the one primary button on each setup screen, pinned in the bottom bar. |
+| Hick | The setup screen shows source, timer and count. Draw from memory, guess the light, gesture reminders, line of action, material and the chime are behind the settings button. In the player, overlays and "Same scene, new light" are behind More. |
+| Recognition | Modes are a two-column grid of icon tiles with labels. The timer offers the seven common lengths as chips, with a slider for anything in between. Quick start reopens the last mode. |
+| Never colour alone | The last five seconds are a thick dashed ring that pulses (static under reduced motion). Pack status is an icon and words ("On this phone", "Not saved offline"). Pressed controls invert to ink. An e2e test reads every colour on the new screens in both themes and fails on anything chromatic outside the blue accent. |
+| Attention | Tapping the picture hides everything but the picture, the clock and the progress bar. 3D references are rendered as stills, so nothing moves while he draws. |
+| Retrieval and feedback | Guess the light asks for an answer before revealing it, then shows the true direction on the same dial with the error in degrees. The line of action appears after a pose, not during it. |
+
 ## Information architecture
 
 ```
 Journal ── entry ── reflection
    │         └── Then / Now
 Practice ── drill ── (photo, rating)
+   │   ├── timed reference ── mode setup ── session player ── contact sheet
    │   ├── drill library
-   │   ├── gesture timer
+   │   ├── gesture timer (the From life mode)
    │   ├── plan a sketch
    │   └── projects ── project
 [ Capture ] ── quick entry ── reflection
