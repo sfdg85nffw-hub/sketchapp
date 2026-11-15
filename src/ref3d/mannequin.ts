@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import { loadBinary } from './binary';
 import { sampleLighting, screenLightAngle } from '../lib/ref/lighting';
 import {
   boneIndex,
@@ -32,10 +33,7 @@ export function loadMocap(): Promise<Mocap> {
       if (!r.ok) throw new Error('The motion-capture data is missing from this build.');
       return r.json() as Promise<MocapIndex>;
     }),
-    fetch('./mocap/clips.bin').then((r) => {
-      if (!r.ok) throw new Error('The motion-capture data is missing from this build.');
-      return r.arrayBuffer();
-    }),
+    loadBinary('mocap/clips.bin', 'The motion-capture data is missing from this build.'),
   ]).then(([index, data]) => ({ index, data, scores: new Map() }));
   mocap.catch(() => (mocap = null));
   return mocap;

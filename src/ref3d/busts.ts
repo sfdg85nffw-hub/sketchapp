@@ -39,7 +39,7 @@ export function loadHeadIndex(): Promise<HeadEntry[]> {
 
 const SKULL: BustModel = {
   key: 'skull',
-  url: './models/skull.glb',
+  url: 'models/skull.glb',
   label: 'Human skull',
   material: 'bone',
   center: [0, 0.125, 0.01],
@@ -122,7 +122,7 @@ async function renderBust(model: BustModel, random: Random, directional = false)
 export async function renderHead(random: Random, directional = false): Promise<RefImage> {
   const head = pickOne(random, await loadHeadIndex());
   return renderBust(
-    { key: head.id, url: `./models/heads/${head.file}`, label: head.label, material: 'skin', center: [0, -0.16, 0.02], radius: 0.8, landmarks: head.landmarks ?? {} },
+    { key: head.id, url: `models/heads/${head.file}`, label: head.label, material: 'skin', center: [0, -0.16, 0.02], radius: 0.8, landmarks: head.landmarks ?? {} },
     random,
     directional,
   );

@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import { loadBinary } from './binary';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { MeshoptDecoder } from 'three/examples/jsm/libs/meshopt_decoder.module.js';
 import { lightVector, type LightingSetup } from '../lib/ref/lighting';
@@ -177,7 +178,8 @@ const geometryCache = new Map<string, Promise<Map<string, THREE.BufferGeometry>>
 export function loadGeometries(url: string): Promise<Map<string, THREE.BufferGeometry>> {
   let pending = geometryCache.get(url);
   if (!pending) {
-    pending = loader.loadAsync(url).then((gltf) => {
+    pending = loadBinary(url, 'A 3D model is missing from this build.').then(async (bytes) => {
+      const gltf = await loader.parseAsync(bytes, '');
       const found = new Map<string, THREE.BufferGeometry>();
       gltf.scene.updateMatrixWorld(true);
       gltf.scene.traverse((object) => {

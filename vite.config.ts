@@ -55,6 +55,8 @@ export default defineConfig({
   // Relative base so the same build works at /<repo>/ on GitHub Pages and at / locally.
   base: './',
   plugins: [preact(), offlineServiceWorker()],
+  // 3D models and motion data, which the claude.ai preview build inlines (src/ref3d/binary.ts).
+  assetsInclude: ['**/*.glb', '**/*.bin'],
   build: {
     target: 'es2022',
     sourcemap: false,
