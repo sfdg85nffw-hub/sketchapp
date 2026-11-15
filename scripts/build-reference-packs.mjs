@@ -28,14 +28,33 @@ const REQUEST_TIMEOUT = 60_000;
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+/**
+ * Wikimedia answers bursts with HTTP 429, so its requests go one at a time with a gap
+ * between them, and a 429 pauses every worker's requests to that host, not just one.
+ */
+const HOST_GAP = { 'upload.wikimedia.org': Number(process.env.WIKIMEDIA_GAP ?? 1500) };
+const hostReady = new Map();
+
+async function throttle(host) {
+  const gap = HOST_GAP[host];
+  if (!gap) return;
+  const now = Date.now();
+  const at = Math.max(now, hostReady.get(host) ?? 0);
+  hostReady.set(host, at + gap);
+  if (at > now) await sleep(at - now);
+}
+
 async function download(url) {
-  for (let attempt = 1; attempt <= 4; attempt++) {
+  const host = new URL(url).host;
+  for (let attempt = 1; attempt <= 5; attempt++) {
     try {
+      await throttle(host);
       const response = await fetch(url, { headers: { 'User-Agent': UA, Accept: 'image/*' }, signal: AbortSignal.timeout(REQUEST_TIMEOUT) });
       if ([403, 429].includes(response.status) || response.status >= 500) {
-        const wait = Number(response.headers.get('retry-after'));
+        const header = Number(response.headers.get('retry-after'));
         const error = new Error(`HTTP ${response.status}`);
-        error.wait = Number.isFinite(wait) && wait > 0 ? Math.min(wait, 30) * 1000 : 0;
+        error.wait = Math.min(Number.isFinite(header) && header > 0 ? header * 1000 : 15_000 * attempt, 90_000);
+        if (response.status === 429) hostReady.set(host, Math.max(hostReady.get(host) ?? 0, Date.now() + error.wait));
         throw error;
       }
       if (!response.ok) return { error: `HTTP ${response.status}` };
@@ -43,8 +62,8 @@ async function download(url) {
       if (!type.startsWith('image/')) return { error: `not an image (${type || 'no content type'})` };
       return { bytes: Buffer.from(await response.arrayBuffer()) };
     } catch (error) {
-      if (attempt === 4) return { error: error.message };
-      await sleep(error.wait || 2000 * attempt);
+      if (attempt === 5) return { error: error.message, limited: error.message === 'HTTP 429' };
+      await sleep(error.wait ?? 2000 * attempt);
     }
   }
   return { error: 'unreachable' };
@@ -75,6 +94,8 @@ async function build(entry) {
       break;
     }
     problem = result.error;
+    // Rate limited: the original file is bigger and limited the same way, so leave it for the next run.
+    if (result.limited) break;
   }
   if (!source) return { failed: problem };
 
